@@ -1,0 +1,169 @@
+/* ========================================================================
+   Allen 個人作品集 — 品牌樣式
+   配色來源：AllenSpeacial.json（暖奶油底 + 霧藍/鼠尾草綠 + 橘色點綴）
+   ======================================================================== */
+:root {
+  /* 品牌色 */
+  --cream:      #F6F0DA;  /* 頁面背景：暖奶油 */
+  --cream-2:    #FBF7E9;  /* 次背景 */
+  --card:       #FFFFFF;  /* 卡片底 */
+  --blue:       #6F91B5;  /* 主色：霧藍 */
+  --blue-dk:    #28738A;  /* 深藍（hover/標題點綴） */
+  --sage:       #89C0B7;  /* 輔色：鼠尾草綠 */
+  --cyan:       #B7E1E4;  /* 淺青 */
+  --green:      #C7DB95;  /* 草綠 */
+  --sand:       #F2D684;  /* 沙黃 */
+  --orange:     #FF8838;  /* 點綴 / CTA */
+  --coral:      #EF8F88;  /* 珊瑚 */
+  --ink:        #1C2325;  /* 主文字：近黑 */
+  --ink-soft:   #293537;  /* 次文字 */
+  --muted:      #5F6B6D;  /* 弱化文字 */
+  --line:       #E7DFC4;  /* 分隔線 */
+
+  /* 標籤色循環（給分類用） */
+  --tag-1: #6F91B5; --tag-2: #89C0B7; --tag-3: #FF8838;
+  --tag-4: #C7DB95; --tag-5: #EF8F88; --tag-6: #28738A;
+
+  --radius: 16px;
+  --shadow: 0 1px 2px rgba(28,35,37,.04), 0 8px 24px rgba(28,35,37,.06);
+  --shadow-hover: 0 2px 4px rgba(28,35,37,.06), 0 16px 40px rgba(28,35,37,.12);
+  --maxw: 1080px;
+  --font: "Noto Sans TC", system-ui, -apple-system, "PingFang TC",
+          "Microsoft JhengHei", sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font);
+  color: var(--ink);
+  background: var(--cream);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--blue-dk); text-decoration: none; }
+a:hover { text-decoration: underline; }
+img { display: block; max-width: 100%; }
+
+.wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
+
+/* ---- 頁首 ---- */
+.site-header {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(246,240,218,.85);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+}
+.site-header .wrap {
+  display: flex; align-items: center; justify-content: space-between;
+  height: 64px;
+}
+.brand { font-weight: 800; font-size: 1.05rem; letter-spacing: .01em; }
+.brand span { color: var(--blue); }
+.nav a { margin-left: 20px; color: var(--ink-soft); font-weight: 500; font-size: .95rem; }
+.nav a:hover { color: var(--blue-dk); text-decoration: none; }
+
+/* ---- Profile / 關於我 ---- */
+.hero { padding: 64px 0 44px; }
+.eyebrow {
+  display: inline-block; font-size: .8rem; font-weight: 800; letter-spacing: .22em;
+  text-transform: uppercase; color: var(--blue);
+  border: 1px solid var(--blue); border-radius: 999px; padding: 4px 14px; margin-bottom: 22px;
+}
+.profile-head { display: flex; align-items: center; gap: 22px; flex-wrap: wrap; }
+.avatar {
+  width: 92px; height: 92px; border-radius: 50%; flex: none;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 2.4rem; font-weight: 800; color: #fff;
+  background: linear-gradient(135deg, var(--blue), var(--sage));
+  box-shadow: var(--shadow); overflow: hidden;
+}
+.avatar img { width: 100%; height: 100%; object-fit: cover; }
+.profile-id h1 { font-size: 2.4rem; line-height: 1.15; font-weight: 800; letter-spacing: -.01em; }
+.profile-id h1 .accent { color: var(--orange); }
+.profile-id .role { font-size: 1.05rem; color: var(--blue-dk); font-weight: 700; margin-top: 6px; }
+.hero .tagline { font-size: 1.25rem; color: var(--ink); margin-top: 24px; font-weight: 700; }
+.hero .bio { font-size: 1.05rem; color: var(--ink-soft); margin-top: 12px; max-width: 680px; }
+.hero-links { margin-top: 26px; display: flex; flex-wrap: wrap; gap: 12px; }
+.btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 10px 18px; border-radius: 999px; font-weight: 600; font-size: .95rem;
+  border: 1px solid var(--line); background: var(--card); color: var(--ink-soft);
+  transition: all .15s ease;
+}
+.btn:hover { text-decoration: none; transform: translateY(-1px); box-shadow: var(--shadow); }
+.btn.primary { background: var(--orange); color: #fff; border-color: var(--orange); }
+.btn.primary:hover { background: #ef7a22; }
+
+/* ---- 分類篩選 ---- */
+.section-title { font-size: 1.5rem; font-weight: 800; margin-bottom: 6px; }
+.section-sub { color: var(--muted); margin-bottom: 22px; }
+.filters { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 28px; }
+.chip {
+  padding: 7px 15px; border-radius: 999px; font-size: .9rem; font-weight: 600;
+  background: var(--card); border: 1px solid var(--line); color: var(--ink-soft);
+  cursor: pointer; transition: all .15s ease;
+}
+.chip:hover { border-color: var(--blue); color: var(--blue-dk); }
+.chip.active { background: var(--blue); border-color: var(--blue); color: #fff; }
+
+/* ---- 作品網格 ---- */
+.grid {
+  display: grid; gap: 24px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  padding-bottom: 80px;
+}
+.card {
+  background: var(--card); border-radius: var(--radius); overflow: hidden;
+  box-shadow: var(--shadow); border: 1px solid var(--line);
+  transition: all .2s ease; display: flex; flex-direction: column;
+}
+.card:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover); text-decoration: none; }
+.card .thumb { aspect-ratio: 16/10; background: var(--cream-2); overflow: hidden; }
+.card .thumb img { width: 100%; height: 100%; object-fit: cover; }
+.card .thumb.placeholder {
+  display: flex; align-items: center; justify-content: center;
+  background: linear-gradient(135deg, var(--cyan), var(--sage));
+  color: #fff; font-size: 2.2rem; font-weight: 800;
+}
+.card .body { padding: 18px 20px 22px; display: flex; flex-direction: column; flex: 1; }
+.card .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
+.tag {
+  font-size: .72rem; font-weight: 700; padding: 3px 9px; border-radius: 6px;
+  color: #fff; letter-spacing: .02em;
+}
+.card h3 { font-size: 1.2rem; font-weight: 800; color: var(--ink); margin-bottom: 6px; }
+.card p { font-size: .94rem; color: var(--muted); flex: 1; }
+.card .meta { margin-top: 14px; font-size: .82rem; color: var(--muted); font-weight: 600; }
+.featured-badge {
+  display: inline-block; background: var(--sand); color: var(--ink);
+  font-size: .72rem; font-weight: 800; padding: 3px 10px; border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+/* ---- 作品內頁 ---- */
+.work-hero { padding: 48px 0 12px; }
+.back-link { font-size: .9rem; color: var(--muted); font-weight: 600; }
+.work-hero h1 { font-size: 2.2rem; font-weight: 800; margin: 14px 0 8px; }
+.work-cover { border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); margin: 24px 0; border: 1px solid var(--line); }
+.work-body { max-width: 720px; }
+.work-body h2 { font-size: 1.3rem; font-weight: 800; margin: 34px 0 12px; }
+.work-body p { margin-bottom: 14px; color: var(--ink-soft); }
+.work-body ul { margin: 0 0 14px 1.2em; color: var(--ink-soft); }
+.work-body li { margin-bottom: 6px; }
+.tool-pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 8px 0 14px; }
+.pill { background: var(--cream-2); border: 1px solid var(--line); color: var(--ink-soft);
+  font-size: .85rem; font-weight: 600; padding: 5px 13px; border-radius: 999px; }
+.work-links { display: flex; flex-wrap: wrap; gap: 12px; margin: 28px 0 80px; }
+
+/* ---- 頁尾 ---- */
+.site-footer { border-top: 1px solid var(--line); background: var(--cream-2); padding: 40px 0; }
+.site-footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; color: var(--muted); font-size: .9rem; }
+
+/* ---- RWD ---- */
+@media (max-width: 640px) {
+  .hero { padding: 48px 0 28px; }
+  .hero h1 { font-size: 2rem; }
+  .grid { grid-template-columns: 1fr; }
+  .nav a { margin-left: 14px; font-size: .9rem; }
+}

@@ -1,0 +1,84 @@
+{
+  "profile": {
+    "name": "Allen",
+    "siteUrl": "https://mouslun-cpu.github.io/Portfolio",
+    "role": "AI 應用創作者",
+    "avatar": "",
+    "tagline": "用 AI Agent 把想法做成真的能用的東西",
+    "bio": "我是 Allen。這裡收錄我用 AI Agent 打造的各種專案——從資料儀表板、實用工具到小遊戲。每一件都是「先完成、再完美」的成果，記錄我把點子變成產品的過程。",
+    "links": [
+      { "label": "寄信給我", "url": "mailto:mouslun0509@gmail.com" }
+    ]
+  },
+  "works": [
+    {
+      "slug": "academic-publication-dashboard",
+      "title": "學術發表儀表板",
+      "categories": ["資料儀表板", "AI 工具"],
+      "summary": "把學術發表紀錄整理成一目了然的互動式儀表板。",
+      "cover": "assets/works/academic-publication-dashboard/cover.svg",
+      "description": "把零散的學術發表資料整理成一個互動式儀表板，能快速看出發表趨勢、領域分布與成果脈絡。\n用 React 打造前端，串接 Gemini API 做資料整理與摘要，讓繁瑣的學術紀錄整理變成幾分鐘就能完成的事。",
+      "highlights": [
+        "互動式視覺化，發表成果一眼看懂",
+        "串接 AI 自動整理與摘要資料",
+        "可部署的完整前端應用"
+      ],
+      "tools": ["React", "TypeScript", "Gemini API", "Vite"],
+      "links": [],
+      "date": "2026-06",
+      "featured": true
+    },
+    {
+      "slug": "voxcpm-voice-cloner",
+      "title": "VoxCPM 聲音克隆器",
+      "categories": ["AI 工具", "自然語言操作"],
+      "summary": "用自己的聲音生成任意語音，錄完直接對 AI Agent 下指令。",
+      "cover": "assets/works/voxcpm-voice-cloner/cover.svg",
+      "description": "一個全自動安裝的聲音克隆工具：雙擊安裝、開瀏覽器錄音，之後就能直接對 AI Agent 說「用某某的聲音說一段話」，Agent 自動呼叫工具生成語音。\n自動偵測 GPU（NVIDIA CUDA / Intel Arc XPU / CPU 三種模式切換），同時用參考音 + 逐字稿複製語氣節奏。錄音走 UI、其餘全部交給自然語言操作，是「AI Agent 當介面」的實際示範。",
+      "highlights": [
+        "全自動安裝，自動偵測並切換 GPU 模式",
+        "Ultimate Cloning：連語氣節奏一起複製",
+        "錄音走 UI、生成走 AI Agent 自然語言操作",
+        "Apache-2.0 授權，模型可商用"
+      ],
+      "tools": ["Python", "VoxCPM2", "AI Agent", "Gradio"],
+      "links": [],
+      "date": "2026-05",
+      "featured": true
+    },
+    {
+      "slug": "stock-blind-box",
+      "title": "股票盲盒遊戲",
+      "categories": ["遊戲", "AI 工具"],
+      "summary": "用抽盲盒的方式認識股票的互動小遊戲。",
+      "cover": "assets/works/stock-blind-box/cover.svg",
+      "description": "把「認識一家公司」變成抽盲盒的趣味體驗——隨機抽出一支股票，揭曉它的業務、定位與基本面，邊玩邊學。\n用 React 打造，串接 Gemini API 生成公司介紹內容，是把學習包裝成遊戲的實驗作品。",
+      "highlights": [
+        "把枯燥的選股學習變成抽盲盒的遊戲體驗",
+        "AI 即時生成公司介紹卡片",
+        "輕量、可直接在瀏覽器遊玩"
+      ],
+      "tools": ["React", "TypeScript", "Gemini API"],
+      "links": [],
+      "date": "2026-05"
+    },
+    {
+      "slug": "pawlive",
+      "title": "PawLive",
+      "categories": ["Web 應用", "教育工具"],
+      "summary": "讓課堂即時互動的師生平台——教師出題，學生掃 QR code 加入、投票、留言，成績自動算出。",
+      "cover": "assets/works/pawlive/cover.svg",
+      "description": "PawLive 是一個針對實體課堂設計的即時互動平台。教師可建立課程、開教室、發起投票，學生用手機掃 QR code 加入後，便能即時投票、聊天、獲得課堂加分。\n後端全由 Firebase Firestore 驅動，所有狀態透過 `onSnapshot` 即時同步，不需刷頁面。教師儀表板有能量地圖（泡泡圖）可一眼看出哪些學生最活躍；投票、訊息、被 spotlight 的次數會合算成 100 分的量化成績並支援 CSV 匯出。\n另有遊戲化系統：課堂冒險進度條、吉祥物、答對撒彩帶，讓上課變得更有參與感。v3.1 版本支援簡報模式（SlideShow）與教師備課筆記（TeacherNotes）雙視窗同步。",
+      "highlights": [
+        "Firebase 即時同步，學生掃 QR code 秒進課堂",
+        "泡泡圖能量地圖，一眼掌握全班參與度",
+        "投票 + 訊息 + Spotlight 自動換算成量化成績並匯出 CSV",
+        "遊戲化冒險系統，答對撒彩帶提升課堂氛圍",
+        "簡報模式 + 教師備課筆記雙視窗同步"
+      ],
+      "tools": ["React", "TypeScript", "Firebase", "Tailwind CSS", "D3", "Vite", "Docker"],
+      "links": [],
+      "date": "2026-04"
+    }
+  ]
+}

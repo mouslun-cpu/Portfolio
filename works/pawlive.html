@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PawLive｜Allen</title>
+<meta name="description" content="讓課堂即時互動的師生平台——教師出題，學生掃 QR code 加入、投票、留言，成績自動算出。">
+<link rel="canonical" href="https://mouslun-cpu.github.io/Portfolio/works/pawlive.html">
+<meta property="og:title" content="PawLive｜Allen">
+<meta property="og:description" content="讓課堂即時互動的師生平台——教師出題，學生掃 QR code 加入、投票、留言，成績自動算出。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mouslun-cpu.github.io/Portfolio/works/pawlive.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+<header class="site-header"><div class="wrap">
+  <a class="brand" href="../index.html">Allen<span>.</span></a>
+  <nav class="nav">
+    <a href="../index.html#works">作品</a>
+    <a href="../index.html#about">Profile</a>
+    
+  </nav>
+</div></header>
+<main class="wrap">
+  <section class="work-hero">
+    <a class="back-link" href="../index.html">← 回作品牆</a>
+    <h1>PawLive</h1>
+    <div class="tags"><span class="tag" style="background:var(--tag-5)">Web 應用</span> <span class="tag" style="background:var(--tag-6)">教育工具</span></div>
+    <div class="meta" style="color:var(--muted);font-weight:600">2026-04</div>
+  </section>
+  <div class="work-cover"><img src="../assets/works/pawlive/cover.svg" alt="PawLive 封面"></div>
+  <section class="work-body">
+    <h2>關於這個作品</h2>
+    <p>PawLive 是一個針對實體課堂設計的即時互動平台。教師可建立課程、開教室、發起投票，學生用手機掃 QR code 加入後，便能即時投票、聊天、獲得課堂加分。</p>
+<p>後端全由 Firebase Firestore 驅動，所有狀態透過 `onSnapshot` 即時同步，不需刷頁面。教師儀表板有能量地圖（泡泡圖）可一眼看出哪些學生最活躍；投票、訊息、被 spotlight 的次數會合算成 100 分的量化成績並支援 CSV 匯出。</p>
+<p>另有遊戲化系統：課堂冒險進度條、吉祥物、答對撒彩帶，讓上課變得更有參與感。v3.1 版本支援簡報模式（SlideShow）與教師備課筆記（TeacherNotes）雙視窗同步。</p>
+    <h2>作品亮點</h2><ul><li>Firebase 即時同步，學生掃 QR code 秒進課堂</li><li>泡泡圖能量地圖，一眼掌握全班參與度</li><li>投票 + 訊息 + Spotlight 自動換算成量化成績並匯出 CSV</li><li>遊戲化冒險系統，答對撒彩帶提升課堂氛圍</li><li>簡報模式 + 教師備課筆記雙視窗同步</li></ul>
+    <h2>使用工具</h2><div class="tool-pills"><span class="pill">React</span><span class="pill">TypeScript</span><span class="pill">Firebase</span><span class="pill">Tailwind CSS</span><span class="pill">D3</span><span class="pill">Vite</span><span class="pill">Docker</span></div>
+    
+  </section>
+</main>
+
+<footer class="site-footer"><div class="wrap">
+  <div>© 2026 Allen．個人作品集</div>
+  <div><a href="mailto:mouslun0509@gmail.com">寄信給我</a></div>
+</div></footer>
+</body></html>
