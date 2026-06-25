@@ -46,23 +46,17 @@
       <span class="divider-right">共 10 件作品</span>
     </div>
     <div class="filters"><button class="chip active" data-cat="">全部</button><button class="chip" data-cat="資料儀表板">資料儀表板</button><button class="chip" data-cat="AI 工具">AI 工具</button><button class="chip" data-cat="教學遊戲">教學遊戲</button><button class="chip" data-cat="互動教學">互動教學</button><button class="chip" data-cat="設計工具">設計工具</button><button class="chip" data-cat="服務設計">服務設計</button><button class="chip" data-cat="設計思考">設計思考</button><button class="chip" data-cat="思考工具">思考工具</button><button class="chip" data-cat="課堂互動">課堂互動</button><button class="chip" data-cat="Web 應用">Web 應用</button><button class="chip" data-cat="教育工具">教育工具</button></div>
-    
-<a class="card-featured" href="works/academic-publication-dashboard.html" data-cats="資料儀表板|AI 工具">
-  <div class="card-featured-img" style="background: linear-gradient(rgba(0,0,0,.22), rgba(0,0,0,.5)), url('assets/works/academic-publication-dashboard/cover.png') center/cover no-repeat;">
-    <div class="card-featured-title">學術發表儀表板</div>
-    <div class="card-featured-cat">資料儀表板 · AI 工具 · 2026.06</div>
-  </div>
-  <div class="card-featured-body">
-    <div class="card-featured-body-left">
-      <div class="card-featured-num">01 — 資料儀表板 · AI 工具</div>
-      <div class="card-featured-body-title">學術發表儀表板</div>
-      <p class="card-featured-summary">把學術發表紀錄整理成一目了然的互動式儀表板。</p>
-    </div>
-    <div class="card-featured-date">2026.06</div>
-  </div>
-</a>
     <div class="works-grid">
       
+<a class="card-small" href="works/academic-publication-dashboard.html" data-cats="資料儀表板|AI 工具">
+  <div class="card-small-img" style="background: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.48)), url('assets/works/academic-publication-dashboard/cover.png') center/cover no-repeat;">
+    <div class="card-small-img-title">學術發表儀表板</div>
+  </div>
+  <div class="card-small-num">01 — 資料儀表板</div>
+  <div class="card-small-summary">把學術發表紀錄整理成一目了然的互動式儀表板。</div>
+  <div class="card-small-date">2026.06</div>
+</a>
+
 <a class="card-small" href="works/stock-blind-box.html" data-cats="教學遊戲|AI 工具">
   <div class="card-small-img" style="background: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.48)), url('assets/works/stock-blind-box/cover.png') center/cover no-repeat;">
     <div class="card-small-img-title">股票盲盒教學平台</div>
@@ -151,13 +145,12 @@
 <footer class="site-footer">
   <div class="wrap">
     <span>© 2026 Allen</span>
-    <span><a href="mailto:mouslun0509@gmail.com">寄信給我</a></span>
   </div>
 </footer>
 </body></html>
 <script>
 const chips = document.querySelectorAll(".chip");
-const allCards = document.querySelectorAll(".card-featured, .card-small");
+const allCards = document.querySelectorAll(".card-small");
 chips.forEach(ch => ch.addEventListener("click", () => {
   chips.forEach(c => c.classList.remove("active"));
   ch.classList.add("active");

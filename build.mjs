@@ -79,8 +79,6 @@ const siteFooter = () => `
 <footer class="site-footer">
   <div class="wrap">
     <span>© ${new Date().getFullYear()} ${esc(profile.name)}</span>
-    <span>${(profile.links || []).map(l =>
-      `<a href="${esc(l.url)}">${esc(l.label)}</a>`).join("　")}</span>
   </div>
 </footer>
 </body></html>`;
@@ -174,9 +172,8 @@ ${siteHeader()}
       <span class="divider-right">共 ${works.length} 件作品</span>
     </div>
     <div class="filters">${chips}</div>
-    ${firstWork ? featuredCard(firstWork, 1) : ""}
     <div class="works-grid">
-      ${restWorks.map((w, i) => smallCard(w, i + 2)).join("\n")}
+      ${sorted.map((w, i) => smallCard(w, i + 1)).join("\n")}
     </div>
   </section>
 
@@ -184,7 +181,7 @@ ${siteHeader()}
 ${siteFooter()}
 <script>
 const chips = document.querySelectorAll(".chip");
-const allCards = document.querySelectorAll(".card-featured, .card-small");
+const allCards = document.querySelectorAll(".card-small");
 chips.forEach(ch => ch.addEventListener("click", () => {
   chips.forEach(c => c.classList.remove("active"));
   ch.classList.add("active");
