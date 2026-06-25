@@ -3,108 +3,141 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Allen｜個人作品集 Profile</title>
-<meta name="description" content="我是 Allen。這裡收錄我用 AI Agent 打造的各種專案——從資料儀表板、實用工具到小遊戲。每一件都是「先完成、再完美」的成果，記錄我把點子變成產品的過程。">
+<title>Allen Portfolio</title>
+<meta name="description" content="我是 Allen，專注用 AI Agent 把點子快速落地。這本作品集，記錄我把 AI 變成日常工作與生活裡真正能用的成果。">
 <link rel="canonical" href="https://mouslun-cpu.github.io/Portfolio/">
-<meta property="og:title" content="Allen｜個人作品集 Profile">
-<meta property="og:description" content="我是 Allen。這裡收錄我用 AI Agent 打造的各種專案——從資料儀表板、實用工具到小遊戲。每一件都是「先完成、再完美」的成果，記錄我把點子變成產品的過程。">
+<meta property="og:title" content="Allen Portfolio">
+<meta property="og:description" content="我是 Allen，專注用 AI Agent 把點子快速落地。這本作品集，記錄我把 AI 變成日常工作與生活裡真正能用的成果。">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://mouslun-cpu.github.io/Portfolio/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Noto+Serif+TC:wght@600;700&family=Noto+Sans+TC:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<header class="site-header"><div class="wrap">
-  <a class="brand" href="index.html">Allen<span>.</span></a>
-  <nav class="nav">
-    <a href="index.html#works">作品</a>
-    <a href="index.html#about">Profile</a>
-    
-  </nav>
-</div></header>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-logo">A</span>
+      <span>ALLEN</span>
+    </a>
+    <nav class="nav">
+      <a href="index.html#works">WORK</a>
+      <a href="index.html#about">ABOUT</a>
+      <a href="mailto:mouslun0509@gmail.com">CONTACT</a>
+    </nav>
+  </div>
+  <div class="header-rule"></div>
+  <div class="header-meta">
+    <span>AI 開發作品集</span>
+    <span>VOL. 2026 / ISSUE 01</span>
+    <span>AI · PRODUCT · WEB</span>
+  </div>
+</header>
 <main>
+
+  <!-- HERO -->
   <section class="hero wrap" id="about">
-    <span class="eyebrow">Profile</span>
-    <div class="profile-head">
-      <div class="avatar">A</div>
-      <div class="profile-id">
-        <h1>Allen<span class="accent">.</span></h1>
-        <div class="role">AI 應用創作者</div>
-      </div>
+    <div class="hero-top">
+      <span class="hero-sub-name">Allen</span>
+      <span class="hero-field">AI · WEB · PRODUCT</span>
     </div>
-    <div class="tagline">用 AI Agent 把想法做成真的能用的東西</div>
-    <p class="bio">我是 Allen。這裡收錄我用 AI Agent 打造的各種專案——從資料儀表板、實用工具到小遊戲。每一件都是「先完成、再完美」的成果，記錄我把點子變成產品的過程。</p>
-    <div class="hero-links">
-      <a class="btn primary" href="mailto:mouslun0509@gmail.com">寄信給我</a>
-    </div>
+    <h1 class="hero-title">Portfolio<span class="dot">.</span></h1>
+    <h2 class="hero-tagline">用 AI 把想法，落地成真正<mark>能用</mark>的工具與網頁應用。</h2>
+    <p class="hero-bio">我是 Allen，專注用 AI Agent 把點子快速落地。這本作品集，記錄我把 AI 變成日常工作與生活裡真正能用的成果。</p>
   </section>
+
+  <!-- META STRIP -->
+  <div class="meta-strip"><div class="meta-cell">
+    <div class="meta-cell-label">領域 / FIELD</div>
+    <div class="meta-cell-value">AI 應用開發</div>
+  </div><div class="meta-cell">
+    <div class="meta-cell-label">範疇 / SCOPE</div>
+    <div class="meta-cell-value">設計 + 前端</div>
+  </div><div class="meta-cell">
+    <div class="meta-cell-label">工具 / STACK</div>
+    <div class="meta-cell-value">React · LLM</div>
+  </div><div class="meta-cell">
+    <div class="meta-cell-label">作品 / WORKS</div>
+    <div class="meta-cell-value">04 件</div>
+  </div></div>
+
+  <!-- WORKS -->
   <section class="wrap" id="works">
-    <h2 class="section-title">作品</h2>
-    <p class="section-sub">共 4 件．依精選與時間排序</p>
+    <div class="section-divider">
+      <span class="divider-label">SELECTED WORK</span>
+      <span class="divider-line"></span>
+      <span class="divider-right">作品一覽</span>
+    </div>
     <div class="filters"><button class="chip active" data-cat="">全部</button><button class="chip" data-cat="資料儀表板">資料儀表板</button><button class="chip" data-cat="AI 工具">AI 工具</button><button class="chip" data-cat="自然語言操作">自然語言操作</button><button class="chip" data-cat="遊戲">遊戲</button><button class="chip" data-cat="Web 應用">Web 應用</button><button class="chip" data-cat="教育工具">教育工具</button></div>
-    <div class="grid" id="grid">
-      <a class="card" href="works/academic-publication-dashboard.html" data-cats="資料儀表板|AI 工具">
-    <div class="thumb"><img src="assets/works/academic-publication-dashboard/cover.svg" alt="學術發表儀表板 封面" loading="lazy"></div>
-    <div class="body">
-      <span class="featured-badge">★ 精選</span>
-      <div class="tags"><span class="tag" style="background:var(--tag-1)">資料儀表板</span><span class="tag" style="background:var(--tag-2)">AI 工具</span></div>
-      <h3>學術發表儀表板</h3>
-      <p>把學術發表紀錄整理成一目了然的互動式儀表板。</p>
-      <div class="meta">2026-06</div>
+    
+<a class="card-featured" href="works/academic-publication-dashboard.html" data-cats="資料儀表板|AI 工具">
+  <div class="card-featured-img" style="background:linear-gradient(140deg,#5C7090,#43556E);">
+    <span class="featured-badge">★ FEATURED 精選</span>
+    <div class="card-featured-title">學術發表儀表板</div>
+    <div class="card-featured-cat">資料儀表板 · AI 工具 · 2026.06</div>
+  </div>
+  <div class="card-featured-body">
+    <div class="card-featured-body-left">
+      <div class="card-featured-num">01 — 資料儀表板 · AI 工具</div>
+      <div class="card-featured-body-title">學術發表儀表板</div>
+      <p class="card-featured-summary">把學術發表紀錄整理成一目了然的互動式儀表板。</p>
     </div>
-  </a>
-<a class="card" href="works/voxcpm-voice-cloner.html" data-cats="AI 工具|自然語言操作">
-    <div class="thumb"><img src="assets/works/voxcpm-voice-cloner/cover.svg" alt="VoxCPM 聲音克隆器 封面" loading="lazy"></div>
-    <div class="body">
-      <span class="featured-badge">★ 精選</span>
-      <div class="tags"><span class="tag" style="background:var(--tag-2)">AI 工具</span><span class="tag" style="background:var(--tag-3)">自然語言操作</span></div>
-      <h3>VoxCPM 聲音克隆器</h3>
-      <p>用自己的聲音生成任意語音，錄完直接對 AI Agent 下指令。</p>
-      <div class="meta">2026-05</div>
-    </div>
-  </a>
-<a class="card" href="works/stock-blind-box.html" data-cats="遊戲|AI 工具">
-    <div class="thumb"><img src="assets/works/stock-blind-box/cover.svg" alt="股票盲盒遊戲 封面" loading="lazy"></div>
-    <div class="body">
+    <div class="card-featured-date">2026.06</div>
+  </div>
+</a>
+    <div class="works-grid">
       
-      <div class="tags"><span class="tag" style="background:var(--tag-4)">遊戲</span><span class="tag" style="background:var(--tag-2)">AI 工具</span></div>
-      <h3>股票盲盒遊戲</h3>
-      <p>用抽盲盒的方式認識股票的互動小遊戲。</p>
-      <div class="meta">2026-05</div>
-    </div>
-  </a>
-<a class="card" href="works/pawlive.html" data-cats="Web 應用|教育工具">
-    <div class="thumb"><img src="assets/works/pawlive/cover.svg" alt="PawLive 封面" loading="lazy"></div>
-    <div class="body">
-      
-      <div class="tags"><span class="tag" style="background:var(--tag-5)">Web 應用</span><span class="tag" style="background:var(--tag-6)">教育工具</span></div>
-      <h3>PawLive</h3>
-      <p>讓課堂即時互動的師生平台——教師出題，學生掃 QR code 加入、投票、留言，成績自動算出。</p>
-      <div class="meta">2026-04</div>
-    </div>
-  </a>
+<a class="card-small" href="works/voxcpm-voice-cloner.html" data-cats="AI 工具|自然語言操作">
+  <div class="card-small-img" style="background:linear-gradient(140deg,#5E8C7F,#456B5F);">
+    <div class="card-small-img-title">VoxCPM 聲音克隆器</div>
+  </div>
+  <div class="card-small-num">02 — AI 工具</div>
+  <div class="card-small-summary">用自己的聲音生成任意語音，錄完直接對 AI Agent 下指令。</div>
+  <div class="card-small-date">2026.05</div>
+</a>
+
+<a class="card-small" href="works/stock-blind-box.html" data-cats="遊戲|AI 工具">
+  <div class="card-small-img" style="background:linear-gradient(140deg,#CF8A52,#B5713A);">
+    <div class="card-small-img-title">股票盲盒遊戲</div>
+  </div>
+  <div class="card-small-num">03 — 遊戲</div>
+  <div class="card-small-summary">用抽盲盒的方式認識股票的互動小遊戲。</div>
+  <div class="card-small-date">2026.05</div>
+</a>
+
+<a class="card-small" href="works/pawlive.html" data-cats="Web 應用|教育工具">
+  <div class="card-small-img" style="background:linear-gradient(140deg,#B5746A,#965248);">
+    <div class="card-small-img-title">PawLive</div>
+  </div>
+  <div class="card-small-num">04 — Web 應用</div>
+  <div class="card-small-summary">讓課堂即時互動的師生平台——教師出題，學生掃 QR code 加入、投票、留言，成績自動算出。</div>
+  <div class="card-small-date">2026.04</div>
+</a>
     </div>
   </section>
+
 </main>
 
-<footer class="site-footer"><div class="wrap">
-  <div>© 2026 Allen．個人作品集</div>
-  <div><a href="mailto:mouslun0509@gmail.com">寄信給我</a></div>
-</div></footer>
+<footer class="site-footer">
+  <div class="wrap">
+    <span>© 2026 Allen</span>
+    <span><a href="mailto:mouslun0509@gmail.com">寄信給我</a></span>
+  </div>
+</footer>
 </body></html>
 <script>
-  const chips = document.querySelectorAll(".chip");
-  const cards = document.querySelectorAll(".card");
-  chips.forEach(ch => ch.addEventListener("click", () => {
-    chips.forEach(c => c.classList.remove("active"));
-    ch.classList.add("active");
-    const cat = ch.dataset.cat;
-    cards.forEach(card => {
-      const cats = (card.dataset.cats || "").split("|");
-      card.style.display = (!cat || cats.includes(cat)) ? "" : "none";
-    });
-  }));
+const chips = document.querySelectorAll(".chip");
+const allCards = document.querySelectorAll(".card-featured, .card-small");
+chips.forEach(ch => ch.addEventListener("click", () => {
+  chips.forEach(c => c.classList.remove("active"));
+  ch.classList.add("active");
+  const cat = ch.dataset.cat;
+  allCards.forEach(card => {
+    const cats = (card.dataset.cats || "").split("|");
+    card.style.display = (!cat || cats.includes(cat)) ? "" : "none";
+  });
+}));
 </script>

@@ -12,39 +12,89 @@
 <meta property="og:url" content="https://mouslun-cpu.github.io/Portfolio/works/voxcpm-voice-cloner.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Noto+Serif+TC:wght@600;700&family=Noto+Sans+TC:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
 
-<header class="site-header"><div class="wrap">
-  <a class="brand" href="../index.html">Allen<span>.</span></a>
-  <nav class="nav">
-    <a href="../index.html#works">作品</a>
-    <a href="../index.html#about">Profile</a>
-    
-  </nav>
-</div></header>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="../index.html">
+      <span class="brand-logo">A</span>
+      <span>ALLEN</span>
+    </a>
+    <nav class="nav">
+      <a href="../index.html#works">WORK</a>
+      <a href="../index.html#about">ABOUT</a>
+      <a href="mailto:mouslun0509@gmail.com">CONTACT</a>
+    </nav>
+  </div>
+  <div class="header-rule"></div>
+  <div class="header-meta">
+    <span>AI 開發作品集</span>
+    <span>VOL. 2026 / ISSUE 01</span>
+    <span>AI · PRODUCT · WEB</span>
+  </div>
+</header>
 <main class="wrap">
-  <section class="work-hero">
-    <a class="back-link" href="../index.html">← 回作品牆</a>
-    <h1>VoxCPM 聲音克隆器</h1>
-    <div class="tags"><span class="tag" style="background:var(--tag-2)">AI 工具</span> <span class="tag" style="background:var(--tag-3)">自然語言操作</span></div>
-    <div class="meta" style="color:var(--muted);font-weight:600">2026-05</div>
-  </section>
-  <div class="work-cover"><img src="../assets/works/voxcpm-voice-cloner/cover.svg" alt="VoxCPM 聲音克隆器 封面"></div>
-  <section class="work-body">
-    <h2>關於這個作品</h2>
-    <p>一個全自動安裝的聲音克隆工具：雙擊安裝、開瀏覽器錄音，之後就能直接對 AI Agent 說「用某某的聲音說一段話」，Agent 自動呼叫工具生成語音。</p>
+
+  <div class="work-header">
+    <div class="work-breadcrumb">
+      <a href="../index.html">← WORK</a>&nbsp;&nbsp;/&nbsp;&nbsp;02 VoxCPM 聲音克隆器
+    </div>
+    <div class="work-cat">AI 工具 · 自然語言操作</div>
+    <h1 class="work-title">VoxCPM 聲音克隆器</h1>
+    <div class="work-date">2026.05 · 個人專案</div>
+  </div>
+
+  <div class="work-cover-wrap" style="background:linear-gradient(140deg,#5E8C7F,#456B5F);">
+    <div class="work-cover-inner"><span class="work-cover-title">VoxCPM 聲音克隆器</span></div>
+  </div>
+  <div class="work-cover-caption">FIG. 02 — 產品主畫面</div>
+
+  <div class="work-body-grid">
+    <div class="work-body-main">
+      <div class="work-section-label">關於這個作品</div>
+      <p>一個全自動安裝的聲音克隆工具：雙擊安裝、開瀏覽器錄音，之後就能直接對 AI Agent 說「用某某的聲音說一段話」，Agent 自動呼叫工具生成語音。</p>
 <p>自動偵測 GPU（NVIDIA CUDA / Intel Arc XPU / CPU 三種模式切換），同時用參考音 + 逐字稿複製語氣節奏。錄音走 UI、其餘全部交給自然語言操作，是「AI Agent 當介面」的實際示範。</p>
-    <h2>作品亮點</h2><ul><li>全自動安裝，自動偵測並切換 GPU 模式</li><li>Ultimate Cloning：連語氣節奏一起複製</li><li>錄音走 UI、生成走 AI Agent 自然語言操作</li><li>Apache-2.0 授權，模型可商用</li></ul>
-    <h2>使用工具</h2><div class="tool-pills"><span class="pill">Python</span><span class="pill">VoxCPM2</span><span class="pill">AI Agent</span><span class="pill">Gradio</span></div>
+    </div>
     
-  </section>
+    <div class="work-body-aside">
+      <div class="work-section-label-muted">作品亮點</div>
+      <div class="work-highlights"><div class="work-highlight-item">
+          <span class="work-highlight-dot"></span>
+          <span class="work-highlight-text">全自動安裝，自動偵測並切換 GPU 模式</span>
+        </div><div class="work-highlight-item">
+          <span class="work-highlight-dot"></span>
+          <span class="work-highlight-text">Ultimate Cloning：連語氣節奏一起複製</span>
+        </div><div class="work-highlight-item">
+          <span class="work-highlight-dot"></span>
+          <span class="work-highlight-text">錄音走 UI、生成走 AI Agent 自然語言操作</span>
+        </div><div class="work-highlight-item">
+          <span class="work-highlight-dot"></span>
+          <span class="work-highlight-text">Apache-2.0 授權，模型可商用</span>
+        </div></div>
+    </div>
+  </div>
+
+  <div class="work-footer">
+    <div class="work-footer-section">
+      <div class="work-footer-label">使用工具</div>
+      <div class="tool-pills"><span class="pill">Python</span><span class="pill">VoxCPM2</span><span class="pill">AI Agent</span><span class="pill">Gradio</span></div>
+    </div>
+    <div class="work-footer-section">
+      <div class="work-footer-label">角色</div>
+      <div class="work-role-text">設計 + 前端開發</div>
+    </div>
+    
+  </div>
+
 </main>
 
-<footer class="site-footer"><div class="wrap">
-  <div>© 2026 Allen．個人作品集</div>
-  <div><a href="mailto:mouslun0509@gmail.com">寄信給我</a></div>
-</div></footer>
+<footer class="site-footer">
+  <div class="wrap">
+    <span>© 2026 Allen</span>
+    <span><a href="mailto:mouslun0509@gmail.com">寄信給我</a></span>
+  </div>
+</footer>
 </body></html>

@@ -18,12 +18,29 @@ const esc = (s = "") =>
   String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;")
     .replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 
-const allCats = [...new Set(works.flatMap((w) => w.categories || []))];
-const tagColor = (cat) => {
-  const palette = ["--tag-1", "--tag-2", "--tag-3", "--tag-4", "--tag-5", "--tag-6"];
-  return "var(" + palette[allCats.indexOf(cat) % palette.length] + ")";
-};
+/* 排序：精選優先，再依 date 新到舊 */
+const sorted = [...works].sort((a, b) =>
+  (b.featured ? 1 : 0) - (a.featured ? 1 : 0) ||
+  (b.date || "").localeCompare(a.date || ""));
 
+/* 預設漸層色板 */
+const GRADIENTS = [
+  "linear-gradient(140deg,#5C7090,#43556E)",
+  "linear-gradient(140deg,#5E8C7F,#456B5F)",
+  "linear-gradient(140deg,#CF8A52,#B5713A)",
+  "linear-gradient(140deg,#B5746A,#965248)",
+  "linear-gradient(140deg,#7B7AB5,#565591)",
+  "linear-gradient(140deg,#4D8B8B,#356060)",
+];
+const gradientOf = (w, i) => w.cardGradient || GRADIENTS[i % GRADIENTS.length];
+
+const fmtDate = (d = "") => d.replace("-", ".");
+
+/* ==text== → <mark>text</mark>（先 esc 再 replace） */
+const taglineHtml = (text = "") =>
+  esc(text).replace(/==(.+?)==/g, "<mark>$1</mark>");
+
+/* ---- <head> ---- */
 const head = (title, desc, canonical, prefix = "") => `<!doctype html>
 <html lang="zh-Hant">
 <head>
@@ -38,148 +55,247 @@ ${canonical ? `<link rel="canonical" href="${esc(canonical)}">` : ""}
 ${canonical ? `<meta property="og:url" content="${esc(canonical)}">` : ""}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Noto+Serif+TC:wght@600;700&family=Noto+Sans+TC:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="${prefix}styles.css">
 </head>
 <body>`;
 
-const header = (prefix = "") => `
-<header class="site-header"><div class="wrap">
-  <a class="brand" href="${prefix}index.html">${esc(profile.name)}<span>.</span></a>
-  <nav class="nav">
-    <a href="${prefix}index.html#works">作品</a>
-    <a href="${prefix}index.html#about">Profile</a>
-    ${(profile.links || []).filter(l => l.nav).map(l => `<a href="${esc(l.url)}">${esc(l.label)}</a>`).join("")}
-  </nav>
-</div></header>`;
-
-const footer = () => `
-<footer class="site-footer"><div class="wrap">
-  <div>© ${new Date().getFullYear()} ${esc(profile.name)}．個人作品集</div>
-  <div>${(profile.links || []).map(l => `<a href="${esc(l.url)}">${esc(l.label)}</a>`).join("　")}</div>
-</div></footer>
-</body></html>`;
-
-const card = (w) => {
-  const tags = (w.categories || []).map(c =>
-    `<span class="tag" style="background:${tagColor(c)}">${esc(c)}</span>`).join("");
-  const thumb = w.cover
-    ? `<div class="thumb"><img src="${esc(w.cover)}" alt="${esc(w.title)} 封面" loading="lazy"></div>`
-    : `<div class="thumb placeholder">${esc(w.title.slice(0, 1))}</div>`;
-  return `<a class="card" href="works/${esc(w.slug)}.html" data-cats="${esc((w.categories || []).join("|"))}">
-    ${thumb}
-    <div class="body">
-      ${w.featured ? `<span class="featured-badge">★ 精選</span>` : ""}
-      <div class="tags">${tags}</div>
-      <h3>${esc(w.title)}</h3>
-      <p>${esc(w.summary)}</p>
-      ${w.date ? `<div class="meta">${esc(w.date)}</div>` : ""}
-    </div>
-  </a>`;
+/* ---- 頁首 ---- */
+const siteHeader = (prefix = "") => {
+  const emailLink = (profile.links || []).find(l => (l.url || "").startsWith("mailto:"));
+  const contactHtml = emailLink ? `<a href="${esc(emailLink.url)}">CONTACT</a>` : "";
+  return `
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="${prefix}index.html">
+      <span class="brand-logo">A</span>
+      <span>${esc(profile.name.toUpperCase())}</span>
+    </a>
+    <nav class="nav">
+      <a href="${prefix}index.html#works">WORK</a>
+      <a href="${prefix}index.html#about">ABOUT</a>
+      ${contactHtml}
+    </nav>
+  </div>
+  <div class="header-rule"></div>
+  <div class="header-meta">
+    <span>AI 開發作品集</span>
+    <span>VOL. ${new Date().getFullYear()} / ISSUE 01</span>
+    <span>AI · PRODUCT · WEB</span>
+  </div>
+</header>`;
 };
 
-/* ---------- index.html ---------- */
-const sorted = [...works].sort((a, b) =>
-  (b.featured ? 1 : 0) - (a.featured ? 1 : 0) || (b.date || "").localeCompare(a.date || ""));
+/* ---- 頁尾 ---- */
+const siteFooter = () => `
+<footer class="site-footer">
+  <div class="wrap">
+    <span>© ${new Date().getFullYear()} ${esc(profile.name)}</span>
+    <span>${(profile.links || []).map(l =>
+      `<a href="${esc(l.url)}">${esc(l.label)}</a>`).join("　")}</span>
+  </div>
+</footer>
+</body></html>`;
 
-const chips = ["全部", ...allCats]
-  .map((c, i) => `<button class="chip${i === 0 ? " active" : ""}" data-cat="${c === "全部" ? "" : esc(c)}">${esc(c)}</button>`)
-  .join("");
+/* ---- 精選大卡 ---- */
+const featuredCard = (w, num) => {
+  const grad = gradientOf(w, num - 1);
+  const cats = (w.categories || []).join(" · ");
+  const numStr = String(num).padStart(2, "0");
+  return `
+<a class="card-featured" href="works/${esc(w.slug)}.html" data-cats="${esc((w.categories || []).join("|"))}">
+  <div class="card-featured-img" style="background:${grad};">
+    <span class="featured-badge">★ FEATURED 精選</span>
+    <div class="card-featured-title">${esc(w.title)}</div>
+    <div class="card-featured-cat">${esc(cats)} · ${fmtDate(w.date || "")}</div>
+  </div>
+  <div class="card-featured-body">
+    <div class="card-featured-body-left">
+      <div class="card-featured-num">${numStr} — ${esc(cats)}</div>
+      <div class="card-featured-body-title">${esc(w.title)}</div>
+      <p class="card-featured-summary">${esc(w.summary)}</p>
+    </div>
+    <div class="card-featured-date">${fmtDate(w.date || "")}</div>
+  </div>
+</a>`;
+};
 
-const avatarHtml = profile.avatar
-  ? `<img src="${esc(profile.avatar)}" alt="${esc(profile.name)}">`
-  : esc(profile.name.slice(0, 1));
+/* ---- 小卡（3-col grid） ---- */
+const smallCard = (w, num) => {
+  const grad = gradientOf(w, num - 1);
+  const firstCat = (w.categories || [])[0] || "";
+  const numStr = String(num).padStart(2, "0");
+  return `
+<a class="card-small" href="works/${esc(w.slug)}.html" data-cats="${esc((w.categories || []).join("|"))}">
+  <div class="card-small-img" style="background:${grad};">
+    <div class="card-small-img-title">${esc(w.title)}</div>
+  </div>
+  <div class="card-small-num">${numStr} — ${esc(firstCat)}</div>
+  <div class="card-small-summary">${esc(w.summary)}</div>
+  <div class="card-small-date">${fmtDate(w.date || "")}</div>
+</a>`;
+};
 
-const index = `${head(`${profile.name}｜個人作品集 Profile`, profile.bio, SITE ? SITE + "/" : "")}
-${header()}
+/* ================================================================
+   INDEX.HTML
+   ================================================================ */
+const allCats = [...new Set(works.flatMap(w => w.categories || []))];
+const chips = ["全部", ...allCats].map((c, i) =>
+  `<button class="chip${i === 0 ? " active" : ""}" data-cat="${c === "全部" ? "" : esc(c)}">${esc(c)}</button>`
+).join("");
+
+const meta = profile.meta || {};
+const metaCells = [
+  { label: "領域 / FIELD", value: meta.field || profile.role || "AI 應用開發" },
+  { label: "範疇 / SCOPE", value: meta.scope || "設計 + 前端" },
+  { label: "工具 / STACK", value: meta.stack || "React · LLM" },
+  { label: "作品 / WORKS", value: `${String(works.length).padStart(2, "0")} 件` },
+].map(m => `<div class="meta-cell">
+    <div class="meta-cell-label">${esc(m.label)}</div>
+    <div class="meta-cell-value">${esc(m.value)}</div>
+  </div>`).join("");
+
+const [firstWork, ...restWorks] = sorted;
+
+const index = `${head(`${profile.name} Portfolio`, profile.bio || "", SITE ? SITE + "/" : "")}
+${siteHeader()}
 <main>
+
+  <!-- HERO -->
   <section class="hero wrap" id="about">
-    <span class="eyebrow">Profile</span>
-    <div class="profile-head">
-      <div class="avatar">${avatarHtml}</div>
-      <div class="profile-id">
-        <h1>${esc(profile.name)}<span class="accent">.</span></h1>
-        ${profile.role ? `<div class="role">${esc(profile.role)}</div>` : ""}
-      </div>
+    <div class="hero-top">
+      <span class="hero-sub-name">${esc(profile.name)}</span>
+      <span class="hero-field">AI · WEB · PRODUCT</span>
     </div>
-    <div class="tagline">${esc(profile.tagline)}</div>
-    <p class="bio">${esc(profile.bio)}</p>
-    <div class="hero-links">
-      ${(profile.links || []).map((l, i) =>
-        `<a class="btn${i === 0 ? " primary" : ""}" href="${esc(l.url)}">${esc(l.label)}</a>`).join("")}
-    </div>
+    <h1 class="hero-title">Portfolio<span class="dot">.</span></h1>
+    <h2 class="hero-tagline">${taglineHtml(profile.tagline)}</h2>
+    <p class="hero-bio">${esc(profile.bio)}</p>
   </section>
+
+  <!-- META STRIP -->
+  <div class="meta-strip">${metaCells}</div>
+
+  <!-- WORKS -->
   <section class="wrap" id="works">
-    <h2 class="section-title">作品</h2>
-    <p class="section-sub">共 ${works.length} 件．依精選與時間排序</p>
+    <div class="section-divider">
+      <span class="divider-label">SELECTED WORK</span>
+      <span class="divider-line"></span>
+      <span class="divider-right">作品一覽</span>
+    </div>
     <div class="filters">${chips}</div>
-    <div class="grid" id="grid">
-      ${sorted.map(card).join("\n")}
+    ${firstWork ? featuredCard(firstWork, 1) : ""}
+    <div class="works-grid">
+      ${restWorks.map((w, i) => smallCard(w, i + 2)).join("\n")}
     </div>
   </section>
+
 </main>
-${footer()}
+${siteFooter()}
 <script>
-  const chips = document.querySelectorAll(".chip");
-  const cards = document.querySelectorAll(".card");
-  chips.forEach(ch => ch.addEventListener("click", () => {
-    chips.forEach(c => c.classList.remove("active"));
-    ch.classList.add("active");
-    const cat = ch.dataset.cat;
-    cards.forEach(card => {
-      const cats = (card.dataset.cats || "").split("|");
-      card.style.display = (!cat || cats.includes(cat)) ? "" : "none";
-    });
-  }));
+const chips = document.querySelectorAll(".chip");
+const allCards = document.querySelectorAll(".card-featured, .card-small");
+chips.forEach(ch => ch.addEventListener("click", () => {
+  chips.forEach(c => c.classList.remove("active"));
+  ch.classList.add("active");
+  const cat = ch.dataset.cat;
+  allCards.forEach(card => {
+    const cats = (card.dataset.cats || "").split("|");
+    card.style.display = (!cat || cats.includes(cat)) ? "" : "none";
+  });
+}));
 </script>`;
 
 writeFileSync(join(ROOT, "index.html"), index);
 
-/* ---------- 作品內頁 ---------- */
+/* ================================================================
+   WORKS/*.HTML
+   ================================================================ */
 if (!existsSync(join(ROOT, "works"))) mkdirSync(join(ROOT, "works"));
 
 const paraToHtml = (text = "") =>
   text.split("\n").filter(Boolean).map(p => `<p>${esc(p)}</p>`).join("\n");
 
-for (const w of works) {
+for (const [idx, w] of sorted.entries()) {
+  const num = idx + 1;
+  const numStr = String(num).padStart(2, "0");
   const canonical = SITE ? `${SITE}/works/${w.slug}.html` : "";
-  const tags = (w.categories || []).map(c =>
-    `<span class="tag" style="background:${tagColor(c)}">${esc(c)}</span>`).join(" ");
-  const cover = w.cover
-    ? `<div class="work-cover"><img src="../${esc(w.cover)}" alt="${esc(w.title)} 封面"></div>` : "";
-  const highlights = (w.highlights || []).length
-    ? `<h2>作品亮點</h2><ul>${w.highlights.map(h => `<li>${esc(h)}</li>`).join("")}</ul>` : "";
-  const tools = (w.tools || []).length
-    ? `<h2>使用工具</h2><div class="tool-pills">${w.tools.map(t => `<span class="pill">${esc(t)}</span>`).join("")}</div>` : "";
-  const links = (w.links || []).length
-    ? `<div class="work-links">${w.links.map((l, i) =>
-        `<a class="btn${i === 0 ? " primary" : ""}" href="${esc(l.url)}">${esc(l.label)}</a>`).join("")}</div>` : "";
+  const cats = (w.categories || []).join(" · ");
+  const grad = gradientOf(w, idx);
+
+  /* 封面：有真實圖（非 SVG 佔位）就顯示 img，否則用漸層 */
+  const isRealCover = w.cover && !w.cover.endsWith(".svg");
+  const coverContent = isRealCover
+    ? `<img src="../${esc(w.cover)}" alt="${esc(w.title)} 封面">`
+    : `<div class="work-cover-inner"><span class="work-cover-title">${esc(w.title)}</span></div>`;
+
+  const highlightsHtml = (w.highlights || []).length
+    ? `<div class="work-highlights">${w.highlights.map(h =>
+        `<div class="work-highlight-item">
+          <span class="work-highlight-dot"></span>
+          <span class="work-highlight-text">${esc(h)}</span>
+        </div>`).join("")}</div>` : "";
+
+  const toolsHtml = (w.tools || []).length
+    ? `<div class="tool-pills">${w.tools.map(t => `<span class="pill">${esc(t)}</span>`).join("")}</div>` : "";
+
+  const linksHtml = (w.links || []).length
+    ? w.links.map((l, i) =>
+        `<a class="btn ${i === 0 ? "primary" : "secondary"}" href="${esc(l.url)}">${esc(l.label)} ↗</a>`
+      ).join("") : "";
 
   const page = `${head(`${w.title}｜${profile.name}`, w.summary, canonical, "../")}
-${header("../")}
+${siteHeader("../")}
 <main class="wrap">
-  <section class="work-hero">
-    <a class="back-link" href="../index.html">← 回作品牆</a>
-    <h1>${esc(w.title)}</h1>
-    <div class="tags">${tags}</div>
-    ${w.date ? `<div class="meta" style="color:var(--muted);font-weight:600">${esc(w.date)}</div>` : ""}
-  </section>
-  ${cover}
-  <section class="work-body">
-    <h2>關於這個作品</h2>
-    ${paraToHtml(w.description)}
-    ${highlights}
-    ${tools}
-    ${links}
-  </section>
+
+  <div class="work-header">
+    <div class="work-breadcrumb">
+      <a href="../index.html">← WORK</a>&nbsp;&nbsp;/&nbsp;&nbsp;${numStr} ${esc(w.title)}
+    </div>
+    <div class="work-cat">${esc(cats)}</div>
+    <h1 class="work-title">${esc(w.title)}</h1>
+    <div class="work-date">${fmtDate(w.date || "")} · 個人專案</div>
+  </div>
+
+  <div class="work-cover-wrap" style="${isRealCover ? "" : `background:${grad};`}">
+    ${coverContent}
+  </div>
+  <div class="work-cover-caption">FIG. ${numStr} — 產品主畫面</div>
+
+  <div class="work-body-grid">
+    <div class="work-body-main">
+      <div class="work-section-label">關於這個作品</div>
+      ${paraToHtml(w.description)}
+    </div>
+    ${(w.highlights || []).length ? `
+    <div class="work-body-aside">
+      <div class="work-section-label-muted">作品亮點</div>
+      ${highlightsHtml}
+    </div>` : ""}
+  </div>
+
+  <div class="work-footer">
+    ${toolsHtml ? `<div class="work-footer-section">
+      <div class="work-footer-label">使用工具</div>
+      ${toolsHtml}
+    </div>` : ""}
+    <div class="work-footer-section">
+      <div class="work-footer-label">角色</div>
+      <div class="work-role-text">設計 + 前端開發</div>
+    </div>
+    ${linksHtml ? `<div class="work-actions">${linksHtml}</div>` : ""}
+  </div>
+
 </main>
-${footer()}`;
+${siteFooter()}`;
+
   writeFileSync(join(ROOT, "works", `${w.slug}.html`), page);
 }
 
-/* ---------- sitemap ---------- */
+/* ================================================================
+   SITEMAP
+   ================================================================ */
 if (SITE) {
-  const urls = [`${SITE}/`, ...works.map(w => `${SITE}/works/${w.slug}.html`)];
+  const urls = [`${SITE}/`, ...sorted.map(w => `${SITE}/works/${w.slug}.html`)];
   const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
     urls.map(u => `  <url><loc>${u}</loc></url>`).join("\n") + `\n</urlset>\n`;
   writeFileSync(join(ROOT, "sitemap.xml"), xml);

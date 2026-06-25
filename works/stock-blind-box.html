@@ -12,39 +12,86 @@
 <meta property="og:url" content="https://mouslun-cpu.github.io/Portfolio/works/stock-blind-box.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Noto+Serif+TC:wght@600;700&family=Noto+Sans+TC:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
 
-<header class="site-header"><div class="wrap">
-  <a class="brand" href="../index.html">Allen<span>.</span></a>
-  <nav class="nav">
-    <a href="../index.html#works">作品</a>
-    <a href="../index.html#about">Profile</a>
-    
-  </nav>
-</div></header>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="../index.html">
+      <span class="brand-logo">A</span>
+      <span>ALLEN</span>
+    </a>
+    <nav class="nav">
+      <a href="../index.html#works">WORK</a>
+      <a href="../index.html#about">ABOUT</a>
+      <a href="mailto:mouslun0509@gmail.com">CONTACT</a>
+    </nav>
+  </div>
+  <div class="header-rule"></div>
+  <div class="header-meta">
+    <span>AI 開發作品集</span>
+    <span>VOL. 2026 / ISSUE 01</span>
+    <span>AI · PRODUCT · WEB</span>
+  </div>
+</header>
 <main class="wrap">
-  <section class="work-hero">
-    <a class="back-link" href="../index.html">← 回作品牆</a>
-    <h1>股票盲盒遊戲</h1>
-    <div class="tags"><span class="tag" style="background:var(--tag-4)">遊戲</span> <span class="tag" style="background:var(--tag-2)">AI 工具</span></div>
-    <div class="meta" style="color:var(--muted);font-weight:600">2026-05</div>
-  </section>
-  <div class="work-cover"><img src="../assets/works/stock-blind-box/cover.svg" alt="股票盲盒遊戲 封面"></div>
-  <section class="work-body">
-    <h2>關於這個作品</h2>
-    <p>把「認識一家公司」變成抽盲盒的趣味體驗——隨機抽出一支股票，揭曉它的業務、定位與基本面，邊玩邊學。</p>
+
+  <div class="work-header">
+    <div class="work-breadcrumb">
+      <a href="../index.html">← WORK</a>&nbsp;&nbsp;/&nbsp;&nbsp;03 股票盲盒遊戲
+    </div>
+    <div class="work-cat">遊戲 · AI 工具</div>
+    <h1 class="work-title">股票盲盒遊戲</h1>
+    <div class="work-date">2026.05 · 個人專案</div>
+  </div>
+
+  <div class="work-cover-wrap" style="background:linear-gradient(140deg,#CF8A52,#B5713A);">
+    <div class="work-cover-inner"><span class="work-cover-title">股票盲盒遊戲</span></div>
+  </div>
+  <div class="work-cover-caption">FIG. 03 — 產品主畫面</div>
+
+  <div class="work-body-grid">
+    <div class="work-body-main">
+      <div class="work-section-label">關於這個作品</div>
+      <p>把「認識一家公司」變成抽盲盒的趣味體驗——隨機抽出一支股票，揭曉它的業務、定位與基本面，邊玩邊學。</p>
 <p>用 React 打造，串接 Gemini API 生成公司介紹內容，是把學習包裝成遊戲的實驗作品。</p>
-    <h2>作品亮點</h2><ul><li>把枯燥的選股學習變成抽盲盒的遊戲體驗</li><li>AI 即時生成公司介紹卡片</li><li>輕量、可直接在瀏覽器遊玩</li></ul>
-    <h2>使用工具</h2><div class="tool-pills"><span class="pill">React</span><span class="pill">TypeScript</span><span class="pill">Gemini API</span></div>
+    </div>
     
-  </section>
+    <div class="work-body-aside">
+      <div class="work-section-label-muted">作品亮點</div>
+      <div class="work-highlights"><div class="work-highlight-item">
+          <span class="work-highlight-dot"></span>
+          <span class="work-highlight-text">把枯燥的選股學習變成抽盲盒的遊戲體驗</span>
+        </div><div class="work-highlight-item">
+          <span class="work-highlight-dot"></span>
+          <span class="work-highlight-text">AI 即時生成公司介紹卡片</span>
+        </div><div class="work-highlight-item">
+          <span class="work-highlight-dot"></span>
+          <span class="work-highlight-text">輕量、可直接在瀏覽器遊玩</span>
+        </div></div>
+    </div>
+  </div>
+
+  <div class="work-footer">
+    <div class="work-footer-section">
+      <div class="work-footer-label">使用工具</div>
+      <div class="tool-pills"><span class="pill">React</span><span class="pill">TypeScript</span><span class="pill">Gemini API</span></div>
+    </div>
+    <div class="work-footer-section">
+      <div class="work-footer-label">角色</div>
+      <div class="work-role-text">設計 + 前端開發</div>
+    </div>
+    
+  </div>
+
 </main>
 
-<footer class="site-footer"><div class="wrap">
-  <div>© 2026 Allen．個人作品集</div>
-  <div><a href="mailto:mouslun0509@gmail.com">寄信給我</a></div>
-</div></footer>
+<footer class="site-footer">
+  <div class="wrap">
+    <span>© 2026 Allen</span>
+    <span><a href="mailto:mouslun0509@gmail.com">寄信給我</a></span>
+  </div>
+</footer>
 </body></html>
