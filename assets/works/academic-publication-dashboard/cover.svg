@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
-<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-<stop offset="0" stop-color="#6F91B5"/><stop offset="1" stop-color="#28738A"/></linearGradient></defs>
-<rect width="800" height="500" fill="url(#g)"/>
-<circle cx="660" cy="90" r="120" fill="#FFFFFF" opacity="0.10"/>
-<circle cx="120" cy="430" r="90" fill="#FFFFFF" opacity="0.08"/>
-<text x="56" y="270" font-family="Noto Sans TC, sans-serif" font-size="56" font-weight="800" fill="#FFFFFF">學術發表儀表板</text>
-<text x="58" y="320" font-family="Noto Sans TC, sans-serif" font-size="22" font-weight="500" fill="#FFFFFF" opacity="0.85">Allen · 作品集</text>
-</svg>

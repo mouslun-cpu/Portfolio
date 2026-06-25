@@ -10,8 +10,8 @@
   --surface:   #F4EEE3;
   --ink:       #2A241E;
   --ink-mid:   #5B5247;
-  --ink-muted: #8a7d6a;
-  --ink-faint: #a89c88;
+  --ink-muted: #5a4e46;
+  --ink-faint: #6e6259;
   --line:      #DAD0C0;
   --accent:    #C26B3F;
 
@@ -385,6 +385,32 @@ img { display: block; max-width: 100%; }
 .btn.secondary { color: var(--ink); border: 1px solid var(--ink); background: transparent; }
 .btn.secondary:hover { background: rgba(42,36,30,.06); }
 
+
+/* ================================================================
+   WORK SCREENSHOTS
+   ================================================================ */
+.work-screenshots { margin-top: 44px; }
+.work-screenshots-label {
+  font-family: var(--font-mono); font-size: 11px; letter-spacing: .16em;
+  color: var(--ink-muted); margin-bottom: 16px;
+}
+.work-screenshots-grid {
+  display: grid; grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+.work-screenshot-item { margin: 0; }
+.work-screenshot-item img {
+  width: 100%; border-radius: 10px;
+  border: 1px solid var(--line); display: block;
+}
+.work-screenshot-item figcaption {
+  font-family: var(--font-mono); font-size: 10px; letter-spacing: .1em;
+  color: var(--ink-faint); margin-top: 6px; text-align: right;
+}
+
+@media (max-width: 600px) {
+  .work-screenshots-grid { grid-template-columns: 1fr; }
+}
 
 /* ================================================================
    FOOTER

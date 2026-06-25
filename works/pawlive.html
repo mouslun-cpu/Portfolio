@@ -23,18 +23,8 @@
       <span class="brand-logo">A</span>
       <span>ALLEN</span>
     </a>
-    <nav class="nav">
-      <a href="../index.html#works">WORK</a>
-      <a href="../index.html#about">ABOUT</a>
-      <a href="mailto:mouslun0509@gmail.com">CONTACT</a>
-    </nav>
   </div>
   <div class="header-rule"></div>
-  <div class="header-meta">
-    <span>AI 開發作品集</span>
-    <span>VOL. 2026 / ISSUE 01</span>
-    <span>AI · PRODUCT · WEB</span>
-  </div>
 </header>
 <main class="wrap">
 
@@ -47,44 +37,69 @@
     <div class="work-date">2026.04 · 個人專案</div>
   </div>
 
-  <div class="work-cover-wrap" style="background:linear-gradient(140deg,#B5746A,#965248);">
-    <div class="work-cover-inner"><span class="work-cover-title">PawLive</span></div>
+  <div class="work-cover-wrap" style="">
+    <img src="../assets/works/pawlive/cover.webp" alt="PawLive 封面">
   </div>
   <div class="work-cover-caption">FIG. 04 — 產品主畫面</div>
 
   <div class="work-body-grid">
     <div class="work-body-main">
       <div class="work-section-label">關於這個作品</div>
-      <p>PawLive 是一個針對實體課堂設計的即時互動平台。教師可建立課程、開教室、發起投票，學生用手機掃 QR code 加入後，便能即時投票、聊天、獲得課堂加分。</p>
-<p>後端全由 Firebase Firestore 驅動，所有狀態透過 `onSnapshot` 即時同步，不需刷頁面。教師儀表板有能量地圖（泡泡圖）可一眼看出哪些學生最活躍；投票、訊息、被 spotlight 的次數會合算成 100 分的量化成績並支援 CSV 匯出。</p>
-<p>另有遊戲化系統：課堂冒險進度條、吉祥物、答對撒彩帶，讓上課變得更有參與感。v3.1 版本支援簡報模式（SlideShow）與教師備課筆記（TeacherNotes）雙視窗同步。</p>
+      <p>PawLive 是一個針對實體課堂設計的即時互動平台。教師可建立課程、開設教室、發起投票，學生用手機掃 QR code 加入後，便能即時投票、聊天、獲得課堂加分。</p>
+<p>後端全由 Firebase Firestore 驅動，所有狀態透過 onSnapshot 即時同步，不需刷頁面。左側控制台管理投票與簡報；右側 Live Chat 讓學生隨時留言互動，教師可一鍵 Spotlight 發言者。</p>
+<p>課程結束後，教師儀表板顯示全班到課率、討論參與度、投票沉浸度，Energy Map 泡泡圖一眼看出哪位學生最活躍。投票、訊息、Spotlight 三個維度合算成 100 分量化成績，支援 CSV 匯出。</p>
+<p>另有遊戲化冒險系統：課堂進度條、吉祥物，答對還能撒彩帶，讓學生主動參與。</p>
     </div>
     
     <div class="work-body-aside">
       <div class="work-section-label-muted">作品亮點</div>
       <div class="work-highlights"><div class="work-highlight-item">
           <span class="work-highlight-dot"></span>
-          <span class="work-highlight-text">Firebase 即時同步，學生掃 QR code 秒進課堂</span>
+          <span class="work-highlight-text">學生掃 QR code 秒進課堂，Firebase 即時同步不需刷頁面</span>
         </div><div class="work-highlight-item">
           <span class="work-highlight-dot"></span>
-          <span class="work-highlight-text">泡泡圖能量地圖，一眼掌握全班參與度</span>
+          <span class="work-highlight-text">教師三合一控制台：投票出題、簡報播放、學生聊天同畫面管理</span>
         </div><div class="work-highlight-item">
           <span class="work-highlight-dot"></span>
-          <span class="work-highlight-text">投票 + 訊息 + Spotlight 自動換算成量化成績並匯出 CSV</span>
+          <span class="work-highlight-text">Energy Map 泡泡圖：投票率 × 訊息數 × Spotlight，一眼看全班參與度</span>
         </div><div class="work-highlight-item">
           <span class="work-highlight-dot"></span>
-          <span class="work-highlight-text">遊戲化冒險系統，答對撒彩帶提升課堂氛圍</span>
+          <span class="work-highlight-text">投票 + 訊息 + Spotlight 合算 100 分制成績，一鍵匯出 CSV</span>
         </div><div class="work-highlight-item">
           <span class="work-highlight-dot"></span>
-          <span class="work-highlight-text">簡報模式 + 教師備課筆記雙視窗同步</span>
+          <span class="work-highlight-text">遊戲化冒險系統：進度條 + 吉祥物 + 答對撒彩帶</span>
         </div></div>
+    </div>
+  </div>
+
+  
+  <div class="work-screenshots">
+    <div class="work-screenshots-label">操作畫面</div>
+    <div class="work-screenshots-grid">
+      
+      <figure class="work-screenshot-item">
+        <img src="../assets/works/pawlive/screenshots/01-classroom.webp" alt="課程管理：建立課堂、查看歷史教室紀錄" loading="lazy">
+        <figcaption>課程管理：建立課堂、查看歷史教室紀錄</figcaption>
+      </figure>
+      <figure class="work-screenshot-item">
+        <img src="../assets/works/pawlive/screenshots/02-classroom2.webp" alt="教師主控台：QR 加入、即時聊天、簡報三合一" loading="lazy">
+        <figcaption>教師主控台：QR 加入、即時聊天、簡報三合一</figcaption>
+      </figure>
+      <figure class="work-screenshot-item">
+        <img src="../assets/works/pawlive/screenshots/03-vote.webp" alt="即時投票：學生作答後結果即時同步顯示" loading="lazy">
+        <figcaption>即時投票：學生作答後結果即時同步顯示</figcaption>
+      </figure>
+      <figure class="work-screenshot-item">
+        <img src="../assets/works/pawlive/screenshots/04-dashboard.png" alt="Total Analytics：到課率、Energy Map 泡泡圖、匯出成績" loading="lazy">
+        <figcaption>Total Analytics：到課率、Energy Map 泡泡圖、匯出成績</figcaption>
+      </figure>
     </div>
   </div>
 
   <div class="work-footer">
     <div class="work-footer-section">
       <div class="work-footer-label">使用工具</div>
-      <div class="tool-pills"><span class="pill">React</span><span class="pill">TypeScript</span><span class="pill">Firebase</span><span class="pill">Tailwind CSS</span><span class="pill">D3</span><span class="pill">Vite</span><span class="pill">Docker</span></div>
+      <div class="tool-pills"><span class="pill">React</span><span class="pill">TypeScript</span><span class="pill">Firebase Firestore</span><span class="pill">Tailwind CSS</span><span class="pill">D3 Force</span><span class="pill">Vite</span><span class="pill">Docker</span></div>
     </div>
     <div class="work-footer-section">
       <div class="work-footer-label">角色</div>

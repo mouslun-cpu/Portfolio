@@ -62,8 +62,6 @@ ${canonical ? `<meta property="og:url" content="${esc(canonical)}">` : ""}
 
 /* ---- 頁首 ---- */
 const siteHeader = (prefix = "") => {
-  const emailLink = (profile.links || []).find(l => (l.url || "").startsWith("mailto:"));
-  const contactHtml = emailLink ? `<a href="${esc(emailLink.url)}">CONTACT</a>` : "";
   return `
 <header class="site-header">
   <div class="wrap header-inner">
@@ -71,18 +69,8 @@ const siteHeader = (prefix = "") => {
       <span class="brand-logo">A</span>
       <span>${esc(profile.name.toUpperCase())}</span>
     </a>
-    <nav class="nav">
-      <a href="${prefix}index.html#works">WORK</a>
-      <a href="${prefix}index.html#about">ABOUT</a>
-      ${contactHtml}
-    </nav>
   </div>
   <div class="header-rule"></div>
-  <div class="header-meta">
-    <span>AI 開發作品集</span>
-    <span>VOL. ${new Date().getFullYear()} / ISSUE 01</span>
-    <span>AI · PRODUCT · WEB</span>
-  </div>
 </header>`;
 };
 
@@ -102,10 +90,13 @@ const featuredCard = (w, num) => {
   const grad = gradientOf(w, num - 1);
   const cats = (w.categories || []).join(" · ");
   const numStr = String(num).padStart(2, "0");
+  const hasImg = w.cover && !w.cover.endsWith(".svg");
+  const imgBg = hasImg
+    ? `background: linear-gradient(rgba(0,0,0,.22), rgba(0,0,0,.5)), url('${esc(w.cover)}') center/cover no-repeat;`
+    : `background:${grad};`;
   return `
 <a class="card-featured" href="works/${esc(w.slug)}.html" data-cats="${esc((w.categories || []).join("|"))}">
-  <div class="card-featured-img" style="background:${grad};">
-    <span class="featured-badge">★ FEATURED 精選</span>
+  <div class="card-featured-img" style="${imgBg}">
     <div class="card-featured-title">${esc(w.title)}</div>
     <div class="card-featured-cat">${esc(cats)} · ${fmtDate(w.date || "")}</div>
   </div>
@@ -125,9 +116,13 @@ const smallCard = (w, num) => {
   const grad = gradientOf(w, num - 1);
   const firstCat = (w.categories || [])[0] || "";
   const numStr = String(num).padStart(2, "0");
+  const hasImg = w.cover && !w.cover.endsWith(".svg");
+  const imgBg = hasImg
+    ? `background: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.48)), url('${esc(w.cover)}') center/cover no-repeat;`
+    : `background:${grad};`;
   return `
 <a class="card-small" href="works/${esc(w.slug)}.html" data-cats="${esc((w.categories || []).join("|"))}">
-  <div class="card-small-img" style="background:${grad};">
+  <div class="card-small-img" style="${imgBg}">
     <div class="card-small-img-title">${esc(w.title)}</div>
   </div>
   <div class="card-small-num">${numStr} — ${esc(firstCat)}</div>
@@ -164,23 +159,19 @@ ${siteHeader()}
   <!-- HERO -->
   <section class="hero wrap" id="about">
     <div class="hero-top">
-      <span class="hero-sub-name">${esc(profile.name)}</span>
-      <span class="hero-field">AI · WEB · PRODUCT</span>
+      <span class="hero-sub-name">My</span>
     </div>
     <h1 class="hero-title">Portfolio<span class="dot">.</span></h1>
     <h2 class="hero-tagline">${taglineHtml(profile.tagline)}</h2>
     <p class="hero-bio">${esc(profile.bio)}</p>
   </section>
 
-  <!-- META STRIP -->
-  <div class="meta-strip">${metaCells}</div>
-
   <!-- WORKS -->
   <section class="wrap" id="works">
     <div class="section-divider">
       <span class="divider-label">SELECTED WORK</span>
       <span class="divider-line"></span>
-      <span class="divider-right">作品一覽</span>
+      <span class="divider-right">共 ${works.length} 件作品</span>
     </div>
     <div class="filters">${chips}</div>
     ${firstWork ? featuredCard(firstWork, 1) : ""}
@@ -272,6 +263,18 @@ ${siteHeader("../")}
       ${highlightsHtml}
     </div>` : ""}
   </div>
+
+  ${(w.screenshots || []).length ? `
+  <div class="work-screenshots">
+    <div class="work-screenshots-label">操作畫面</div>
+    <div class="work-screenshots-grid">
+      ${(w.screenshots).map((s, si) => `
+      <figure class="work-screenshot-item">
+        <img src="../${esc(s.src)}" alt="${esc(s.caption || w.title + ' 畫面 ' + (si+1))}" loading="lazy">
+        ${s.caption ? `<figcaption>${esc(s.caption)}</figcaption>` : ""}
+      </figure>`).join("")}
+    </div>
+  </div>` : ""}
 
   <div class="work-footer">
     ${toolsHtml ? `<div class="work-footer-section">

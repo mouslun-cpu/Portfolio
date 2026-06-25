@@ -4,8 +4,8 @@
     "siteUrl": "https://mouslun-cpu.github.io/Portfolio",
     "role": "AI 應用創作者",
     "avatar": "",
-    "tagline": "用 AI 把想法，落地成真正==能用==的工具與網頁應用。",
-    "bio": "我是 Allen，專注用 AI Agent 把點子快速落地。這本作品集，記錄我把 AI 變成日常工作與生活裡真正能用的成果。",
+    "tagline": "用 AI 把想法，落地成真正==能用==的工具。",
+    "bio": "我是 Allen，專注用 AI 把點子快速落地。這本作品集，記錄我把 AI 變成日常工作與生活裡真正能用的成果。",
     "meta": {
       "field": "AI 應用開發",
       "scope": "設計 + 前端",
@@ -22,11 +22,13 @@
       "categories": ["資料儀表板", "AI 工具"],
       "summary": "把學術發表紀錄整理成一目了然的互動式儀表板。",
       "cardGradient": "linear-gradient(140deg,#5C7090,#43556E)",
-      "description": "把零散的學術發表資料整理成一個互動式儀表板，能快速看出發表趨勢、領域分布與成果脈絡。\n用 React 打造前端，串接 Gemini API 做資料整理與摘要，讓繁瑣的學術紀錄整理變成幾分鐘就能完成的事。",
+      "cover": "assets/works/academic-publication-dashboard/cover.png",
+      "description": "把零散的學術發表紀錄整理成一套完整的個人研究作品集儀表板。\n首頁一眼看到總發表數、第一作者篇數、SCI/SSCI 收錄數與 Q1 期刊數；下方即時串接 Google Scholar，顯示引用數、H-index 與 i10-index。\n圖表區呈現歷年發表趨勢、期刊 Q 值分布與資料庫收錄比例，下方則是可搜尋的完整期刊清單，並支援匯出標準格式的個人 CV。",
       "highlights": [
-        "互動式視覺化，發表成果一眼看懂",
-        "串接 AI 自動整理與摘要資料",
-        "可部署的完整前端應用"
+        "一頁式儀表板：發表總覽 + Google Scholar 指標 + 視覺化圖表",
+        "Publications By Year、Impact Ranking、Database Indexing 三圖並列",
+        "即時搜尋期刊清單，一鍵匯出 CV PDF",
+        "Sync 功能定期更新 Google Scholar 引用數據"
       ],
       "tools": ["React", "TypeScript", "Gemini API", "Vite"],
       "links": [],
@@ -34,38 +36,203 @@
       "featured": true
     },
     {
-      "slug": "voxcpm-voice-cloner",
-      "title": "VoxCPM 聲音克隆器",
-      "categories": ["AI 工具", "自然語言操作"],
-      "summary": "用自己的聲音生成任意語音，錄完直接對 AI Agent 下指令。",
-      "cardGradient": "linear-gradient(140deg,#5E8C7F,#456B5F)",
-      "description": "一個全自動安裝的聲音克隆工具：雙擊安裝、開瀏覽器錄音，之後就能直接對 AI Agent 說「用某某的聲音說一段話」，Agent 自動呼叫工具生成語音。\n自動偵測 GPU（NVIDIA CUDA / Intel Arc XPU / CPU 三種模式切換），同時用參考音 + 逐字稿複製語氣節奏。錄音走 UI、其餘全部交給自然語言操作，是「AI Agent 當介面」的實際示範。",
+      "slug": "stock-blind-box",
+      "title": "股票盲盒教學平台",
+      "categories": ["教學遊戲", "AI 工具"],
+      "summary": "把股票分析課變成抽盲盒——學生抽到哪支股票就研究哪支，完成報告後 AI 評分。",
+      "cardGradient": "linear-gradient(140deg,#CF8A52,#B5713A)",
+      "cover": "assets/works/stock-blind-box/cover.png",
+      "description": "股票盲盒是一個教師主導的投資教育平台，把傳統的股票研究作業變成遊戲化的抽盲盒體驗。\n教師事先建立股票池（TSM、AAPL、NVDA…等），設定年度學期後開放學生用 QR code 加入，每位學生隨機「搶奪」一支股票，完成認領即開始研究任務。\n平台提供範例報告引導分析架構，學生依照模板撰寫投資摘要、關鍵亮點與財務評分，完成後可下載任務卡。教師控制台即時看到認領進度，也可手動指派特定股票給特定學生，並在學期末鎖定報告、結束搶奪。",
       "highlights": [
-        "全自動安裝，自動偵測並切換 GPU 模式",
-        "Ultimate Cloning：連語氣節奏一起複製",
-        "錄音走 UI、生成走 AI Agent 自然語言操作",
-        "Apache-2.0 授權，模型可商用"
+        "學生掃 QR code 加入，隨機搶奪一支股票開始研究",
+        "41 支股票跨產業分類，教師可自訂股票池與指派對象",
+        "範例報告引導分析框架：信用評級、關鍵亮點、財務指標評分",
+        "完成後下載任務卡，記錄學生姓名與研究標的",
+        "教師控制台：遊戲控制 / 股票池管理 / 指派管理三合一"
       ],
-      "tools": ["Python", "VoxCPM2", "AI Agent", "Gradio"],
+      "tools": ["React", "TypeScript", "Gemini API", "Vite"],
       "links": [],
       "date": "2026-05",
-      "featured": true
+      "screenshots": [
+        {
+          "src": "assets/works/stock-blind-box/screenshots/01db.png",
+          "caption": "股票研究報告庫：41 支股票依產業分類，顯示認領狀態與分析師"
+        },
+        {
+          "src": "assets/works/stock-blind-box/screenshots/02example.png",
+          "caption": "範例報告：TSM 台積電 AA+ 信用評級，含關鍵亮點與財務評分"
+        },
+        {
+          "src": "assets/works/stock-blind-box/screenshots/03teacher.png",
+          "caption": "教師指派管理：手動分配股票給特定學生"
+        },
+        {
+          "src": "assets/works/stock-blind-box/screenshots/04card.png",
+          "caption": "搶奪成功畫面：學生抽到 DIS 迪士尼，下載任務卡開始研究"
+        }
+      ]
     },
     {
-      "slug": "stock-blind-box",
-      "title": "股票盲盒遊戲",
-      "categories": ["遊戲", "AI 工具"],
-      "summary": "用抽盲盒的方式認識股票的互動小遊戲。",
-      "cardGradient": "linear-gradient(140deg,#CF8A52,#B5713A)",
-      "description": "把「認識一家公司」變成抽盲盒的趣味體驗——隨機抽出一支股票，揭曉它的業務、定位與基本面，邊玩邊學。\n用 React 打造，串接 Gemini API 生成公司介紹內容，是把學習包裝成遊戲的實驗作品。",
+      "slug": "lovegame",
+      "title": "約會大作戰",
+      "categories": ["教學遊戲", "互動教學"],
+      "summary": "用戀愛文字冒險訓練批判性思考——每個決策點都要逼自己問：如果換個選項，結果又會如何？",
+      "cardGradient": "linear-gradient(140deg,#B56A85,#8B4A65)",
+      "cover": "assets/works/lovegame/cover.jpg",
+      "description": "約會大作戰是一套以戀愛情境包裝的批判性思考訓練工具。\n學生扮演男主角，在戀愛紀念日一日遊中面對一連串的決策點——訂知名老店還是網紅新餐廳？塞車時要硬撐原計畫還是立刻應變？每個選項都沒有絕對正確答案，遊戲的核心目的是讓學生養成「換個選項想想」的思考習慣。\n老師在大螢幕推進劇情，學生用手機投票，看到選擇後的後果後再反思：如果當初選另一個，結果是不是也有它的道理？純 HTML/JS 實作，零安裝即開即用。",
       "highlights": [
-        "把枯燥的選股學習變成抽盲盒的遊戲體驗",
-        "AI 即時生成公司介紹卡片",
-        "輕量、可直接在瀏覽器遊玩"
+        "以戀愛 AVG 包裝批判性思考訓練",
+        "每個決策點都沒有唯一正解，學生練習換位思考",
+        "全班即時投票後，一起看選擇帶來的後果",
+        "純 HTML 無後端，教師掃碼即可主持課堂"
       ],
-      "tools": ["React", "TypeScript", "Gemini API"],
+      "tools": ["HTML", "JavaScript", "QR Code"],
       "links": [],
-      "date": "2026-05"
+      "date": "2025-12",
+      "screenshots": [
+        { "src": "assets/works/lovegame/screenshots/story.jpg", "caption": "劇情推進：塞車突發狀況，你會怎麼決定？" },
+        { "src": "assets/works/lovegame/screenshots/end.jpg", "caption": "故事結局：不同選擇累積出不同的結果" }
+      ]
+    },
+    {
+      "slug": "beergame",
+      "title": "醫院殺",
+      "categories": ["教學遊戲", "互動教學"],
+      "summary": "狼人殺 × 醫療倫理——學生抽卡扮演副院長、急診醫師、護理長或護理師，每夜投票的決定都引發連鎖後果。",
+      "cardGradient": "linear-gradient(140deg,#4A3B5C,#2E2240)",
+      "cover": "assets/works/beergame/cover.jpg",
+      "description": "醫院殺以狼人殺的輪轉投票機制為骨架，把場景搬進一座深夜急診室。\n學生抽卡分配角色——副院長只在意床位績效，急診醫師面對生死兩難，護理長要維持秩序，護理師承受最前線的壓力。天黑之後，每個角色在手機上看到屬於自己的情境與選項，獨立投票做出決定；所有人的決策匯合後，才在大螢幕上揭曉這個夜晚的結局。\n一個人的選擇，牽動所有人的命運——學生在遊戲中體驗醫療體系的結構性困境，沒有人是壞人，但錯誤的系統讓每個人都做出了錯誤的決定。",
+      "highlights": [
+        "四角色各有隱藏立場：副院長、急診醫師、護理長、護理師",
+        "狼人殺機制：天黑後各角色在手機上獨立決策",
+        "全員決策匯合才揭曉結局，體驗連鎖後果",
+        "Firebase 即時同步，支援課堂大班規模"
+      ],
+      "tools": ["React", "JavaScript", "Firebase", "Vite"],
+      "links": [],
+      "date": "2025-11",
+      "screenshots": [
+        { "src": "assets/works/beergame/screenshots/副院長.jpg", "caption": "角色抽卡：副院長——維持醫院營運，績效至上" },
+        { "src": "assets/works/beergame/screenshots/急診醫師.jpg", "caption": "角色抽卡：急診醫師——在資源不足的深夜做出決定" },
+        { "src": "assets/works/beergame/screenshots/關卡.jpg", "caption": "Night 1：霸王級寒流來襲，急診湧入三倍病患" },
+        { "src": "assets/works/beergame/screenshots/關卡2.jpg", "caption": "劇情推進：每個角色面對不同的情境與選項" },
+        { "src": "assets/works/beergame/screenshots/story.jpg", "caption": "故事場景：走廊、病房、深夜的白色巨塔" },
+        { "src": "assets/works/beergame/screenshots/end.jpg", "caption": "GAME OVER：沒有人是壞人，但你們一起毀滅了這個世界" }
+      ]
+    },
+    {
+      "slug": "canvas",
+      "title": "Canvas",
+      "categories": ["設計工具", "互動教學"],
+      "summary": "課堂協作白板——多種框架模板、即時便利貼，把設計思考從紙本搬到所有人的螢幕上。",
+      "cardGradient": "linear-gradient(140deg,#5E8C7F,#456B5F)",
+      "cover": "assets/works/canvas/cover.jpg",
+      "description": "Canvas 是一個以「白板」為核心概念設計的課堂協作工具。\n教師選擇框架模板（Empathy Map、SCAMPER、Business Model Canvas 等），開啟房間後學生掃碼加入，每個人都能在白板上對應的區塊即時貼上便利貼，所有人同步看到彼此的輸入，不再需要輪流上台或等待回合。\n內建多色便利貼、分組顯示（可按組別篩選）、賓果完成判定，以及 QR code 快速加入。純 Node.js + Socket.io 驅動，無前端框架依賴。",
+      "highlights": [
+        "白板概念：學生即時在模板上貼便利貼，所有人同步看到",
+        "支援 Empathy Map / SCAMPER / FOUROW / BMC 等多種模板",
+        "按組別篩選便利貼，方便比較各組觀點",
+        "QR code 加入 + 賓果完成判定，純 Socket.io 驅動"
+      ],
+      "tools": ["Node.js", "Express", "Socket.io", "HTML", "JavaScript"],
+      "links": [],
+      "date": "2025-10",
+      "screenshots": [
+        { "src": "assets/works/canvas/screenshots/template.jpg", "caption": "框架選擇：多種設計思考模板可切換" },
+        { "src": "assets/works/canvas/screenshots/form.jpg", "caption": "白板作業中：各組即時貼入便利貼" }
+      ]
+    },
+    {
+      "slug": "cjm-journey",
+      "title": "CJM 體驗冒險",
+      "categories": ["互動教學", "服務設計"],
+      "summary": "用文字冒險遊戲帶學生以患者視角走過醫療顧客旅程，自然生成一張完整 CJM。",
+      "cardGradient": "linear-gradient(140deg,#7B7AB5,#565591)",
+      "cover": "assets/works/cjm-journey/coverpng.png",
+      "description": "「CJM 體驗冒險：抽血奇幻旅程」是為服務設計課程開發的沉浸式教學工具。\n學生扮演一位需要抽血的患者，在文字冒險遊戲中逐步體驗掛號、候診、採血等各個服務觸點，系統同步記錄每個環節的情緒起伏與痛點描述。遊戲結束後，這些輸入自然轉化為一張視覺化的顧客旅程地圖（Customer Journey Map）。\n相比直接填 CJM 表格，學生在沉浸過程中更能感受服務缺口，課後討論品質大幅提升。",
+      "highlights": [
+        "沉浸式文字冒險，學生以第一視角體驗服務流程",
+        "遊戲中自動記錄各觸點情緒，結束即生成 CJM",
+        "教師大螢幕即時看到全班進度與情緒分布",
+        "Next.js + Supabase 全端架構，支援班級規模部署"
+      ],
+      "tools": ["Next.js", "TypeScript", "Supabase", "Tailwind CSS"],
+      "links": [],
+      "date": "2026-02",
+      "screenshots": [
+        { "src": "assets/works/cjm-journey/screenshots/game.png", "caption": "文字冒險進行中：患者視角體驗服務觸點" },
+        { "src": "assets/works/cjm-journey/screenshots/game2.png", "caption": "情緒記錄：每個環節自動標記感受與痛點" },
+        { "src": "assets/works/cjm-journey/screenshots/game3.png", "caption": "旅程總覽：遊戲結束後生成完整 CJM" }
+      ]
+    },
+    {
+      "slug": "true-need",
+      "title": "True Need 挖掘機",
+      "categories": ["教學遊戲", "設計思考"],
+      "summary": "海龜湯教學版——學生靠是非題提問逐步挖掘謎底，練習從表面現象看見深層需求。",
+      "cardGradient": "linear-gradient(140deg,#3A8B9A,#2A6875)",
+      "cover": "assets/works/true-need/cover.jpg",
+      "description": "把「海龜湯」謎題遊戲改造成設計思考課的核心教具。\n老師設定一個謎面（表面現象），學生只能問是／否問題，在對話中一層層剝開表象、挖掘真正的需求或動機——這正是用戶研究「5 Whys」思維的遊戲化版本。\n教師端大螢幕顯示所有問題與答案，學生透過手機提問與搶答。Next.js + Supabase 支撐即時同步，Cyber 風格介面讓課堂氛圍有別於一般講授。",
+      "highlights": [
+        "海龜湯機制自然模擬 5 Whys 深度提問路徑",
+        "學生手機提問，教師即時回答是/否/不相關",
+        "Supabase 即時同步，全班共同推進謎底",
+        "課後檢視問題脈絡，直接討論需求挖掘邏輯"
+      ],
+      "tools": ["Next.js", "TypeScript", "Supabase", "Tailwind CSS", "Framer Motion"],
+      "links": [],
+      "date": "2026-03",
+      "screenshots": [
+        { "src": "assets/works/true-need/screenshots/screen.jpg", "caption": "教師大螢幕：謎面與歷史問答一覽" },
+        { "src": "assets/works/true-need/screenshots/answer.jpg", "caption": "揭曉謎底：從提問脈絡看見深層需求" }
+      ]
+    },
+    {
+      "slug": "roast-hats",
+      "title": "炎上思考帽",
+      "categories": ["教學遊戲", "思考工具"],
+      "summary": "六頂思考帽課堂遊戲版——學生戴帽扮演不同思維角色，在「炎上」氛圍中辯論議題。",
+      "cardGradient": "linear-gradient(140deg,#C25A3F,#A03B25)",
+      "cover": "assets/works/roast-hats/cover.png",
+      "description": "以愛德華·德波諾的「六頂思考帽」理論為基礎，設計的課堂互動遊戲。\n教師設定討論情境後，學生掃 QR code 加入，被隨機分配帽子角色（白帽事實、紅帽情緒、黑帽批判、黃帽樂觀、綠帽創意、藍帽程序），從自己的角色視角提出論點。\nSpotlight 功能讓精彩發言瞬間聚焦在大螢幕；彈幕（Danmaku）讓全班訊息即時飄過畫面，火焰特效視覺呈現討論熱度。Firebase Realtime Database 支撐即時同步。",
+      "highlights": [
+        "隨機分配六帽角色，強迫多角度思考",
+        "Spotlight 功能：一鍵讓指定發言佔滿大螢幕",
+        "彈幕 + 火焰特效，讓討論氛圍真的「炎上」",
+        "Firebase 即時同步，支援大班課堂規模"
+      ],
+      "tools": ["Next.js", "Firebase", "Framer Motion", "Tailwind CSS", "QR Code"],
+      "links": [],
+      "date": "2026-01",
+      "screenshots": [
+        { "src": "assets/works/roast-hats/screenshots/game.png", "caption": "教師控制台：設定議題、看全班帽子分布" },
+        { "src": "assets/works/roast-hats/screenshots/game_student.png", "caption": "學生端：戴上分配到的帽子，從角色視角發言" }
+      ]
+    },
+    {
+      "slug": "fatdog-rush",
+      "title": "Fat Dog Rush",
+      "categories": ["教學遊戲", "課堂互動"],
+      "summary": "同樣是搶狗活動，A 組是遊戲化介面、B 組是正式表單——搶完後比較兩組行為，親身體驗 A/B 測試。",
+      "cardGradient": "linear-gradient(140deg,#8B7355,#6B5535)",
+      "cover": "assets/works/fatdog-rush/cover.png",
+      "description": "Fat Dog Rush 是一個讓學生親身成為 A/B 測試受試者的課堂遊戲。\n教師開啟場次，學生掃 QR code 加入，系統將學生分為 A、B 兩組。兩組人面對的是「完全不同設計」的同一件事——A 組看到的是遊戲化的搶購戰介面，B 組看到的是正式的認證申請表單。學生只管搶完 10 個名額，搶完後教師揭曉兩個版本的長相。\n學生頓時明白：剛才自己對這件事的感受（好玩？煩？焦慮？），其實是被介面設計塑造出來的——這就是 A/B 測試在測的東西。",
+      "highlights": [
+        "A/B 兩版介面：遊戲化搶購 vs 正式申請表單，呈現完全不同體驗",
+        "搶完才揭曉兩版差異，學生親身感受設計如何影響行為",
+        "讓 A/B 測試從抽象概念變成可討論的親身經歷",
+        "Firebase 即時同步，已部署 Zeabur"
+      ],
+      "tools": ["HTML", "JavaScript", "Firebase Realtime Database"],
+      "links": [
+        { "label": "前往作品", "url": "https://fatdog-rush.zeabur.app/" }
+      ],
+      "date": "2026-04",
+      "screenshots": [
+        { "src": "assets/works/fatdog-rush/screenshots/screen-a.png", "caption": "A 組：遊戲化搶購介面，限量10份搶完即止" },
+        { "src": "assets/works/fatdog-rush/screenshots/screen-b.png", "caption": "B 組：正式認證表單介面，同樣的活動完全不同的感受" },
+        { "src": "assets/works/fatdog-rush/screenshots/end.png", "caption": "揭曉結果：教師對比兩組，討論設計如何影響行為" }
+      ]
     },
     {
       "slug": "pawlive",
@@ -73,17 +240,36 @@
       "categories": ["Web 應用", "教育工具"],
       "summary": "讓課堂即時互動的師生平台——教師出題，學生掃 QR code 加入、投票、留言，成績自動算出。",
       "cardGradient": "linear-gradient(140deg,#B5746A,#965248)",
-      "description": "PawLive 是一個針對實體課堂設計的即時互動平台。教師可建立課程、開教室、發起投票，學生用手機掃 QR code 加入後，便能即時投票、聊天、獲得課堂加分。\n後端全由 Firebase Firestore 驅動，所有狀態透過 `onSnapshot` 即時同步，不需刷頁面。教師儀表板有能量地圖（泡泡圖）可一眼看出哪些學生最活躍；投票、訊息、被 spotlight 的次數會合算成 100 分的量化成績並支援 CSV 匯出。\n另有遊戲化系統：課堂冒險進度條、吉祥物、答對撒彩帶，讓上課變得更有參與感。v3.1 版本支援簡報模式（SlideShow）與教師備課筆記（TeacherNotes）雙視窗同步。",
+      "cover": "assets/works/pawlive/cover.webp",
+      "description": "PawLive 是一個針對實體課堂設計的即時互動平台。教師可建立課程、開設教室、發起投票，學生用手機掃 QR code 加入後，便能即時投票、聊天、獲得課堂加分。\n後端全由 Firebase Firestore 驅動，所有狀態透過 onSnapshot 即時同步，不需刷頁面。左側控制台管理投票與簡報；右側 Live Chat 讓學生隨時留言互動，教師可一鍵 Spotlight 發言者。\n課程結束後，教師儀表板顯示全班到課率、討論參與度、投票沉浸度，Energy Map 泡泡圖一眼看出哪位學生最活躍。投票、訊息、Spotlight 三個維度合算成 100 分量化成績，支援 CSV 匯出。\n另有遊戲化冒險系統：課堂進度條、吉祥物，答對還能撒彩帶，讓學生主動參與。",
       "highlights": [
-        "Firebase 即時同步，學生掃 QR code 秒進課堂",
-        "泡泡圖能量地圖，一眼掌握全班參與度",
-        "投票 + 訊息 + Spotlight 自動換算成量化成績並匯出 CSV",
-        "遊戲化冒險系統，答對撒彩帶提升課堂氛圍",
-        "簡報模式 + 教師備課筆記雙視窗同步"
+        "學生掃 QR code 秒進課堂，Firebase 即時同步不需刷頁面",
+        "教師三合一控制台：投票出題、簡報播放、學生聊天同畫面管理",
+        "Energy Map 泡泡圖：投票率 × 訊息數 × Spotlight，一眼看全班參與度",
+        "投票 + 訊息 + Spotlight 合算 100 分制成績，一鍵匯出 CSV",
+        "遊戲化冒險系統：進度條 + 吉祥物 + 答對撒彩帶"
       ],
-      "tools": ["React", "TypeScript", "Firebase", "Tailwind CSS", "D3", "Vite", "Docker"],
+      "tools": ["React", "TypeScript", "Firebase Firestore", "Tailwind CSS", "D3 Force", "Vite", "Docker"],
       "links": [],
-      "date": "2026-04"
+      "date": "2026-04",
+      "screenshots": [
+        {
+          "src": "assets/works/pawlive/screenshots/01-classroom.webp",
+          "caption": "課程管理：建立課堂、查看歷史教室紀錄"
+        },
+        {
+          "src": "assets/works/pawlive/screenshots/02-classroom2.webp",
+          "caption": "教師主控台：QR 加入、即時聊天、簡報三合一"
+        },
+        {
+          "src": "assets/works/pawlive/screenshots/03-vote.webp",
+          "caption": "即時投票：學生作答後結果即時同步顯示"
+        },
+        {
+          "src": "assets/works/pawlive/screenshots/04-dashboard.png",
+          "caption": "Total Analytics：到課率、Energy Map 泡泡圖、匯出成績"
+        }
+      ]
     }
   ]
 }
