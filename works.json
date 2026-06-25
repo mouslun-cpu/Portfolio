@@ -19,7 +19,7 @@
     {
       "slug": "academic-publication-dashboard",
       "title": "學術發表儀表板",
-      "categories": ["資料儀表板", "AI 工具"],
+      "categories": ["BI儀表板"],
       "summary": "把學術發表紀錄整理成一目了然的互動式儀表板。",
       "cardGradient": "linear-gradient(140deg,#5C7090,#43556E)",
       "cover": "assets/works/academic-publication-dashboard/cover.png",
@@ -38,7 +38,7 @@
     {
       "slug": "stock-blind-box",
       "title": "股票盲盒教學平台",
-      "categories": ["教學遊戲", "AI 工具"],
+      "categories": ["教學遊戲"],
       "summary": "把股票分析課變成抽盲盒——學生抽到哪支股票就研究哪支，完成報告後 AI 評分。",
       "cardGradient": "linear-gradient(140deg,#CF8A52,#B5713A)",
       "cover": "assets/works/stock-blind-box/cover.png",
@@ -75,7 +75,7 @@
     {
       "slug": "lovegame",
       "title": "約會大作戰",
-      "categories": ["教學遊戲", "互動教學"],
+      "categories": ["教學遊戲"],
       "summary": "用戀愛文字冒險訓練批判性思考——每個決策點都要逼自己問：如果換個選項，結果又會如何？",
       "cardGradient": "linear-gradient(140deg,#B56A85,#8B4A65)",
       "cover": "assets/works/lovegame/cover.jpg",
@@ -97,7 +97,7 @@
     {
       "slug": "beergame",
       "title": "醫院殺",
-      "categories": ["教學遊戲", "互動教學"],
+      "categories": ["教學遊戲"],
       "summary": "狼人殺 × 醫療倫理——學生抽卡扮演副院長、急診醫師、護理長或護理師，每夜投票的決定都引發連鎖後果。",
       "cardGradient": "linear-gradient(140deg,#4A3B5C,#2E2240)",
       "cover": "assets/works/beergame/cover.jpg",
@@ -123,7 +123,7 @@
     {
       "slug": "canvas",
       "title": "Canvas",
-      "categories": ["設計工具", "互動教學"],
+      "categories": ["教學工具"],
       "summary": "課堂協作白板——多種框架模板、即時便利貼，把設計思考從紙本搬到所有人的螢幕上。",
       "cardGradient": "linear-gradient(140deg,#5E8C7F,#456B5F)",
       "cover": "assets/works/canvas/cover.jpg",
@@ -145,7 +145,7 @@
     {
       "slug": "cjm-journey",
       "title": "CJM 體驗冒險",
-      "categories": ["互動教學", "服務設計"],
+      "categories": ["教學遊戲"],
       "summary": "用文字冒險遊戲帶學生以患者視角走過醫療顧客旅程，自然生成一張完整 CJM。",
       "cardGradient": "linear-gradient(140deg,#7B7AB5,#565591)",
       "cover": "assets/works/cjm-journey/coverpng.png",
@@ -168,7 +168,7 @@
     {
       "slug": "true-need",
       "title": "True Need 挖掘機",
-      "categories": ["教學遊戲", "設計思考"],
+      "categories": ["教學遊戲"],
       "summary": "海龜湯教學版——學生靠是非題提問逐步挖掘謎底，練習從表面現象看見深層需求。",
       "cardGradient": "linear-gradient(140deg,#3A8B9A,#2A6875)",
       "cover": "assets/works/true-need/cover.jpg",
@@ -190,7 +190,7 @@
     {
       "slug": "roast-hats",
       "title": "炎上思考帽",
-      "categories": ["教學遊戲", "思考工具"],
+      "categories": ["教學遊戲"],
       "summary": "六頂思考帽課堂遊戲版——學生戴帽扮演不同思維角色，在「炎上」氛圍中辯論議題。",
       "cardGradient": "linear-gradient(140deg,#C25A3F,#A03B25)",
       "cover": "assets/works/roast-hats/cover.png",
@@ -212,7 +212,7 @@
     {
       "slug": "fatdog-rush",
       "title": "Fat Dog Rush",
-      "categories": ["教學遊戲", "課堂互動"],
+      "categories": ["教學遊戲"],
       "summary": "同樣是搶狗活動，A 組是遊戲化介面、B 組是正式表單——搶完後比較兩組行為，親身體驗 A/B 測試。",
       "cardGradient": "linear-gradient(140deg,#8B7355,#6B5535)",
       "cover": "assets/works/fatdog-rush/cover.png",
@@ -237,7 +237,7 @@
     {
       "slug": "pawlive",
       "title": "PawLive",
-      "categories": ["Web 應用", "教育工具"],
+      "categories": ["教學工具"],
       "summary": "讓課堂即時互動的師生平台——教師出題，學生掃 QR code 加入、投票、留言，成績自動算出。",
       "cardGradient": "linear-gradient(140deg,#B5746A,#965248)",
       "cover": "assets/works/pawlive/cover.webp",
