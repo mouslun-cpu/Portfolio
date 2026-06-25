@@ -37,7 +37,7 @@
     },
     {
       "slug": "stock-blind-box",
-      "title": "股票盲盒教學平台",
+      "title": "華爾街盲盒挑戰",
       "categories": ["教學遊戲"],
       "summary": "把股票分析課變成抽盲盒——學生抽到哪支股票就研究哪支，完成報告後 AI 評分。",
       "cardGradient": "linear-gradient(140deg,#CF8A52,#B5713A)",
@@ -105,8 +105,7 @@
       "highlights": [
         "四角色各有隱藏立場：副院長、急診醫師、護理長、護理師",
         "狼人殺機制：天黑後各角色在手機上獨立決策",
-        "全員決策匯合才揭曉結局，體驗連鎖後果",
-        "Firebase 即時同步，支援課堂大班規模"
+        "全員決策匯合才揭曉結局，體驗連鎖後果"
       ],
       "tools": ["React", "JavaScript", "Firebase", "Vite"],
       "links": [],
@@ -176,7 +175,6 @@
       "highlights": [
         "海龜湯機制自然模擬 5 Whys 深度提問路徑",
         "學生手機提問，教師即時回答是/否/不相關",
-        "Supabase 即時同步，全班共同推進謎底",
         "課後檢視問題脈絡，直接討論需求挖掘邏輯"
       ],
       "tools": ["Next.js", "TypeScript", "Supabase", "Tailwind CSS", "Framer Motion"],
@@ -198,8 +196,7 @@
       "highlights": [
         "隨機分配六帽角色，強迫多角度思考",
         "Spotlight 功能：一鍵讓指定發言佔滿大螢幕",
-        "彈幕 + 火焰特效，讓討論氛圍真的「炎上」",
-        "Firebase 即時同步，支援大班課堂規模"
+        "彈幕 + 火焰特效，讓討論氛圍真的「炎上」"
       ],
       "tools": ["Next.js", "Firebase", "Framer Motion", "Tailwind CSS", "QR Code"],
       "links": [],
@@ -220,13 +217,10 @@
       "highlights": [
         "A/B 兩版介面：遊戲化搶購 vs 正式申請表單，呈現完全不同體驗",
         "搶完才揭曉兩版差異，學生親身感受設計如何影響行為",
-        "讓 A/B 測試從抽象概念變成可討論的親身經歷",
-        "Firebase 即時同步，已部署 Zeabur"
+        "讓 A/B 測試從抽象概念變成可討論的親身經歷"
       ],
       "tools": ["HTML", "JavaScript", "Firebase Realtime Database"],
-      "links": [
-        { "label": "前往作品", "url": "https://fatdog-rush.zeabur.app/" }
-      ],
+      "links": [],
       "date": "2026-04",
       "screenshots": [
         { "src": "assets/works/fatdog-rush/screenshots/screen-a.png", "caption": "A 組：遊戲化搶購介面，限量10份搶完即止" },
@@ -243,7 +237,7 @@
       "cover": "assets/works/pawlive/cover.webp",
       "description": "PawLive 是一個針對實體課堂設計的即時互動平台。教師可建立課程、開設教室、發起投票，學生用手機掃 QR code 加入後，便能即時投票、聊天、獲得課堂加分。\n後端全由 Firebase Firestore 驅動，所有狀態透過 onSnapshot 即時同步，不需刷頁面。左側控制台管理投票與簡報；右側 Live Chat 讓學生隨時留言互動，教師可一鍵 Spotlight 發言者。\n課程結束後，教師儀表板顯示全班到課率、討論參與度、投票沉浸度，Energy Map 泡泡圖一眼看出哪位學生最活躍。投票、訊息、Spotlight 三個維度合算成 100 分量化成績，支援 CSV 匯出。\n另有遊戲化冒險系統：課堂進度條、吉祥物，答對還能撒彩帶，讓學生主動參與。",
       "highlights": [
-        "學生掃 QR code 秒進課堂，Firebase 即時同步不需刷頁面",
+        "學生掃 QR code 秒進課堂，無需刷頁面即時同步",
         "教師三合一控制台：投票出題、簡報播放、學生聊天同畫面管理",
         "Energy Map 泡泡圖：投票率 × 訊息數 × Spotlight，一眼看全班參與度",
         "投票 + 訊息 + Spotlight 合算 100 分制成績，一鍵匯出 CSV",

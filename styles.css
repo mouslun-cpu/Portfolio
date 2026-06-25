@@ -402,6 +402,9 @@ img { display: block; max-width: 100%; }
 .work-screenshot-item img {
   width: 100%; border-radius: 10px;
   border: 1px solid var(--line); display: block;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: top center;
 }
 .work-screenshot-item figcaption {
   font-family: var(--font-mono); font-size: 10px; letter-spacing: .1em;
