@@ -22,7 +22,14 @@ if (!fs.existsSync(path.join(__dirname, 'index.html'))) {
 }
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+
+// 確保 PORT 為合法數字 (相容 Zeabur 與本機環境)
+let rawPort = process.env.PORT;
+if (!rawPort || isNaN(Number(rawPort))) {
+  rawPort = 3000;
+}
+const PORT = Number(rawPort);
+
 
 // Trust proxy for secure cookies on Zeabur/Cloud platforms
 app.set('trust proxy', 1);

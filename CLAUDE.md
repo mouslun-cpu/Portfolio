@@ -135,3 +135,13 @@ Portfolio/
    - 改 `works.json` → `npm run build` → `git add . && git commit -m "..." && git push origin main`。
    - Zeabur 會自動拉取並重啟服務。
 
+---
+
+## Zeabur Deployment
+- Server: `one` (Tencent Cloud, Seoul)
+- Project ID: `6a8522b2b4e0f32adf0682d5`
+- Service ID: `6a8522b8b4e0f32adf0682dc`
+- Live Domain: `https://yh-portfolio.zeabur.app`
+- OAuth Callback: `https://yh-portfolio.zeabur.app/auth/google/callback`
+
+
