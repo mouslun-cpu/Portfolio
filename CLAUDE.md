@@ -68,6 +68,7 @@ Portfolio/
   "works": [
     {
       "slug": "kebab-case-英數",        // 必填，唯一，會變成 works/<slug>.html 的檔名
+      "type": "work",                   // 可選，work（預設）或 skill；首頁可與主題交叉篩選
       "title": "作品名稱",               // 必填
       "categories": ["分類A", "分類B"],  // 必填，自動產生篩選按鈕與標籤配色
       "summary": "卡片上的一句話",        // 必填
@@ -107,12 +108,30 @@ Portfolio/
 
 ---
 
-## 部署到 GitHub Pages
+## 部署與安全架構（Zeabur + Google OAuth 白名單保護）
 
-1. 把整個 `Portfolio/` 資料夾推上 GitHub repo。
-2. Repo Settings → Pages → Source 選 `main` 分支、`/ (root)` 資料夾。
-3. 若 repo 名不是 `<帳號>.github.io`，網址會是 `https://<帳號>.github.io/<repo>/`，
-   此時要把 `works.json` 的 `siteUrl` 設成該網址（影響 canonical 與 sitemap）。
-4. 之後每次更新：改 `works.json` → `node build.mjs` → git commit & push。
+專案具備伺服器端守衛 (`server.mjs`)，在公網上線時僅限授權的 Google 帳號訪問：
 
-> 不需要 GitHub Actions，也不需要任何套件安裝——build.mjs 只用 Node 內建模組。
+1. **架構模式**：
+   - 伺服器啟動入口：`npm start`（執行 `server.mjs`，若無靜態檔案會自動跑 `build.mjs`）。
+   - 身分驗證：Google OAuth 2.0 + Signed Session Cookie。
+   - 存取限制：比對登入者 Email 是否在 `ALLOWED_EMAILS` 白名單中，未授權者一律 403 阻擋，靜態檔案與作品資料完全受到伺服器中介層保護。
+
+2. **Zeabur 環境變數設定**：
+   - `PORT`: `3000` (Zeabur 自動注入)
+   - `BASE_URL`: Zeabur 服務網址（如 `https://portfolio.zeabur.app`）
+   - `GOOGLE_CLIENT_ID`: Google Cloud Console 申請之 OAuth 用戶端 ID
+   - `GOOGLE_CLIENT_SECRET`: Google Cloud OAuth 用戶端密鑰
+   - `SESSION_SECRET`: 加密 Session 的隨機密鑰字串
+   - `ALLOWED_EMAILS`: 允許登入的 Google 信箱（例如 `mouslun0509@gmail.com`，多個信箱以逗號分隔）
+
+3. **Google Cloud Console 設定**：
+   - 建立 OAuth 2.0 用戶端 ID（網頁應用程式）。
+   - 「已授權的重新導向 URI」設定為：
+     - 本機測試：`http://localhost:3000/auth/google/callback`
+     - 線上環境：`https://<你的zeabur網址>/auth/google/callback`
+
+4. **更新與維護流程**：
+   - 改 `works.json` → `npm run build` → `git add . && git commit -m "..." && git push origin main`。
+   - Zeabur 會自動拉取並重啟服務。
+

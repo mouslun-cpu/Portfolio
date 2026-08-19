@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">NTUH SQL 開發顧問</title>
+  <desc id="desc">以安全關聯與資料字典為核心的醫療資料查詢工作流程</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#183d52"/><stop offset="1" stop-color="#2d6e70"/></linearGradient>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#b8e0d2"/><stop offset="1" stop-color="#f4c274"/></linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="1350" cy="155" r="280" fill="#67b4a8" opacity=".12"/>
+  <circle cx="136" cy="810" r="260" fill="#f0b75e" opacity=".1"/>
+  <text x="130" y="168" fill="#fffaf0" font-family="Arial, 'Microsoft JhengHei', sans-serif" font-size="72" font-weight="700">NTUH SQL DEVELOPER</text>
+  <text x="135" y="232" fill="#b8e0d2" font-family="Arial, 'Microsoft JhengHei', sans-serif" font-size="28">臺大醫院資料庫查詢的安全開發流程</text>
+  <g transform="translate(130 348)" font-family="Arial, 'Microsoft JhengHei', sans-serif">
+    <rect width="360" height="268" rx="28" fill="#214e63" stroke="#77c5b4" stroke-width="2"/>
+    <text x="42" y="76" fill="#f4c274" font-size="27" font-weight="700">01</text>
+    <text x="42" y="137" fill="#fffaf0" font-size="43" font-weight="700">資料字典</text>
+    <text x="42" y="187" fill="#b8e0d2" font-size="24">核實欄位 · 避免幻覺</text>
+    <path d="M415 134h124" stroke="url(#line)" stroke-width="9" stroke-linecap="round"/><path d="M534 109l45 25-45 25z" fill="#f4c274"/>
+    <rect x="610" width="360" height="268" rx="28" fill="#214e63" stroke="#77c5b4" stroke-width="2"/>
+    <text x="652" y="76" fill="#f4c274" font-size="27" font-weight="700">02</text>
+    <text x="652" y="137" fill="#fffaf0" font-size="43" font-weight="700">安全關聯</text>
+    <text x="652" y="187" fill="#b8e0d2" font-size="24">複合鍵 · 防資料膨脹</text>
+    <path d="M1025 134h124" stroke="url(#line)" stroke-width="9" stroke-linecap="round"/><path d="M1144 109l45 25-45 25z" fill="#f4c274"/>
+    <rect x="1220" width="260" height="268" rx="28" fill="#285b66" stroke="#f4c274" stroke-width="2"/>
+    <text x="1260" y="76" fill="#f4c274" font-size="27" font-weight="700">03</text>
+    <text x="1260" y="137" fill="#fffaf0" font-size="39" font-weight="700">Queryman</text>
+    <text x="1260" y="187" fill="#b8e0d2" font-size="23">可執行 SQL</text>
+  </g>
+  <text x="130" y="744" fill="#f4c274" font-family="Arial, sans-serif" font-size="25" letter-spacing="4">VERIFY FIELDS. PROTECT THE JOIN. QUERY WITH CONFIDENCE.</text>
+</svg>

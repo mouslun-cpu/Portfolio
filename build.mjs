@@ -5,7 +5,7 @@
    產出：index.html、works/<slug>.html、sitemap.xml
    零相依套件，只用 Node 內建模組。
    ======================================================================== */
-import { readFileSync, writeFileSync, mkdirSync, existsSync } from "node:fs";
+import { readFileSync, writeFileSync, mkdirSync, existsSync, readdirSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -33,8 +33,24 @@ const GRADIENTS = [
   "linear-gradient(140deg,#4D8B8B,#356060)",
 ];
 const gradientOf = (w, i) => w.cardGradient || GRADIENTS[i % GRADIENTS.length];
+const generatedCover = (w, name) => `assets/works/${w.slug}/${name}`;
+const detailCoverOf = w => existsSync(join(ROOT, generatedCover(w, "cover.png")))
+  ? generatedCover(w, "cover.png") : w.cover;
+const cardCoverOf = w => existsSync(join(ROOT, generatedCover(w, "cover-card.png")))
+  ? generatedCover(w, "cover-card.png") : detailCoverOf(w);
+const galleryScreenshotsOf = w => {
+  const folder = join(ROOT, "assets", "works", w.slug, "gallery");
+  if (!existsSync(folder)) return [];
+  return readdirSync(folder).filter(name => /\.(png|jpe?g|webp)$/i.test(name)).sort().map(name => ({
+    src: `assets/works/${w.slug}/gallery/${name}`,
+    caption: "手機操作畫面",
+    portrait: true,
+  }));
+};
 
 const fmtDate = (d = "") => d.replace("-", ".");
+const typeOf = w => w.type === "skill" ? "skill" : "work";
+const typeLabelOf = w => typeOf(w) === "skill" ? "技能包" : "作品";
 
 /* ==text== → <mark>text</mark>（先 esc 再 replace） */
 const taglineHtml = (text = "") =>
@@ -88,9 +104,10 @@ const featuredCard = (w, num) => {
   const grad = gradientOf(w, num - 1);
   const cats = (w.categories || []).join(" · ");
   const numStr = String(num).padStart(2, "0");
-  const hasImg = w.cover && !w.cover.endsWith(".svg");
+  const cover = cardCoverOf(w);
+  const hasImg = Boolean(cover);
   const imgBg = hasImg
-    ? `background: linear-gradient(rgba(0,0,0,.22), rgba(0,0,0,.5)), url('${esc(w.cover)}') center/cover no-repeat;`
+    ? `background: linear-gradient(rgba(0,0,0,.22), rgba(0,0,0,.5)), url('${esc(cover)}') center/cover no-repeat;`
     : `background:${grad};`;
   return `
 <a class="card-featured" href="works/${esc(w.slug)}.html" data-cats="${esc((w.categories || []).join("|"))}">
@@ -113,17 +130,20 @@ const featuredCard = (w, num) => {
 const smallCard = (w, num) => {
   const grad = gradientOf(w, num - 1);
   const firstCat = (w.categories || [])[0] || "";
+  const type = typeOf(w);
+  const typeLabel = typeLabelOf(w);
   const numStr = String(num).padStart(2, "0");
-  const hasImg = w.cover && !w.cover.endsWith(".svg");
+  const cover = cardCoverOf(w);
+  const hasImg = Boolean(cover);
   const imgBg = hasImg
-    ? `background: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.48)), url('${esc(w.cover)}') center/cover no-repeat;`
+    ? `background: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.48)), url('${esc(cover)}') center/cover no-repeat;`
     : `background:${grad};`;
   return `
-<a class="card-small" href="works/${esc(w.slug)}.html" data-cats="${esc((w.categories || []).join("|"))}">
+<a class="card-small" href="works/${esc(w.slug)}.html" data-cats="${esc((w.categories || []).join("|"))}" data-type="${type}">
   <div class="card-small-img" style="${imgBg}">
     <div class="card-small-img-title">${esc(w.title)}</div>
   </div>
-  <div class="card-small-num">${numStr} — ${esc(firstCat)}</div>
+  <div class="card-small-num">${numStr} — ${typeLabel} · ${esc(firstCat)}</div>
   <div class="card-small-summary">${esc(w.summary)}</div>
   <div class="card-small-date">${fmtDate(w.date || "")}</div>
 </a>`;
@@ -133,16 +153,21 @@ const smallCard = (w, num) => {
    INDEX.HTML
    ================================================================ */
 const allCats = [...new Set(works.flatMap(w => w.categories || []))];
-const chips = ["全部", ...allCats].map((c, i) =>
-  `<button class="chip${i === 0 ? " active" : ""}" data-cat="${c === "全部" ? "" : esc(c)}">${esc(c)}</button>`
+const categoryChips = ["全部", ...allCats].map((c, i) =>
+  `<button class="chip${i === 0 ? " active" : ""}" data-filter="category" data-value="${c === "全部" ? "" : esc(c)}">${esc(c)}</button>`
 ).join("");
+const typeChips = [["全部", ""], ["作品", "work"], ["技能包", "skill"]].map(([label, value], i) =>
+  `<button class="chip${i === 0 ? " active" : ""}" data-filter="type" data-value="${value}">${label}</button>`
+).join("");
+const workCount = works.filter(w => typeOf(w) === "work").length;
+const skillCount = works.filter(w => typeOf(w) === "skill").length;
 
 const meta = profile.meta || {};
 const metaCells = [
   { label: "領域 / FIELD", value: meta.field || profile.role || "AI 應用開發" },
   { label: "範疇 / SCOPE", value: meta.scope || "設計 + 前端" },
   { label: "工具 / STACK", value: meta.stack || "React · LLM" },
-  { label: "作品 / WORKS", value: `${String(works.length).padStart(2, "0")} 件` },
+  { label: "累積 / TOTAL", value: `${workCount} 個作品 · ${skillCount} 個技能包` },
 ].map(m => `<div class="meta-cell">
     <div class="meta-cell-label">${esc(m.label)}</div>
     <div class="meta-cell-value">${esc(m.value)}</div>
@@ -167,11 +192,33 @@ ${siteHeader()}
   <!-- WORKS -->
   <section class="wrap" id="works">
     <div class="section-divider">
-      <span class="divider-label">SELECTED WORK</span>
+      <span class="divider-label">PROJECTS &amp; SKILLS</span>
       <span class="divider-line"></span>
-      <span class="divider-right">共 ${works.length} 件作品</span>
     </div>
-    <div class="filters">${chips}</div>
+    <div class="stat-showcase" aria-label="目前累積 ${workCount} 個作品、${skillCount} 個技能包">
+      <div class="stat-showcase-kicker">目前累積的實作與方法論</div>
+      <div class="stat-metrics">
+        <div class="stat-metric stat-metric-work">
+          <span class="stat-number" data-target="${workCount}">0</span>
+          <span class="stat-unit">個作品</span>
+        </div>
+        <span class="stat-plus">+</span>
+        <div class="stat-metric stat-metric-skill">
+          <span class="stat-number" data-target="${skillCount}">0</span>
+          <span class="stat-unit">個技能包</span>
+        </div>
+      </div>
+    </div>
+    <div class="filter-groups">
+      <div class="filter-group">
+        <span class="filter-label">類型</span>
+        <div class="filters">${typeChips}</div>
+      </div>
+      <div class="filter-group">
+        <span class="filter-label">主題</span>
+        <div class="filters">${categoryChips}</div>
+      </div>
+    </div>
     <div class="works-grid">
       ${sorted.map((w, i) => smallCard(w, i + 1)).join("\n")}
     </div>
@@ -180,17 +227,44 @@ ${siteHeader()}
 </main>
 ${siteFooter()}
 <script>
-const chips = document.querySelectorAll(".chip");
 const allCards = document.querySelectorAll(".card-small");
-chips.forEach(ch => ch.addEventListener("click", () => {
-  chips.forEach(c => c.classList.remove("active"));
-  ch.classList.add("active");
-  const cat = ch.dataset.cat;
+let selectedType = "";
+let selectedCategory = "";
+const updateCards = () => {
   allCards.forEach(card => {
     const cats = (card.dataset.cats || "").split("|");
-    card.style.display = (!cat || cats.includes(cat)) ? "" : "none";
+    const matchesType = !selectedType || card.dataset.type === selectedType;
+    const matchesCategory = !selectedCategory || cats.includes(selectedCategory);
+    card.style.display = matchesType && matchesCategory ? "" : "none";
   });
+};
+document.querySelectorAll(".chip").forEach(ch => ch.addEventListener("click", () => {
+  const filter = ch.dataset.filter;
+  document.querySelectorAll('.chip[data-filter="' + filter + '"]').forEach(c => c.classList.remove("active"));
+  ch.classList.add("active");
+  if (filter === "type") selectedType = ch.dataset.value;
+  if (filter === "category") selectedCategory = ch.dataset.value;
+  updateCards();
 }));
+const counters = document.querySelectorAll(".stat-number");
+const animateCounter = (counter, delay) => {
+  const target = Number(counter.dataset.target);
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    counter.textContent = target;
+    return;
+  }
+  const start = performance.now() + delay;
+  const duration = 760;
+  const update = now => {
+    if (now < start) return requestAnimationFrame(update);
+    const progress = Math.min((now - start) / duration, 1);
+    counter.textContent = Math.round(target * (1 - Math.pow(1 - progress, 3)));
+    if (progress < 1) return requestAnimationFrame(update);
+    counter.classList.add("is-ready");
+  };
+  requestAnimationFrame(update);
+};
+counters.forEach((counter, index) => animateCounter(counter, index * 160));
 </script>`;
 
 writeFileSync(join(ROOT, "index.html"), index);
@@ -208,12 +282,15 @@ for (const [idx, w] of sorted.entries()) {
   const numStr = String(num).padStart(2, "0");
   const canonical = SITE ? `${SITE}/works/${w.slug}.html` : "";
   const cats = (w.categories || []).join(" · ");
+  const typeLabel = typeLabelOf(w);
   const grad = gradientOf(w, idx);
+  const screenshots = [...(w.screenshots || []), ...galleryScreenshotsOf(w)];
 
-  /* 封面：有真實圖（非 SVG 佔位）就顯示 img，否則用漸層 */
-  const isRealCover = w.cover && !w.cover.endsWith(".svg");
+  /* 封面：有圖檔（含設計用 SVG）就顯示 img，否則用漸層 */
+  const cover = detailCoverOf(w);
+  const isRealCover = Boolean(cover);
   const coverContent = isRealCover
-    ? `<img src="../${esc(w.cover)}" alt="${esc(w.title)} 封面">`
+    ? `<img src="../${esc(cover)}" alt="${esc(w.title)} 封面">`
     : `<div class="work-cover-inner"><span class="work-cover-title">${esc(w.title)}</span></div>`;
 
   const highlightsHtml = (w.highlights || []).length
@@ -239,7 +316,7 @@ ${siteHeader("../")}
     <div class="work-breadcrumb">
       <a href="../index.html">← WORK</a>&nbsp;&nbsp;/&nbsp;&nbsp;${numStr} ${esc(w.title)}
     </div>
-    <div class="work-cat">${esc(cats)}</div>
+    <div class="work-cat">${typeLabel} · ${esc(cats)}</div>
     <h1 class="work-title">${esc(w.title)}</h1>
     <div class="work-date">${fmtDate(w.date || "")} · 個人專案</div>
   </div>
@@ -261,12 +338,12 @@ ${siteHeader("../")}
     </div>` : ""}
   </div>
 
-  ${(w.screenshots || []).length ? `
+  ${screenshots.length ? `
   <div class="work-screenshots">
     <div class="work-screenshots-label">操作畫面</div>
     <div class="work-screenshots-grid">
-      ${(w.screenshots).map((s, si) => `
-      <figure class="work-screenshot-item">
+      ${screenshots.map((s, si) => `
+      <figure class="work-screenshot-item${s.portrait ? " portrait" : ""}">
         <img src="../${esc(s.src)}" alt="${esc(s.caption || w.title + ' 畫面 ' + (si+1))}" loading="lazy">
         ${s.caption ? `<figcaption>${esc(s.caption)}</figcaption>` : ""}
       </figure>`).join("")}

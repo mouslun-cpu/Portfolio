@@ -4,3 +4,21 @@ Thumbs.db
 *.log
 .vscode/
 .idea/
+
+# Environment Variables & Secrets
+.env
+.env.*
+!.env.example
+
+# Local tools & Scripts
+local-tools/
+*.bat
+
+# Backup files
+*.bak
+*.bak.*
+*.bak-*
+**/*.bak
+**/*.bak.*
+**/*.bak-*
+

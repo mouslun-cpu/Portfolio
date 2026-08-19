@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <rect width="1600" height="900" fill="#101419"/><circle cx="1355" cy="220" r="360" fill="#EAF0F5" opacity=".08"/><path d="M90 736H715M90 764H430" stroke="#FF653E" stroke-width="3"/>
+  <text x="90" y="135" fill="#FF653E" font-family="Arial" font-size="24" font-weight="700" letter-spacing="5">PERSONAL ADVISOR / 03</text>
+  <text x="86" y="354" fill="#F4F7F8" font-family="Arial" font-size="106" font-weight="800">FIRST</text><text x="86" y="468" fill="#F4F7F8" font-family="Arial" font-size="106" font-weight="800">PRINCIPLES</text>
+  <text x="92" y="547" fill="#AEB8BE" font-family="Arial" font-size="30">把假設拆到底，重新從物理現實出發。</text>
+  <g transform="translate(910 130)"><rect width="470" height="570" rx="30" fill="#F0F3F4"/><path d="M235 70 330 250 235 430 140 250Z" fill="#FF653E"/><circle cx="235" cy="250" r="83" fill="#101419"/><path d="M235 250 385 115M235 250 103 401M235 250 389 409" stroke="#101419" stroke-width="10"/><circle cx="385" cy="115" r="17" fill="#101419"/><circle cx="103" cy="401" r="17" fill="#101419"/><circle cx="389" cy="409" r="17" fill="#101419"/><text x="48" y="510" fill="#101419" font-family="Arial" font-size="21" font-weight="700" letter-spacing="4">CONSTRAINT → DESIGN → SCALE</text></g>
+  <text x="92" y="817" fill="#F4F7F8" font-family="Arial" font-size="22" font-weight="700" letter-spacing="3">ELON MUSK PERSPECTIVE</text>
+</svg>

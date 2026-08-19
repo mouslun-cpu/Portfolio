@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="100" y1="90" x2="1510" y2="850" gradientUnits="userSpaceOnUse"><stop stop-color="#FFF5F0"/><stop offset="1" stop-color="#F7E4DD"/></linearGradient>
+    <linearGradient id="card" x1="1030" y1="170" x2="1470" y2="700" gradientUnits="userSpaceOnUse"><stop stop-color="#FFFFFF"/><stop offset="1" stop-color="#F9DAD0"/></linearGradient>
+    <filter id="shadow" x="760" y="100" width="780" height="710" filterUnits="userSpaceOnUse"><feDropShadow dx="0" dy="24" stdDeviation="26" flood-color="#743D46" flood-opacity=".18"/></filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="154" cy="112" r="330" fill="#F4CBBF" fill-opacity=".55"/>
+  <circle cx="1450" cy="760" r="320" fill="#E7A49B" fill-opacity=".22"/>
+  <path d="M90 719H722" stroke="#B24F59" stroke-width="3"/>
+  <path d="M90 744H416" stroke="#D58B83" stroke-width="3"/>
+  <text x="94" y="138" fill="#B24F59" font-family="Arial, sans-serif" font-size="24" font-weight="700" letter-spacing="5">PERSONAL ADVISOR / 01</text>
+  <text x="90" y="338" fill="#382C35" font-family="Arial, sans-serif" font-size="116" font-weight="800" letter-spacing="-5">溝 通</text>
+  <text x="90" y="455" fill="#382C35" font-family="Arial, sans-serif" font-size="116" font-weight="800" letter-spacing="-5">顧 問</text>
+  <text x="94" y="540" fill="#7A5961" font-family="Arial, sans-serif" font-size="31" letter-spacing="1">把難開口的話，說得真誠而不失分寸。</text>
+  <g filter="url(#shadow)">
+    <rect x="850" y="128" width="568" height="618" rx="34" fill="url(#card)"/>
+    <rect x="893" y="174" width="482" height="70" rx="18" fill="#382C35"/>
+    <circle cx="935" cy="209" r="14" fill="#F5B4A5"/>
+    <rect x="972" y="198" width="224" height="18" rx="9" fill="#FFF5F0"/>
+    <rect x="893" y="286" width="346" height="108" rx="24" fill="#FFFFFF"/>
+    <rect x="925" y="318" width="226" height="15" rx="7.5" fill="#E8B7AF"/>
+    <rect x="925" y="350" width="168" height="15" rx="7.5" fill="#F0D1CA"/>
+    <rect x="1031" y="431" width="344" height="108" rx="24" fill="#B24F59"/>
+    <rect x="1063" y="463" width="196" height="15" rx="7.5" fill="#FFF5F0"/>
+    <rect x="1063" y="495" width="137" height="15" rx="7.5" fill="#F7C9BF"/>
+    <path d="M950 592C950 572 966 556 986 556H1138C1158 556 1174 572 1174 592V636C1174 656 1158 672 1138 672H1025L982 705V672H986C966 672 950 656 950 636V592Z" fill="#FFFFFF"/>
+    <path d="M1037 606H1100M1012 631H1113" stroke="#B24F59" stroke-width="12" stroke-linecap="round"/>
+  </g>
+  <text x="94" y="816" fill="#382C35" font-family="Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="3">CAI KANGYONG PERSPECTIVE</text>
+</svg>

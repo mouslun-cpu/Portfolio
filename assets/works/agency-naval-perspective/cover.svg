@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <rect width="1600" height="900" fill="#F5F3E9"/><circle cx="1330" cy="190" r="400" fill="#D6C171" opacity=".25"/><path d="M90 736H715M90 764H452" stroke="#8B7522" stroke-width="3"/>
+  <text x="90" y="135" fill="#8B7522" font-family="Arial" font-size="24" font-weight="700" letter-spacing="5">PERSONAL ADVISOR / 05</text>
+  <text x="86" y="354" fill="#25251F" font-family="Arial" font-size="108" font-weight="800">BUILD</text><text x="86" y="468" fill="#25251F" font-family="Arial" font-size="108" font-weight="800">LEVERAGE.</text>
+  <text x="92" y="547" fill="#716F60" font-family="Arial" font-size="30">讓你的特定知識，在你睡著時也能工作。</text>
+  <g transform="translate(900 145)"><rect width="490" height="540" rx="28" fill="#25251F"/><path d="M75 420 170 340 260 375 370 180 445 230" stroke="#E4D17D" stroke-width="12" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="75" cy="420" r="13" fill="#E4D17D"/><circle cx="170" cy="340" r="13" fill="#E4D17D"/><circle cx="260" cy="375" r="13" fill="#E4D17D"/><circle cx="370" cy="180" r="13" fill="#E4D17D"/><circle cx="445" cy="230" r="13" fill="#E4D17D"/><text x="65" y="94" fill="#F5F3E9" font-family="Arial" font-size="28" font-weight="700" letter-spacing="4">SPECIFIC KNOWLEDGE</text><text x="65" y="480" fill="#BFB998" font-family="Arial" font-size="18" letter-spacing="3">TIME × OWNERSHIP × COMPOUNDING</text></g>
+  <text x="92" y="817" fill="#25251F" font-family="Arial" font-size="22" font-weight="700" letter-spacing="3">NAVAL RAVIKANT PERSPECTIVE</text>
+</svg>

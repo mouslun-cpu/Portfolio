@@ -19,7 +19,7 @@
     {
       "slug": "academic-publication-dashboard",
       "title": "學術發表儀表板",
-      "categories": ["BI儀表板"],
+      "categories": ["BI儀表板", "學術研究"],
       "summary": "把學術發表紀錄整理成一目了然的互動式儀表板。",
       "cardGradient": "linear-gradient(140deg,#5C7090,#43556E)",
       "cover": "assets/works/academic-publication-dashboard/cover.png",
@@ -31,7 +31,7 @@
         "Sync 功能定期更新 Google Scholar 引用數據"
       ],
       "tools": ["React", "TypeScript", "Gemini API", "Vite"],
-      "links": [],
+      "links": [{"label": "前往作品", "url": "https://academic-publication.zeabur.app/"}],
       "date": "2026-06",
       "featured": true
     },
@@ -51,7 +51,7 @@
         "教師控制台：遊戲控制 / 股票池管理 / 指派管理三合一"
       ],
       "tools": ["React", "TypeScript", "Gemini API", "Vite"],
-      "links": [],
+      "links": [{"label": "前往作品", "url": "https://yh-accountstockdb.zeabur.app/"}],
       "date": "2026-05",
       "screenshots": [
         {
@@ -87,7 +87,7 @@
         "純 HTML 無後端，教師掃碼即可主持課堂"
       ],
       "tools": ["HTML", "JavaScript", "QR Code"],
-      "links": [],
+      "links": [{"label": "前往作品", "url": "https://yh-lovegame.zeabur.app/"}],
       "date": "2025-12",
       "screenshots": [
         { "src": "assets/works/lovegame/screenshots/story.jpg", "caption": "劇情推進：塞車突發狀況，你會怎麼決定？" },
@@ -108,7 +108,7 @@
         "全員決策匯合才揭曉結局，體驗連鎖後果"
       ],
       "tools": ["React", "JavaScript", "Firebase", "Vite"],
-      "links": [],
+      "links": [{"label": "前往作品", "url": "https://yh-beergame.zeabur.app/"}],
       "date": "2025-11",
       "screenshots": [
         { "src": "assets/works/beergame/screenshots/副院長.jpg", "caption": "角色抽卡：副院長——維持醫院營運，績效至上" },
@@ -134,7 +134,7 @@
         "QR code 加入 + 賓果完成判定，純 Socket.io 驅動"
       ],
       "tools": ["Node.js", "Express", "Socket.io", "HTML", "JavaScript"],
-      "links": [],
+      "links": [{"label": "前往作品", "url": "https://empathy-map.zeabur.app/"}],
       "date": "2025-10",
       "screenshots": [
         { "src": "assets/works/canvas/screenshots/template.jpg", "caption": "框架選擇：多種設計思考模板可切換" },
@@ -156,7 +156,7 @@
         "Next.js + Supabase 全端架構，支援班級規模部署"
       ],
       "tools": ["Next.js", "TypeScript", "Supabase", "Tailwind CSS"],
-      "links": [],
+      "links": [{"label": "前往作品", "url": "https://yh-cjm.zeabur.app/"}],
       "date": "2026-02",
       "screenshots": [
         { "src": "assets/works/cjm-journey/screenshots/game.png", "caption": "文字冒險進行中：患者視角體驗服務觸點" },
@@ -178,7 +178,7 @@
         "課後檢視問題脈絡，直接討論需求挖掘邏輯"
       ],
       "tools": ["Next.js", "TypeScript", "Supabase", "Tailwind CSS", "Framer Motion"],
-      "links": [],
+      "links": [{"label": "前往作品", "url": "https://soup.zeabur.app/"}],
       "date": "2026-03",
       "screenshots": [
         { "src": "assets/works/true-need/screenshots/screen.jpg", "caption": "教師大螢幕：謎面與歷史問答一覽" },
@@ -199,7 +199,7 @@
         "彈幕 + 火焰特效，讓討論氛圍真的「炎上」"
       ],
       "tools": ["Next.js", "Firebase", "Framer Motion", "Tailwind CSS", "QR Code"],
-      "links": [],
+      "links": [{"label": "前往作品", "url": "https://yh-roast.zeabur.app/"}],
       "date": "2026-01",
       "screenshots": [
         { "src": "assets/works/roast-hats/screenshots/game.png", "caption": "教師控制台：設定議題、看全班帽子分布" },
@@ -220,7 +220,7 @@
         "讓 A/B 測試從抽象概念變成可討論的親身經歷"
       ],
       "tools": ["HTML", "JavaScript", "Firebase Realtime Database"],
-      "links": [],
+      "links": [{"label": "前往作品", "url": "https://fatdog-rush.zeabur.app/"}],
       "date": "2026-04",
       "screenshots": [
         { "src": "assets/works/fatdog-rush/screenshots/screen-a.png", "caption": "A 組：遊戲化搶購介面，限量10份搶完即止" },
@@ -244,7 +244,7 @@
         "遊戲化冒險系統：進度條 + 吉祥物 + 答對撒彩帶"
       ],
       "tools": ["React", "TypeScript", "Firebase Firestore", "Tailwind CSS", "D3 Force", "Vite", "Docker"],
-      "links": [],
+      "links": [{"label": "前往作品", "url": "https://pawlive.zeabur.app/"}],
       "date": "2026-04",
       "screenshots": [
         {
@@ -270,7 +270,11 @@
       "title": "創業生存會計沙盒",
       "categories": ["教學遊戲"],
       "summary": "學生扮演創業者，走完完整會計循環——從日記帳、T字帳、調整分錄到財報，最後做出 Pitch Deck 向投資人簡報。",
-      "cover": "",
+      "cover": "assets/works/founders-journey/screenshots/cover.png",
+      "screenshots": [
+        { "src": "assets/works/founders-journey/screenshots/A.產業及參數設定.png", "caption": "產業及參數設定" },
+        { "src": "assets/works/founders-journey/screenshots/B.營運大富翁.png", "caption": "營運大富翁" }
+      ],
       "description": "創業生存會計沙盒把枯燥的會計循環包裝成一趟創業體驗。\n學生建立自己的公司，逐步完成日記帳分錄、T 字帳過帳、試算表、調整分錄、調整後試算表、損益表、保留盈餘表、資產負債表，最終步驟是製作 Pitch Deck 向虛擬投資人簡報。\n每一步都有即時驗算，錯誤會顯示提示而非直接揭曉答案，引導學生自行找出借貸不平衡的原因。系統支援多組同步進行，老師可在控制台看到各組進度。",
       "highlights": [
         "涵蓋完整會計循環：日記帳 → T帳 → 試算表 → 財報全流程",
@@ -279,7 +283,7 @@
         "支援多組同步作業，教師儀表板即時查看各組進度"
       ],
       "tools": ["Next.js", "TypeScript", "Firebase Firestore", "Zustand", "Recharts", "PptxGenJS"],
-      "links": [],
+      "links": [{"label": "前往作品", "url": "https://account-ex.zeabur.app/"}],
       "date": "2026-03"
     },
     {
@@ -287,7 +291,7 @@
       "title": "跳出老鼠圈",
       "categories": ["教學遊戲"],
       "summary": "數位版《富爸爸現金流遊戲》——學生從職業起點出發，用薪資買資產、還負債，目標是讓被動收入超越生活開銷，跳出老鼠圈。",
-      "cover": "",
+      "cover": "assets/works/cashgame/screenshots/cover.png",
       "description": "以 Robert Kiyosaki《富爸爸》現金流棋盤遊戲為原型，設計的多人數位教學版本。\n每位學生從一個職業開始（護士、工程師、律師…），持有對應的薪資、支出與財務結構。遊戲中隨機抽到機會卡可以買股票、房地產或做生意；壞事卡則帶來意外支出。學生需要用財務報表追蹤自己的現金流，目標是讓被動收入超過總支出——即「跳出老鼠圈」。\n多人同步進行，老師在主控台推進關卡，即時看到各組財務狀況。",
       "highlights": [
         "多職業起點：各職業有不同薪資、負債與財務結構",
@@ -296,15 +300,15 @@
         "目標明確：被動收入 > 生活開銷即「跳出老鼠圈」"
       ],
       "tools": ["Next.js", "TypeScript", "Firebase Realtime Database", "Tailwind CSS"],
-      "links": [],
+      "links": [{"label": "前往作品", "url": "https://cashgame.zeabur.app/"}],
       "date": "2025-09"
     },
     {
       "slug": "lots",
       "title": "抽籤小工具",
-      "categories": ["教學工具"],
+      "categories": ["生活工具"],
       "summary": "課堂分組、抽獎、點名都能用——轉盤或方格跳動兩種動畫模式，讓每次點名都成為課堂小高潮。",
-      "cover": "",
+      "cover": "assets/works/lots/screenshots/cover.png",
       "description": "輕量的課堂抽籤工具，支援兩種抽選模式：轉盤模式讓轉輪緩緩停下並高亮中籤者，方格跳動模式讓每個名字快速閃過後鎖定一人。\n老師只需貼入名單，即可開始抽籤。支援多輪連抽、排除已抽過的學生、自訂顯示標題。適合隨機分組、隨堂提問點名、活動抽獎等場景。\nVue.js + Vite 打造，純前端無後端。",
       "highlights": [
         "兩種抽籤模式：轉盤旋轉停下 + 方格跳動鎖定",
@@ -312,7 +316,7 @@
         "純前端部署，零設定即可使用"
       ],
       "tools": ["Vue.js", "Vite", "JavaScript"],
-      "links": [],
+      "links": [{"label": "前往作品", "url": "https://lots.zeabur.app/"}],
       "date": "2025-08"
     },
     {
@@ -320,7 +324,7 @@
       "title": "創業募資實境秀",
       "categories": ["教學遊戲"],
       "summary": "期末版《創業鯊魚》——學生上台 Pitch，台下投資人用籌碼即時押注，大螢幕特效 + 即時排行榜，最像實境秀的期末發表。",
-      "cover": "",
+      "cover": "assets/works/finalshow/screenshots/cover.png",
       "description": "創業募資實境秀把學期末的創業提案發表會，改造成一場真實感十足的投資競賽。\n每組學生上台 Pitch 自己的創業計畫，台下「投資人」（其他同學）在手機上用籌碼即時投資喜歡的提案。舞台上的大螢幕顯示即時 LED 跑馬燈、NumberRoller 數字滾動特效，以及雷達圖對比各項評估維度。投資結束後排行榜即時揭曉，獲投最多的隊伍當場宣布勝出。\n老師可從後台控制簡報進度、調整籌碼設定、管理各組狀態。",
       "highlights": [
         "台下同學化身投資人，即時用籌碼為提案背書",
@@ -329,7 +333,7 @@
         "老師後台控制場次進度，支援多組同場競技"
       ],
       "tools": ["Next.js", "TypeScript", "Firebase Realtime Database", "Tailwind CSS", "Framer Motion"],
-      "links": [],
+      "links": [{"label": "前往作品", "url": "https://finalshow.zeabur.app/"}],
       "date": "2026-05"
     },
     {
@@ -337,7 +341,13 @@
       "title": "紫微 ZIP",
       "categories": ["Web應用"],
       "summary": "輸入生辰八字，自動排出紫微斗數命盤，並由 AI 解讀各宮位意涵與人生課題。",
-      "cover": "",
+      "cover": "assets/works/ziwei/screenshots/cover.png",
+      "screenshots": [
+        { "src": "assets/works/ziwei/screenshots/A.角色卡.png", "caption": "角色卡" },
+        { "src": "assets/works/ziwei/screenshots/B.完整命盤.png", "caption": "完整命盤" },
+        { "src": "assets/works/ziwei/screenshots/C.論命主題包.png", "caption": "論命主題包" },
+        { "src": "assets/works/ziwei/screenshots/D.紫微AI小仙即時解盤.png", "caption": "紫微 AI 小仙即時解盤" }
+      ],
       "description": "紫微 ZIP 是一個紫微斗數命盤生成與解析工具。\n使用者輸入生日（年月日時），系統根據傳統紫微斗數排盤規則自動計算十二宮位、主星配置與四化飛星，生成視覺化的完整命盤。\n每個宮位可點擊查看主星特質與大運走勢，也可啟動 AI 對話模式，針對特定宮位或人生課題進行深度問答。適合對命理有興趣的使用者自學，也可作為命理師的輔助工具。",
       "highlights": [
         "輸入生辰自動排出完整命盤，含十二宮位與主星配置",
@@ -345,15 +355,254 @@
         "AI 對話解盤：針對感情、事業、財運等課題深度問答"
       ],
       "tools": ["React", "TypeScript", "Gemini API", "Tailwind CSS", "Vite"],
+      "links": [{"label": "前往作品", "url": "https://zwzip.zeabur.app/"}],
+      "date": "2026-04"
+    },
+    {
+      "slug": "followai",
+      "title": "FollowAI 股票分析平台",
+      "categories": ["量化投資"],
+      "summary": "跨手機與桌面的 AI 股票分析工具，整合台美股行情、技術面、財務面與籌碼資料。",
+      "cover": "assets/works/followai/screenshots/cover.png",
+      "screenshots": [
+        { "src": "assets/works/followai/screenshots/手機板面.png", "caption": "手機版：台美股個股研究介面" },
+        { "src": "assets/works/followai/screenshots/A.技術與籌碼分析.png", "caption": "技術與籌碼分析" },
+        { "src": "assets/works/followai/screenshots/B.財務分析.png", "caption": "財務分析" },
+        { "src": "assets/works/followai/screenshots/C.大盤追蹤.png", "caption": "大盤追蹤" }
+      ],
+      "description": "FollowAI 將個人投資研究整合成手機與桌面兩種操作情境。手機版可快速切換台股日盤與美股夜盤，查看個股行情、技術與財務資訊；桌面版則提供更完整的圖表、籌碼與大盤分析。\n系統優先使用同步至 PostgreSQL 的市場資料，並在資料不足時串接外部來源；分析結果再交由 AI 整理為可讀的投資洞察。",
+      "highlights": ["手機版支援台股日盤與美股夜盤的即時個股研究", "桌面版整合技術圖表、財務資料、籌碼與大盤分析", "PostgreSQL 同步市場資料，AI 產出可讀的投資洞察"],
+      "tools": ["Python", "Streamlit", "PostgreSQL", "Gemini API", "Zeabur", "FinLab"],
+      "links": [{"label": "前往作品", "url": "https://tw-analyzer.zeabur.app/"}],
+      "date": "2026-07"
+    },
+    {
+      "slug": "tw-quant-dashboard",
+      "title": "台股量化策略儀表板",
+      "categories": ["量化投資"],
+      "summary": "整合台股策略掃描、回測與多檔比較，讓選股與決策過程可視化。",
+      "cover": "assets/works/tw-quant-dashboard/screenshots/cover.png",
+      "description": "台股量化策略儀表板將策略研究、每日掃描與回測結果集中在同一個操作介面。\n使用者可切換不同 scanner 與策略，查看候選股、持股與績效，並在 Choose 比較頁面交叉比較多檔標的的決策資訊。",
+      "highlights": ["參數化 scanner，快速檢視台股候選標的", "整合策略持股、績效與回測結果", "多檔比較介面，支援研究與決策判讀"],
+      "tools": ["Python", "Streamlit", "Plotly", "FinLab"],
+      "links": [],
+      "date": "2026-07"
+    },
+    {
+      "slug": "tw-daytrade-calculator",
+      "title": "沖沖算",
+      "categories": ["量化投資"],
+      "summary": "輸入台股代碼，立即取得前一交易日 CDP 五價，並以實際入場價試算每個 Tick 的成本後賺賠。",
+      "cover": "assets/works/tw-daytrade-calculator/cover.svg",
+      "description": "沖沖算是為台股盤中決策打造的輕量網頁工具。輸入股票代碼後，系統透過 FinMind 取得最近有效交易日的最高、最低與收盤價，立即推導 AH、NH、CDP、NL、AL 五個關鍵價位。\n使用者再輸入實際入場價與交易股數，工具會依台股價格級距逐 Tick 計算 -10 至 +10 Tick 的目標價、扣除整體成本 0.3% 後的損益與報酬率，讓停損與停利空間在盤中一眼可判讀。",
+      "highlights": [
+        "FinMind 最近有效交易日高低收，自動算出 AH／NH／CDP／NL／AL",
+        "點擊關鍵價位即可帶入實際入場價，快速建立盤中試算",
+        "依台股價格級距正確換算 -10～+10 Tick 的目標價",
+        "統一扣除 0.3% 整體成本，直接顯示成本後賺賠與轉正報酬門檻"
+      ],
+      "tools": ["Node.js", "Express", "FinMind API", "HTML", "JavaScript"],
+      "links": [
+        {"label": "前往作品", "url": "https://yh-daytrade.zeabur.app/"},
+        {"label": "查看原始碼", "url": "https://github.com/mouslun-cpu/tw-daytrade-calculator"}
+      ],
+      "date": "2026-08"
+    },
+    {
+      "slug": "us-quant-dashboard",
+      "title": "美股量化策略儀表板",
+      "categories": ["量化投資"],
+      "summary": "以量化選股、策略持倉與回測分析，整理美股研究與決策脈絡。",
+      "cover": "assets/works/us-quant-dashboard/screenshots/2026-08-12 13_36_03-.png",
+      "description": "美股量化策略儀表板將 scanner 與 strategy 兩種研究模式放在同一介面。\n使用者可檢視選股結果、策略持倉與回測分析，從不同量化條件觀察美股標的，建立可追溯的研究流程。",
+      "highlights": ["scanner 與 strategy 雙模式切換", "集中呈現選股結果與策略持倉", "以回測分析檢視策略歷史表現"],
+      "tools": ["Python", "Streamlit", "Plotly", "FinLab", "Financial Modeling Prep"],
+      "links": [],
+      "date": "2026-07"
+    },
+    {
+      "slug": "line-quant-signal-system",
+      "title": "LINE 量化訊號推播系統",
+      "categories": ["量化投資"],
+      "summary": "自動彙整台股每日量化訊號、推播重點標的，並回收績效作為策略驗證依據。",
+      "cover": "assets/works/line-quant-signal-system/screenshots/2026-08-12 13_55_44-Market Playground.png",
+      "screenshots": [
+        { "src": "assets/works/line-quant-signal-system/screenshots/2026-08-12 13_56_14-Market Playground.png", "caption": "LINE 量化訊號推播畫面" }
+      ],
+      "description": "LINE 量化訊號推播系統將台股 scanner 的每日結果收斂為可行動的訊號摘要。\n排程會彙整多個 scanner 的共振標的、寫入 PostgreSQL，並透過 LINE 發送每日訊號與週報；後續再以實際推播紀錄追蹤出場後表現，形成策略研究的回饋迴圈。",
+      "highlights": ["每日彙整多個 scanner，標出共振訊號", "GitHub Actions 自動執行推播與週報流程", "保留實際推播紀錄，回收 OOS 績效作為研究回饋"],
+      "tools": ["Python", "GitHub Actions", "LINE Messaging API", "PostgreSQL", "FinLab"],
+      "links": [],
+      "date": "2026-07"
+    },
+    {
+      "slug": "2x-kick",
+      "title": "2X Kick 正二倉位策略",
+      "categories": ["量化投資"],
+      "summary": "以週線策略管理 00631L 正二曝險、資金與個人投資績效的半自動決策 App。",
+      "cover": "assets/works/2x-kick/screenshots/cover.png",
+      "description": "2X Kick 是 FollowAI 旗下的正二半自動資產配置服務，協助使用者依週線策略管理 00631L 的配置與現金部位。\n系統會在週五收盤後更新策略配置，平日則更新現價與市值；使用者可記錄底倉、入出金與交易，查看實際配置是否偏離目標，並將建議交易套用為暫估紀錄。",
+      "highlights": ["依週線策略更新正二與現金的目標曝險配置", "記錄底倉、交易與資金流，計算個人資產與損益", "比較實際與目標配置，產出需要調整時的建議股數", "Firebase UID 隔離個人帳本資料，策略快照存於 PostgreSQL"],
+      "tools": ["Next.js", "TypeScript", "Firebase Authentication", "PostgreSQL", "Zeabur"],
+      "links": [{"label": "前往作品", "url": "https://followai-leveraged.zeabur.app/"}],
+      "date": "2026-08"
+    },
+    {
+      "slug": "aipedia",
+      "title": "AIpedia AI 知識庫",
+      "categories": ["教學工具"],
+      "summary": "以互動式視覺化與學習路徑，帶使用者理解 AI 與機器學習的核心概念。",
+      "cover": "assets/works/aipedia/screenshots/cover.png",
+      "description": "AIpedia 是一個以互動內容呈現的 AI／機器學習知識庫，讓抽象概念能依主題與學習路徑逐步理解。\n平台將分辨式與生成式 AI 整理為可探索的單元，每個主題頁面搭配互動視覺化、學習進度與挑戰，協助使用者從理解走向練習。",
+      "highlights": ["分辨式與生成式 AI 的雙學習路徑", "50+ 主題單元與互動視覺化內容", "以 localStorage 保存個人學習進度", "挑戰追蹤，讓概念學習具備明確節奏"],
+      "tools": ["React", "TypeScript", "Vite", "Tailwind CSS"],
+      "links": [{"label": "前往作品", "url": "https://mouslun-cpu.github.io/AIpedia/"}],
+      "date": "2026-08"
+    },
+    {
+      "slug": "business-card",
+      "title": "個人數位名片",
+      "categories": ["Web應用"],
+      "summary": "以一頁式行動優先網站，整合醫療、教學身份與直接聯絡入口。",
+      "cover": "assets/works/business-card/screenshots/cover.png",
+      "description": "個人數位名片以手機閱讀為優先，將醫療與教學的雙重職務、專業關注領域與聯絡方式濃縮在單一頁面。\n介面透過深色科技風格、動態粒子背景與清晰 CTA，讓訪客能快速理解個人定位並直接以 LINE、電話或 Email 聯繫。",
+      "highlights": ["一頁式呈現雙職務與專業定位", "LINE、電話與 Email 直接聯絡", "行動優先版型與響應式設計", "動態粒子背景與科技風格視覺"],
+      "tools": ["HTML", "CSS", "JavaScript"],
+      "links": [{"label": "前往作品", "url": "https://mouslun-cpu.github.io/business_card/"}],
+      "date": "2026-05"
+    },
+    {
+      "slug": "loop-lab",
+      "title": "Loop Lab 猜數字實驗",
+      "categories": ["教學遊戲"],
+      "summary": "把猜數字活動變成課堂實驗，對照不同回饋條件如何影響學生的解題過程。",
+      "cover": "assets/works/loop-lab/screenshots/cover.png",
+      "screenshots": [
+        { "src": "assets/works/loop-lab/screenshots/A.學生遊戲畫面.png", "caption": "學生遊戲畫面" },
+        { "src": "assets/works/loop-lab/screenshots/A.老師主控畫面.png", "caption": "老師主控畫面" }
+      ],
+      "description": "Loop Lab 是一個以猜數字任務設計的課堂互動實驗。教師建立房間後，學生透過房號或 QR Code 加入，系統即時分派不同回饋條件。\n活動全程保留作答軌跡與結果，讓教師能在結束後比較各組的解題方式與成效，將抽象的回饋設計轉為可觀察的學習經驗。",
+      "highlights": ["教師建房，學生以房號或 QR Code 快速加入", "即時分組，對照不同回饋條件", "完整記錄作答軌跡與解題結果", "活動後比較各組學習成效"],
+      "tools": ["HTML", "JavaScript", "Firebase Realtime Database"],
+      "links": [{"label": "前往作品", "url": "https://loopgame.zeabur.app/loop-teacher.html/"}],
+      "date": "2026-08"
+    },
+    {
+      "slug": "open-slide",
+      "title": "OpenSlide 簡報創作工作台",
+      "categories": ["生活工具"],
+      "summary": "以元件化網頁技術製作、播放與發布高解析度互動簡報。",
+      "cover": "assets/works/open-slide/screenshots/cover.png",
+      "description": "OpenSlide 是一套以 React 元件為核心的簡報創作工作台，讓投影片可像網頁般組裝、修改與播放。\n系統提供 1920×1080 畫布、縮圖導覽、全螢幕播放與靜態建置能力，適合把課程內容與互動視覺設計整合成可分享的簡報。",
+      "highlights": ["1920×1080 投影片畫布與元件化創作方式", "縮圖導覽與全螢幕播放", "可將簡報建置為可部署的靜態網站", "支援互動視覺與多媒體內容"],
+      "tools": ["React", "TypeScript", "Vite", "@open-slide/core", "Three.js"],
+      "links": [{"label": "前往作品", "url": "https://myopenslide.zeabur.app/"}],
+      "date": "2026-07"
+    },
+    {
+      "slug": "tax-dashboard",
+      "title": "綜合所得稅 Dashboard",
+      "categories": ["BI儀表板"],
+      "summary": "以視覺化方式整理個人年度申報資料，檢視所得、扣除額與稅額的長期趨勢。",
+      "cover": "assets/works/tax-dashboard/screenshots/cover.png",
+      "description": "綜合所得稅 Dashboard 是一個僅供個人地端使用的資料整理工具，將多年度申報資料轉化為可切換的摘要與趨勢圖表。\n介面可對照所得結構、扣除額與稅額計算流程，協助使用者以視覺化方式回顧個人稅務變化；作品頁不包含或連結任何個人申報資料。",
+      "highlights": ["多年度資料切換與趨勢比較", "呈現所得、扣除額與稅額計算流程", "以圖表檢視稅率與扣除額結構", "僅供地端個人使用，不公開資料"],
+      "tools": ["HTML", "CSS", "JavaScript", "Chart.js"],
       "links": [],
       "date": "2026-04"
+    },
+    {
+      "slug": "ntuh-appointment-bot",
+      "title": "NTUH 快速掛號工具",
+      "categories": ["生活工具"],
+      "summary": "將掛號頁面的身分驗證與驗證碼輸入流程自動化，縮短門診掛號的操作時間。",
+      "cover": "assets/works/ntuh-appointment-bot/screenshots/cover.png",
+      "description": "NTUH 快速掛號工具會先預熱 OCR 與瀏覽器，使用者貼上指定掛號頁網址後，協助完成身分證字號、生日與驗證碼的輸入並送出。\n工具以桌面視窗提示操作，將需要在短時間完成的重複填表流程集中處理，瀏覽器全程以可見模式執行。",
+      "highlights": ["預先啟動 Chromium 與 OCR 模型以縮短等待時間", "以桌面對話框接收指定掛號網址", "自動填入身分資料並辨識頁面驗證碼", "可見瀏覽器模式保留使用者確認流程"],
+      "tools": ["Python", "Playwright", "ddddocr", "Tkinter"],
+      "links": [],
+      "date": "2026-05"
+    },
+    {
+      "slug": "coffee-cost-game",
+      "title": "開一間咖啡廳學成本",
+      "categories": ["教學遊戲"],
+      "summary": "以咖啡廳經營模擬，帶學生從選址、定價到損益決策理解成本結構。",
+      "cover": "assets/works/coffee-cost-game/screenshots/cover.png",
+      "screenshots": [
+        {"src": "assets/works/coffee-cost-game/screenshots/A.學生開店畫面.png", "caption": "學生開店畫面"},
+        {"src": "assets/works/coffee-cost-game/screenshots/B.打造咖啡廳.png", "caption": "打造咖啡廳"},
+        {"src": "assets/works/coffee-cost-game/screenshots/C.成本估算.png", "caption": "成本估算"},
+        {"src": "assets/works/coffee-cost-game/screenshots/D.損益平衡試算.png", "caption": "損益平衡試算"},
+        {"src": "assets/works/coffee-cost-game/screenshots/E.市場風雲.png", "caption": "市場風雲"},
+        {"src": "assets/works/coffee-cost-game/screenshots/F.結算復盤.png", "caption": "結算復盤"}
+      ],
+      "description": "這是一個多人同步的咖啡廳經營模擬。學生以老闆與合夥人的角色組隊，依序決定店型、咖啡豆、乳品、售價與行銷預算，並觀察決策如何改變銷量、成本與資金。\n教師可透過 QR Code 開場、控制關卡與月份進度，並在 Dashboard 比較各組每月損益、資本變化與最終經營成果。",
+      "highlights": ["選址、原料、售價與行銷預算的連動決策", "直接成本、固定成本、營收與損益即時呈現", "老師以 QR Code 建場並控制關卡與月份", "全班 Dashboard 比較各組決策與獲利表現"],
+      "tools": ["Next.js", "TypeScript", "Firebase", "Recharts", "QR Code"],
+      "links": [{"label": "前往作品", "url": "https://yh-coffee.zeabur.app/teacher"}],
+      "date": "2026-04"
+    },
+    {
+      "slug": "clothing-inventory-game",
+      "title": "開一間服飾店學盤存",
+      "categories": ["教學遊戲"],
+      "summary": "以服飾店經營情境串連進貨、存貨與分錄，讓盤存制度在決策中自然發生。",
+      "cover": "assets/works/clothing-inventory-game/screenshots/cover.png",
+      "description": "學生在服飾店經營故事中處理籌資、租店、進貨、瑕疵品、折讓與銷售等事件。每次選擇都會影響存貨、現金、應付帳款與損益，並以滑動題目練習正確的借貸方向。\n教師端可建立場次、顯示 QR Code、逐關解鎖與觀察各組的 T 字帳與決策結果，使盤存與會計循環成為可操作的情境。",
+      "highlights": ["以服飾店經營事件帶出永續盤存觀念", "籌資、進貨、退貨、折讓與銷售的連續情境", "借貸滑動題與 T 字帳即時回饋", "教師控台支援 QR 加入、逐關解鎖與結果比較"],
+      "tools": ["Next.js", "TypeScript", "Firebase", "Framer Motion", "QR Code"],
+      "links": [{"label": "前往作品", "url": "https://kaidian.zeabur.app/teacher"}],
+      "date": "2026-05"
+    },
+    {
+      "slug": "scamper-innovation-thinking",
+      "title": "SCAMPER 創新思考",
+      "categories": ["教學遊戲"],
+      "summary": "用命運轉盤隨機組合 SCAMPER 方法與題目，快速啟動課堂創意發想。",
+      "cover": "assets/works/scamper-innovation-thinking/screenshots/cover.png",
+      "description": "SCAMPER 創新思考將替代、結合、調整、轉用、消除與重組等思考提示製作成轉盤互動。課堂上可隨機抽出一種創新方法與題目，接著啟動倒數計時，讓小組在有限時間內產出具體想法。\n它把原本抽象的創意思考框架轉為具儀式感的隨機觸發與可見時間壓力，適合做為腦力激盪的開場。",
+      "highlights": ["SCAMPER 方法與題目雙轉盤隨機組合", "替代、結合、調整、轉用、消除、重組等提示", "可調整並啟動課堂倒數計時", "以抽籤儀式感降低創意發想的起步門檻"],
+      "tools": ["Next.js", "TypeScript", "Framer Motion", "Tailwind CSS"],
+      "links": [{"label": "前往作品", "url": "https://scamper.zeabur.app/"}],
+      "date": "2026-05"
+    },
+    {
+      "slug": "swipebook-accounting",
+      "title": "左滑右滑學借貸",
+      "categories": ["教學遊戲"],
+      "summary": "把借貸判斷做成即時滑卡競技，讓會計分錄練習像手機遊戲一樣反覆建立直覺。",
+      "cover": "assets/works/swipebook-accounting/screenshots/cover.png",
+      "description": "SwipeBooks 結合滑卡操作與即時競技。學生掃 QR Code 加入房間，在限時內向左滑選借方、向右滑選貸方；教師選擇題庫副本、控制發題與查看排行榜。\n內建正常餘額、買賣業會計循環與結帳分錄等關卡，系統以即時回饋與排名讓學生反覆練習資產、負債、收益與費用的借貸規則。",
+      "highlights": ["手機滑卡操作：左借、右貸", "教師大螢幕提供 QR 加入、題庫副本與進度控制", "正常餘額、買賣業與結帳分錄三類關卡", "即時答題回饋、作答進度與最終排行榜"],
+      "tools": ["Next.js", "TypeScript", "Firebase Realtime Database", "Framer Motion", "QR Code"],
+      "links": [{"label": "前往作品", "url": "https://swipebook.zeabur.app/"}],
+      "date": "2026-05"
+    },
+    {
+      "slug": "wowcow-decision-matrix",
+      "title": "WOWCOW 決策矩陣",
+      "categories": ["教學遊戲"],
+      "summary": "讓全班以 NOW／HOW／WOW／COW 投票篩選提案，再用 RICE 做決策排序。",
+      "cover": "assets/works/wowcow-decision-matrix/screenshots/cover.png",
+      "screenshots": [
+        {"src": "assets/works/wowcow-decision-matrix/screenshots/A.提案蒐集.png", "caption": "提案蒐集"},
+        {"src": "assets/works/wowcow-decision-matrix/screenshots/B.晉級名單.png", "caption": "晉級名單"},
+        {"src": "assets/works/wowcow-decision-matrix/screenshots/C.創投評分.png", "caption": "創投評分"},
+        {"src": "assets/works/wowcow-decision-matrix/screenshots/D.最終排名.png", "caption": "最終排名"}
+      ],
+      "description": "WOWCOW 決策矩陣是一個課堂創新提案競技場。學生掃碼加入並提交構想，全班依 NOW、HOW、WOW、COW 四種價值判斷投票；獲得最多 WOW 票的提案晉級，再進入限時 RICE 評分。\n教師端掌控提案、投票、晉級與結果揭露流程，最後以排行榜呈現各組構想如何從發散走向可執行的優先順序。",
+      "highlights": ["學生掃 QR Code 加入並提交小組提案", "NOW／HOW／WOW／COW 四象限投票篩選", "晉級提案進行限時 RICE 評分", "教師控台與動態排行榜呈現決策過程"],
+      "tools": ["Next.js", "TypeScript", "Firebase", "Framer Motion", "QR Code"],
+      "links": [{"label": "前往作品", "url": "https://wowcow.zeabur.app/"}],
+      "date": "2026-05"
     },
     {
       "slug": "tanchi",
       "title": "Tanchi 投資儀表板",
       "categories": ["BI儀表板"],
       "summary": "個人股票投資組合追蹤儀表板——持倉一覽、損益曲線、Top Performers，讓投資狀況一目了然。",
-      "cover": "",
+      "cover": "assets/works/tanchi/screenshots/cover.png",
       "description": "Tanchi 是一個個人投資組合管理儀表板，整合持倉、交易紀錄與損益分析於單一介面。\n首頁顯示總資產、已實現 / 未實現損益、各持股比重；損益曲線圖呈現投資組合隨時間的表現；Top Performers 區塊標示報酬率最高與最低的標的。\n交易記錄頁面支援搜尋與篩選，可依股票代號、日期、買賣方向查詢。Supabase 作為資料後端，支援即時更新。",
       "highlights": [
         "持倉總覽：資產分布 + 各標的即時損益",
@@ -362,8 +611,419 @@
         "交易記錄支援搜尋篩選，歷史買賣一覽無遺"
       ],
       "tools": ["React", "TypeScript", "Supabase", "Recharts", "Tailwind CSS"],
-      "links": [],
+      "links": [{"label": "前往作品", "url": "https://tanchi.zeabur.app/"}],
       "date": "2026-05"
+    },
+    {
+      "slug": "manuscript-submission-pipeline",
+      "type": "skill",
+      "title": "國際期刊投稿手稿管線",
+      "categories": ["學術工具", "學術研究"],
+      "summary": "將中文手稿重組為英文投稿初稿，並可串接預審與內部修稿迴圈。",
+      "cover": "assets/works/manuscript-submission-pipeline/screenshots/cover.png",
+      "description": "這套工作流將中文學位論文、期刊初稿轉為結構完整的英文投稿手稿，不做逐字翻譯，而是依目標期刊的閱讀邏輯重組內容。\n\n可選擇單純產出初稿，或啟動投稿前迴圈，串接預審、內部修訂與再審；同時整理圖表與文獻，並將尚待作者確認的事項清楚保留在交付文件中。",
+      "highlights": [
+        "中文手稿重組為英文國際期刊稿",
+        "圖表萃取、整併與學術表格格式化",
+        "draft-only／preflight-loop 雙模式",
+        "新增文獻須經資料庫查證後才可納入"
+      ],
+      "tools": ["Python", "python-docx", "Crossref", "PubMed", "APA 7"],
+      "links": [],
+      "date": "2026-08"
+    },
+    {
+      "slug": "manuscript-pre-submission-review",
+      "type": "skill",
+      "title": "國際期刊投稿前預審",
+      "categories": ["學術工具", "學術研究"],
+      "summary": "以主編、技術編輯與審稿觀點，將投稿風險轉成可執行的修訂清單。",
+      "cover": "assets/works/manuscript-pre-submission-review/screenshots/cover.png",
+      "description": "投稿前預審工作流會先建立可追溯的證據地圖，再以 Editor-in-Chief、Technical Editor 與領域審稿觀點檢查手稿的定位、方法、證據與呈現。\n\n每項發現都有嚴重度、可行性與優先順序，並產出可直接交給修稿流程使用的中英文交接文件；修訂後也可進行 re-review，確認每一項意見是否真正被處理。",
+      "highlights": [
+        "主編、技術編輯與領域審稿多角度檢視",
+        "先建立證據地圖，再提出可追溯意見",
+        "Blocker／Major／Minor 分級與行動優先順序",
+        "支援初審與修訂後再審"
+      ],
+      "tools": ["Markdown", "Python", "python-docx", "Crossref", "PubMed"],
+      "links": [],
+      "date": "2026-08"
+    },
+    {
+      "slug": "manuscript-revision-response",
+      "type": "skill",
+      "title": "學術修稿與審稿回應系統",
+      "categories": ["學術工具", "學術研究"],
+      "summary": "把每則審稿意見轉成可稽核的手稿修訂、紅線稿與中英回覆。",
+      "cover": "assets/works/manuscript-revision-response/screenshots/cover.png",
+      "description": "這套修稿工作流將每則審稿意見建立為 revision tracker，從證據查證、手稿修改到差異比對都可逐項追溯。\n\n它支援投稿前的內部修訂，以及收到期刊意見後的 revise-and-resubmit；可輸出清稿、紅線稿、修訂紀錄、作者待辦與逐點回覆，同時避免虛構資料或文獻。",
+      "highlights": [
+        "逐則意見建立 revision tracker 與修訂證據",
+        "產出清稿、紅線稿與作者待辦清單",
+        "internal-preflight／external-r-and-r 雙模式",
+        "中英逐點回覆與文獻查證防呆"
+      ],
+      "tools": ["Python", "python-docx", "Crossref", "PubMed", "Markdown"],
+      "links": [],
+      "date": "2026-08"
+    },
+    {
+      "slug": "cai-kangyong-perspective",
+      "type": "skill",
+      "title": "蔡康永專屬關係與溝通顧問",
+      "categories": ["專屬顧問"],
+      "summary": "從關係、邊界到難題對話，提供真誠、有分寸且可實行的溝通建議。",
+      "cover": "assets/works/cai-kangyong-perspective/cover.svg",
+      "description": "以新版蔡康永語料庫為基礎升級的專家 Agent，整合 50 多個來源，將關係理解、情緒主權與表達分寸轉為可操作的對話框架。\n\n它特別適合處理難開口的話、關係中的界線、情緒表達與文字語氣調整；先辨識彼此真正的需求與情境，再提供既誠實、不失溫柔，也能保護自己的說法。",
+      "highlights": [
+        "困難對話、關係界線與情緒表達建議",
+        "情緒主權與溫柔但清楚的界線練習",
+        "以提問釐清真正需求、情境與說話目的",
+        "提供可直接使用的說法與語氣版本"
+      ],
+      "tools": ["Expert Distillation", "Conversation Design", "Emotional Intelligence", "Relationship Psychology"],
+      "links": [],
+      "date": "2026-08"
+    },
+    {
+      "slug": "wang-zhiqian-perspective",
+      "type": "skill",
+      "title": "汪志謙專屬體驗策略顧問",
+      "categories": ["專屬顧問"],
+      "summary": "以峰終定律與關鍵接觸點為核心，拆解品牌、產品與服務體驗。",
+      "cover": "assets/works/wang-zhiqian-perspective/cover.svg",
+      "description": "以汪志謙的公開著作、課程與訪談內容為基礎蒸餾，專注於品牌策略、顧客體驗與峰值設計。\n\nAgent 會先找出使用者旅程中的關鍵接觸點，再從洞察、體驗情緒與可執行方案逐步推進，讓策略不只停在概念，而能落到產品、服務與溝通設計。",
+      "highlights": [
+        "以 MOT、峰終定律與體驗曲線拆解旅程",
+        "從顧客洞察轉化為具體策略選項",
+        "兼顧品牌定位、產品設計與服務接觸點",
+        "以結構化追問找出真正值得優化的瞬間"
+      ],
+      "tools": ["Expert Distillation", "Customer Journey Mapping", "Brand Strategy", "Experience Design"],
+      "links": [],
+      "date": "2026-08"
+    },
+    {
+      "slug": "agency-elon-musk-perspective",
+      "type": "skill",
+      "title": "Elon Musk 專屬第一性原理顧問",
+      "categories": ["專屬顧問"],
+      "cover": "assets/works/agency-elon-musk-perspective/cover.svg",
+      "summary": "用第一性原理、工程拆解與極限目標，重新檢視產品、技術與商業難題。",
+      "description": "以 Elon Musk 的公開訪談、演講、決策紀錄與外部批評資料為基礎蒸餾的專家 Agent。\n\n它將問題拉回物理限制、成本結構與可驗證假設，適合用來挑戰既有做法、拆解複雜系統，並把野心轉為可執行的工程與營運問題。",
+      "highlights": [
+        "以第一性原理拆解成本、限制與假設",
+        "從工程、製造與速度角度重估可行性",
+        "檢查 10 倍目標背後的關鍵瓶頸",
+        "在高風險決策中區分物理現實與慣例"
+      ],
+      "tools": ["Expert Distillation", "First-Principles Thinking", "Systems Engineering", "Decision Analysis"],
+      "links": [],
+      "date": "2026-08"
+    },
+    {
+      "slug": "agency-steve-jobs-perspective",
+      "type": "skill",
+      "title": "Steve Jobs 專屬產品品味顧問",
+      "categories": ["專屬顧問"],
+      "cover": "assets/works/agency-steve-jobs-perspective/cover.svg",
+      "summary": "從使用者體驗、產品聚焦與端到端整合，逼近真正讓人想使用的產品。",
+      "description": "以 Steve Jobs 的公開演講、訪談、著作與產品決策紀錄為基礎蒸餾的專家 Agent。\n\n它會從產品的核心承諾出發，剔除不必要的功能與訊息，檢視使用者感受、整體性與細節是否一致，協助把產品概念收斂成清楚、有辨識度的體驗。",
+      "highlights": [
+        "以產品核心承諾檢查功能取捨",
+        "從端到端體驗檢視整體一致性",
+        "以使用者感受與品味挑戰平庸方案",
+        "把複雜概念收斂為清楚的產品敘事"
+      ],
+      "tools": ["Expert Distillation", "Product Strategy", "UX Design", "Narrative Design"],
+      "links": [],
+      "date": "2026-08"
+    },
+    {
+      "slug": "agency-naval-perspective",
+      "type": "skill",
+      "title": "Naval Ravikant 專屬財富與槓桿顧問",
+      "categories": ["專屬顧問"],
+      "cover": "assets/works/agency-naval-perspective/cover.svg",
+      "summary": "從特定知識、槓桿與長期複利，重新設計工作、財富與生活的選擇。",
+      "description": "以 Naval Ravikant 的公開談話、訪談與投資思維為基礎蒸餾的專家 Agent。\n\n它聚焦於特定知識、責任感、槓桿與長期賽局，協助使用者辨識真正值得累積的資產，並把職涯、創業、投資與內在自由放在同一個決策框架中。",
+      "highlights": [
+        "辨識個人特定知識與可累積的長期優勢",
+        "以產品、資本與媒體槓桿重新看待工作",
+        "區分財富、金錢、地位與內在自由",
+        "用長期賽局與 skin in the game 檢查選擇"
+      ],
+      "tools": ["Expert Distillation", "Career Strategy", "Leverage Thinking", "Long-Term Decision Making"],
+      "links": [],
+      "date": "2026-08"
+    },
+    {
+      "slug": "agency-munger-perspective",
+      "type": "skill",
+      "title": "Charlie Munger 專屬多元思維顧問",
+      "categories": ["專屬顧問"],
+      "cover": "assets/works/agency-munger-perspective/cover.svg",
+      "summary": "用多元思維模型、反向思考與避免愚蠢，讓重要判斷更穩健。",
+      "description": "以 Charlie Munger 的著作、股東會、演講與決策紀錄為基礎蒸餾的專家 Agent。\n\n它不急著尋找聰明答案，而是先找出會造成失敗的誘因、偏誤與系統性風險；透過跨學科思維模型與反向檢查，協助做出更耐久的投資、商業與人生決策。",
+      "highlights": [
+        "以反向思考先排除可避免的愚蠢",
+        "用多元思維模型交叉檢查判斷",
+        "辨識誘因扭曲、心理偏誤與連鎖效應",
+        "以長期複利與風險承受度評估選擇"
+      ],
+      "tools": ["Expert Distillation", "Mental Models", "Inversion", "Risk Analysis"],
+      "links": [],
+      "date": "2026-08"
+    },
+    {
+      "slug": "agency-feynman-perspective",
+      "type": "skill",
+      "title": "Richard Feynman 專屬科學思考顧問",
+      "categories": ["專屬顧問"],
+      "cover": "assets/works/agency-feynman-perspective/cover.svg",
+      "summary": "以好奇、可驗證與不自欺的標準，把複雜問題講清楚、查明白。",
+      "description": "以 Richard Feynman 的演講、訪談、著作與學術生涯資料為基礎蒸餾的專家 Agent。\n\n它會把抽象名詞拉回可觀察的現象與第一手證據，要求用簡單語言說明真正理解的內容；適合用於學習、研究、技術決策與任何需要檢查「我們是不是其實沒有懂」的問題。",
+      "highlights": [
+        "以簡單語言檢驗是否真正理解問題",
+        "把概念拉回可觀察現象與可驗證證據",
+        "主動尋找自欺、貨物崇拜與空洞術語",
+        "結合好奇心、懷疑精神與嚴肅的玩心"
+      ],
+      "tools": ["Expert Distillation", "Scientific Thinking", "Learning Design", "Evidence-Based Reasoning"],
+      "links": [],
+      "date": "2026-08"
+    },
+    {
+      "slug": "project-showcase-sync",
+      "type": "skill",
+      "title": "專案作品集與第二大腦同步",
+      "categories": ["生產力工具"],
+      "summary": "專案完成後，一次完成作品集、第二大腦專案卡、索引、建置驗證與日誌紀錄。",
+      "cover": "assets/works/project-showcase-sync/cover.svg",
+      "description": "專案作品集與第二大腦同步是一套用於專案里程碑收尾的 Skill。它會從實際程式與 Git 資訊萃取可驗證內容，將公開版的作品敘事與私有的工程快照分別收錄到 Portfolio 與 2ndBrain。\n\n流程同時處理封面、作品索引、AI MOC、建置驗證與 Daily log，讓每個完成的 Side Project 都留下可展示、也可回顧的成果紀錄。",
+      "highlights": [
+        "建立公開作品卡、封面、連結與靜態網站建置驗證",
+        "建立第二大腦 AI 專案卡，更新 MOC 與 Portfolio Works Index",
+        "以程式碼、測試與 commit 萃取可驗證資訊，不杜撰功能或成果",
+        "區隔公開作品內容與私有設定，避免憑證或敏感路徑外流"
+      ],
+      "tools": ["Markdown", "Node.js", "Git", "Obsidian", "Portfolio Build"],
+      "links": [],
+      "date": "2026-08"
+    },
+    {
+      "slug": "classroom-app",
+      "type": "skill",
+      "title": "課堂互動 App 設計師",
+      "categories": ["教學工具"],
+      "summary": "從需求訪談到即時互動架構，規劃可真正走進教室的教學 App。",
+      "cover": "assets/works/classroom-app/cover.svg",
+      "description": "這套 Skill 將課堂情境轉化為可開發的互動產品規格。它協助釐清教師、學生與管理端流程，選擇合適的 Next.js、Firebase 與即時同步架構，並在動工前處理連線、投影與操作節奏等真實教室限制。",
+      "highlights": ["以需求訪談釐清角色、學習目標與互動規則", "規劃教師端、學生端與即時同步流程", "納入斷線重連、投影與課堂操作節奏", "將教學想法收斂為可執行的 App 規格"],
+      "tools": ["Next.js", "Firebase", "WebSocket", "Learning Design"],
+      "links": [],
+      "date": "2026-08"
+    },
+    {
+      "slug": "literature-search",
+      "type": "skill",
+      "title": "可查證文獻搜尋",
+      "categories": ["學術工具", "學術研究"],
+      "summary": "以 DOI 與原始資料庫交叉查證，讓文獻搜尋不再靠記憶或猜測。",
+      "cover": "assets/works/literature-search/cover.svg",
+      "description": "可查證文獻搜尋透過 Crossref、PubMed、OpenAlex 等來源蒐集研究，逐篇確認書目與 DOI，並依研究問題整理證據強度、核心論點與 APA 7 格式。它把「找到資料」提升為可追溯的研究基礎。",
+      "highlights": ["串接 Crossref、PubMed、OpenAlex 等原始資料庫", "逐篇驗證 DOI、書目與來源可追溯性", "依研究問題整理摘要、論點與證據層級", "以 APA 7 與 DOI 交付可直接使用的引用"],
+      "tools": ["Crossref", "PubMed", "OpenAlex", "APA 7"],
+      "links": [],
+      "date": "2026-08"
+    },
+    {
+      "slug": "manuscript-single-file-polish",
+      "type": "skill",
+      "title": "學術手稿全文潤飾",
+      "categories": ["學術工具", "學術研究"],
+      "summary": "以最小必要改寫，讓接近完成的英文手稿更自然、連貫且可投稿。",
+      "cover": "assets/works/manuscript-single-file-polish/cover.svg",
+      "description": "這是一套針對單一近完成手稿的輕量潤飾流程。它聚焦於術語、時態、主張力度與段落連貫性，保留作者原本的研究聲音與 References，不補造資料、不延伸為審稿或回覆流程。",
+      "highlights": ["以最小必要改寫維持作者原有論證與聲音", "校正術語、時態與主張強度的一致性", "檢查段落銜接與自然學術語氣", "不杜撰資料、不改造 References 或擴張工作範圍"],
+      "tools": ["Academic Writing", "APA 7", "Manuscript Editing"],
+      "links": [],
+      "date": "2026-08"
+    },
+    {
+      "slug": "agency-serenity-perspective",
+      "type": "skill",
+      "title": "Serenity 產業專家顧問",
+      "categories": ["專屬顧問", "量化投資"],
+      "summary": "從供應鏈瓶頸與價值捕獲切入，建立有證據、可反駁的產業研究判斷。",
+      "cover": "assets/works/agency-serenity-perspective/cover.svg",
+      "description": "Serenity 是一位產業研究專家顧問。它從系統變化一路追到價值鏈的稀缺環節，排序值得追查的公司與假設，同時要求一手證據、反方觀點與下一步驗證點，避免把研究直接包裝成交易指令。",
+      "highlights": ["由產業變化展開供應鏈與價值鏈地圖", "定位瓶頸、稀缺層與可能受益的候選者", "以一手證據、風險與反方觀點壓力測試論點", "輸出研究優先序與下一步驗證問題"],
+      "tools": ["Industry Research", "Supply Chain", "Thesis Stress Test", "Evidence Mapping"],
+      "links": [],
+      "date": "2026-08"
+    },
+    {
+      "slug": "skill-htmlppt",
+      "type": "skill",
+      "title": "HTML 簡報設計師",
+      "categories": ["教學工具"],
+      "summary": "把文字大綱轉成可直接播放的高質感 HTML 簡報。",
+      "cover": "assets/works/skill-htmlppt/cover.svg",
+      "description": "HTML 簡報設計師會先重整內容層級與每頁核心訊息，再以暖北歐視覺系統組合圖文版型與互動節奏，最後產出自包含的 HTML 簡報，支援鍵盤導航與現場播放。",
+      "highlights": ["將長篇內容拆成有節奏的投影片敘事", "依資訊特性選擇圖表、流程、對比與案例版型", "套用一致的暖北歐設計系統", "輸出無額外依賴、可鍵盤導航的 HTML 簡報"],
+      "tools": ["HTML", "CSS", "JavaScript", "Presentation Design"],
+      "links": [],
+      "date": "2026-08"
+    },
+    {
+      "slug": "ziwei-deep-reading",
+      "type": "skill",
+      "title": "紫微深度解讀顧問",
+      "categories": ["專屬顧問", "Web應用"],
+      "summary": "以可重現排盤資料與分層脈絡，提供不宿命的紫微斗數解讀。",
+      "cover": "assets/works/ziwei-deep-reading/cover.svg",
+      "description": "紫微深度解讀顧問以 iztro 排盤資料作為唯一盤面事實，結合第二大腦的星曜知識卡，從本命、大限到流年分層回應問題。它強調具體脈絡與可行動的理解，而不是把命盤說成不可改變的結論。",
+      "highlights": ["以 iztro 資料驗證命盤與星曜配置", "檢索第二大腦卡片補足星曜脈絡", "分層處理本命、大限與流年問題", "以具體、非宿命的方式提出解讀與反思"],
+      "tools": ["iztro", "Knowledge Retrieval", "Zi Wei Dou Shu"],
+      "links": [],
+      "date": "2026-08"
+    },
+    {
+      "slug": "new-project-deploy",
+      "type": "skill",
+      "title": "新專案部署管線",
+      "categories": ["生產力工具"],
+      "summary": "從本機專案到公開網址，串起 GitHub、Zeabur、網域與部署驗證。",
+      "cover": "assets/works/new-project-deploy/cover.svg",
+      "description": "新專案部署管線將公開發布拆成可追蹤的步驟：建立 GitHub 儲存庫、設定 Zeabur 服務與網域、處理 Firebase 環境變數，再從建置與服務日誌確認最終結果，留下可回顧的部署紀錄。",
+      "highlights": ["建立 GitHub 儲存庫並推送可部署程式碼", "設定 Zeabur 專案、服務、公開網域與環境變數", "處理 Firebase 等前端服務的部署設定", "以建置與服務日誌驗證公開發布結果"],
+      "tools": ["GitHub", "Zeabur", "Firebase", "Deployment"],
+      "links": [],
+      "date": "2026-08"
+    },
+    {
+      "slug": "ntuh-sql-developer",
+      "type": "skill",
+      "title": "NTUH SQL 開發顧問",
+      "categories": ["生產力工具"],
+      "summary": "以臺大醫院資料字典、關聯鍵與 Queryman 規範，產出可安全執行的醫療資料 SQL。",
+      "cover": "assets/works/ntuh-sql-developer/cover.svg",
+      "description": "NTUH SQL 開發顧問是一套面向臺大醫院 HIS／MIS 與資料倉儲環境的 SQL 工作流程。它將資料字典核實、複合鍵關聯、申報資料邏輯與 Queryman／Oracle 語法規範整合在同一個查詢前檢查流程中，協助降低欄位誤用與一對多串接造成的統計膨脹。",
+      "highlights": [
+        "先核實資料字典，再使用門急診、住院、醫令、病患與員工等核心資料表",
+        "以複合關聯鍵與 SubQuery／DISTINCT 防止醫令明細放大主檔統計",
+        "內建總院過濾、民國年與年齡計算等醫療業務規則",
+        "遵守 Queryman／Oracle SQL 的註解、中文別名與 GROUP BY 寫法"
+      ],
+      "tools": ["Oracle SQL", "Queryman", "NTUHDW", "醫療資料字典"],
+      "links": [],
+      "date": "2026-08"
+    },
+    {
+      "slug": "quote-bank",
+      "type": "skill",
+      "title": "金句知識庫",
+      "categories": ["學習工具"],
+      "summary": "將人物、書籍與訪談中的重要句子收斂成可檢索、可回溯的金句庫。",
+      "cover": "assets/works/quote-bank/cover.svg",
+      "description": "金句知識庫為每個來源建立可追溯的條目，保存原文、出處與主題脈絡，並透過標籤、去重與總索引，讓零散的句子逐漸成為可以再利用的觀點網絡。",
+      "highlights": ["依人物、書籍與訪談建立來源金句檔", "保留原文與出處，避免失去脈絡或錯誤引用", "主題標籤與去重，支援跨來源檢索", "同步更新總索引，讓知識可以持續累積"],
+      "tools": ["Obsidian", "Markdown", "Knowledge Management"],
+      "links": [],
+      "date": "2026-08"
+    },
+    {
+      "slug": "soul-card",
+      "type": "skill",
+      "title": "人物靈魂卡",
+      "categories": ["學習工具"],
+      "summary": "把人物訪談與觀點整理為可連結的知識圖譜，而非零散的人物介紹。",
+      "cover": "assets/works/soul-card/cover.svg",
+      "description": "人物靈魂卡以人物卡、分類 MOC 與訪談紀錄串接一位人物的核心觀點、經歷與金句。流程重視來源可追溯與關聯維護，讓長期累積的人物研究能真正被再次檢索與使用。",
+      "highlights": ["建立人物卡與分類 MOC 的知識結構", "掛載訪談、摘要與可追溯來源", "萃取關鍵觀點並同步至金句庫", "避免杜撰人物經歷或沒有來源的敘述"],
+      "tools": ["Obsidian", "Markdown", "Knowledge Graph"],
+      "links": [],
+      "date": "2026-08"
+    },
+    {
+      "slug": "book-card",
+      "type": "skill",
+      "title": "書籍知識卡",
+      "categories": ["學習工具"],
+      "summary": "將閱讀摘錄、心得與金句整理成能陪著閱讀歷程成長的書籍卡。",
+      "cover": "assets/works/book-card/cover.svg",
+      "description": "書籍知識卡將一本書的基礎資訊、摘錄、讀後想法與金句放進可連結的結構，同時維護分類 MOC 與 read100 進度。它讓讀完不是結束，而是把閱讀轉為日後可回看的個人資料庫。",
+      "highlights": ["建立結合摘錄、心得與書目資訊的書籍卡", "萃取金句並連回來源與主題", "維護分類 MOC 與 read100 閱讀進度", "讓閱讀紀錄可以持續補充、交叉連結與回顧"],
+      "tools": ["Obsidian", "Markdown", "Reading Notes"],
+      "links": [],
+      "date": "2026-08"
+    },
+    {
+      "slug": "stock-card",
+      "type": "skill",
+      "title": "股票資訊卡",
+      "categories": ["學習工具", "量化投資"],
+      "summary": "用卡片筆記法整理台美股公司、產業位置與跨市場關聯。",
+      "cover": "assets/works/stock-card/cover.svg",
+      "description": "股票資訊卡將公司業務、產業鏈位置、上下游與跨市場關聯整理成標準化卡片。它支援單張、批次與增量更新，幫助投資研究從一時的查詢，累積成可比較、可連結的公司知識庫。",
+      "highlights": ["整理公司業務、產品與產業鏈定位", "建立上下游與台美股跨市場關聯", "支援單張、批次與增量更新模式", "將研究結果寫入可檢索的本地股票卡資料庫"],
+      "tools": ["Stock Research", "Markdown", "Knowledge Graph"],
+      "links": [],
+      "date": "2026-08"
+    },
+    {
+      "slug": "log",
+      "type": "skill",
+      "title": "協作日誌",
+      "categories": ["學習工具"],
+      "summary": "在每次協作後留下真實、可掃描的日誌，讓工作經驗不在對話結束後消失。",
+      "cover": "assets/works/log/cover.svg",
+      "description": "協作日誌將本次真正完成的工作與解決的困難，以固定格式插入每日紀錄的三省之前。它也會回看是否出現重複卻沒有工具支援的流程，將經驗轉化為下一個 Skill 的線索。",
+      "highlights": ["以固定格式記錄真實完成工作與難題", "保持三省區塊固定在每日紀錄底部", "不捏造未發生的成果或解法", "透過 Skill 雷達發現值得制度化的重複流程"],
+      "tools": ["Obsidian", "Markdown", "Reflection"],
+      "links": [],
+      "date": "2026-08"
+    },
+    {
+      "slug": "learn",
+      "type": "skill",
+      "title": "每日學習摘要",
+      "categories": ["學習工具"],
+      "summary": "彙整當日筆記與閱讀高亮，留下真正學到什麼的一頁式摘要。",
+      "cover": "assets/works/learn/cover.svg",
+      "description": "每日學習摘要會掃描當天在第二大腦新增或修改的筆記，搭配 Readwise 新增高亮，濃縮成 Daily log 中獨立的學習摘要。它讓輸入不只被收藏，而能回到每天的反思與累積。",
+      "highlights": ["掃描當日新增或修改的 Obsidian 筆記", "整合當日 Readwise 閱讀高亮", "產出獨立、可回顧的今日學習摘要", "避免重複與空泛，保留真正新增的觀點"],
+      "tools": ["Obsidian", "Readwise", "Markdown"],
+      "links": [],
+      "date": "2026-08"
+    },
+    {
+      "slug": "yt-nlm-course",
+      "type": "skill",
+      "title": "課程影片蒸餾",
+      "categories": ["學習工具", "教學工具"],
+      "summary": "把教學影片與線上課程重建成有章節、步驟與例子的深度學習筆記。",
+      "cover": "assets/works/yt-nlm-course/cover.svg",
+      "description": "課程影片蒸餾運用 NotebookLM 將長篇逐字稿按主題重組，還原成接近一頁頁簡報的教學脈絡、操作步驟與案例。流程保留來源、完成歸檔並清理暫存資源。",
+      "highlights": ["以 NotebookLM 建立專用的暫存研究空間", "依章節與主題還原課程核心內容", "整理步驟、範例與可教學的文字結構", "保留逐字稿來源、完成歸檔並清理暫存資料"],
+      "tools": ["NotebookLM", "YouTube", "Learning Design"],
+      "links": [],
+      "date": "2026-08"
+    },
+    {
+      "slug": "yt-nlm-compile",
+      "type": "skill",
+      "title": "影片精華與金句編譯",
+      "categories": ["學習工具"],
+      "summary": "將訪談影片編譯成分段精華、可引用金句與可延伸的人物知識。",
+      "cover": "assets/works/yt-nlm-compile/cover.svg",
+      "description": "影片精華與金句編譯以 NotebookLM 整理沒有字幕或資訊零散的影片，產出分段摘要與精選金句；若是人物訪談，還會連動人物卡、金句庫與第二大腦編譯流程。",
+      "highlights": ["以 NotebookLM 將影片內容分段整理為精華", "從內容中萃取 3 至 8 句可回溯的金句", "人物訪談可連動人物卡與金句資料庫", "完成後觸發第二大腦編譯並清理暫存資源"],
+      "tools": ["NotebookLM", "YouTube", "Obsidian", "Knowledge Management"],
+      "links": [],
+      "date": "2026-08"
     }
   ]
 }
