@@ -17,6 +17,50 @@
   },
   "works": [
     {
+      "slug": "buybuybuy",
+      "title": "政府標案投標輔助系統",
+      "categories": ["AI應用", "工具軟體"],
+      "summary": "政府標案自動化監控雷達 + 案件資料庫 + LINE 即時推播輔助系統。",
+      "cardGradient": "linear-gradient(140deg,#3F6B7E,#264B59)",
+      "cover": "assets/works/buybuybuy/cover.svg",
+      "description": "一套專為政府採購投標設計的「標案雷達 + 案件資料庫 + 投標決策分析」系統。\n每日自動抓取政府電子採購網之新公告（包含台灣電力股份有限公司等採購機關），依自訂關鍵字與標的分類過濾，即時推播至 LINE 群組；所有案件結構化入庫留痕，提供公開看板檢視與管理。",
+      "highlights": [
+        "每日自動定時抓取政府電子採購網最新公告",
+        "彈性關鍵字與機構篩選（含台電等勞務標案）",
+        "LINE Messaging API 即時群組推播與去重機制",
+        "Next.js 互動式案件看板與 Firebase Firestore 雲端資料庫"
+      ],
+      "tools": ["Next.js", "TypeScript", "Tailwind CSS", "Firebase", "LINE API", "Node.js", "Zeabur"],
+      "links": [
+        { "label": "前往作品", "url": "https://buybuybuy.zeabur.app" },
+        { "label": "查看原始碼", "url": "https://github.com/mouslun-cpu/buy" }
+      ],
+      "date": "2026-08",
+      "featured": true
+    },
+    {
+      "slug": "portfolio",
+      "title": "個人作品集與 Google 授權守門系統",
+      "categories": ["個人品牌", "安全架構"],
+      "summary": "具備 Google OAuth 白名單伺服器端守門與 PWA 安裝支援的個人作品集。",
+      "cardGradient": "linear-gradient(140deg,#28738A,#184E5E)",
+      "cover": "assets/works/portfolio/cover.svg",
+      "description": "Allen 的個人 AI 應用與專案作品集網站，收錄超過 60 個實作專案與方法論技能包。\n採用 Node.js Express 伺服器作為入口守衛，全域攔截所有請求並透過 Google OAuth 2.0 與 Email 白名單進行存取控制；同時支援 PWA 漸進式網頁應用，可一鍵下載至 iPhone / Android 主畫面實現獨立全螢幕 App 體驗。",
+      "highlights": [
+        "伺服器端全域守門：Google OAuth 2.0 + 30 天安全 Session Cookie",
+        "Email 白名單存取控制，未授權者完全無法取得作品資料與圖片",
+        "支援 PWA 行動裝置安裝與專屬設計之向量 App Icon",
+        "資料驅動靜態建置引擎，零前端框架依賴、極速載入"
+      ],
+      "tools": ["Node.js", "Express", "Google OAuth", "PWA", "Zeabur", "JavaScript"],
+      "links": [
+        { "label": "前往作品", "url": "https://yh-portfolio.zeabur.app" },
+        { "label": "查看原始碼", "url": "https://github.com/mouslun-cpu/Portfolio" }
+      ],
+      "date": "2026-08",
+      "featured": true
+    },
+    {
       "slug": "academic-publication-dashboard",
       "title": "學術發表儀表板",
       "categories": ["BI儀表板", "學術研究"],

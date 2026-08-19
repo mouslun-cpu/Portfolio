@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">政府標案投標輔助系統</title>
+  <desc id="desc">政府標案智慧雷達、案件庫與 LINE 即時推播</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0E232E"/>
+      <stop offset="100%" stop-color="#1A3B4D"/>
+    </linearGradient>
+    <linearGradient id="radar-accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#00C39A"/>
+      <stop offset="100%" stop-color="#4BE3B5"/>
+    </linearGradient>
+    <linearGradient id="card-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#183648"/>
+      <stop offset="100%" stop-color="#122A38"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="1400" cy="120" r="320" fill="#00C39A" opacity=".08"/>
+  <circle cx="150" cy="850" r="300" fill="#28738A" opacity=".12"/>
+
+  <!-- 標題區 -->
+  <text x="120" y="180" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, 'Noto Sans TC', sans-serif" font-size="88" font-weight="700">政府標案投標輔助系統</text>
+  <text x="125" y="248" fill="#8EB5C7" font-family="-apple-system, BlinkMacSystemFont, 'Noto Sans TC', sans-serif" font-size="28" letter-spacing="1">標案智慧雷達 · 案件資料庫 · LINE 即時推播</text>
+
+  <!-- 左側面板：雷達掃描與條件 -->
+  <rect x="120" y="320" width="640" height="460" rx="24" fill="url(#card-grad)" stroke="#2C5368" stroke-width="2"/>
+  <text x="160" y="380" fill="#E2F1F8" font-family="-apple-system, BlinkMacSystemFont, 'Noto Sans TC', sans-serif" font-size="26" font-weight="700">🎯 標案監控與即時推播引擎</text>
+  <line x1="160" y1="410" x2="720" y2="410" stroke="#2C5368" stroke-width="1.5"/>
+
+  <!-- 標籤狀態條目 -->
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Noto Sans TC', sans-serif" font-size="22">
+    <rect x="160" y="440" width="560" height="85" rx="14" fill="#0E232E" stroke="#1D4358"/>
+    <circle cx="195" cy="482" r="10" fill="#00C39A"/>
+    <text x="220" y="475" fill="#FFFFFF" font-weight="600">每日 21:00 定時排程自動巡邏</text>
+    <text x="220" y="505" fill="#8EB5C7" font-size="18">政府電子採購網 · 台灣電力公司 · 勞務標案</text>
+
+    <rect x="160" y="545" width="560" height="85" rx="14" fill="#0E232E" stroke="#1D4358"/>
+    <circle cx="195" cy="587" r="10" fill="#06C755"/>
+    <text x="220" y="580" fill="#FFFFFF" font-weight="600">LINE Messaging API 群組推播</text>
+    <text x="220" y="610" fill="#8EB5C7" font-size="18">即時去重 · 標案預算 · 截止日期 · 決標方式</text>
+
+    <rect x="160" y="650" width="560" height="85" rx="14" fill="#0E232E" stroke="#1D4358"/>
+    <circle cx="195" cy="692" r="10" fill="#FFA463"/>
+    <text x="220" y="685" fill="#FFFFFF" font-weight="600">Firebase Firestore 雲端資料庫</text>
+    <text x="220" y="715" fill="#8EB5C7" font-size="18">歷史標案留痕 · 狀態追蹤 · 投標決策分析</text>
+  </g>
+
+  <!-- 右側面板：案件清單模擬 -->
+  <rect x="800" y="320" width="680" height="460" rx="24" fill="url(#card-grad)" stroke="#2C5368" stroke-width="2"/>
+  <text x="840" y="380" fill="#E2F1F8" font-family="-apple-system, BlinkMacSystemFont, 'Noto Sans TC', sans-serif" font-size="26" font-weight="700">📋 即時標案公開看板</text>
+  <line x1="840" y1="410" x2="1440" y2="410" stroke="#2C5368" stroke-width="1.5"/>
+
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Noto Sans TC', sans-serif">
+    <rect x="840" y="440" width="600" height="135" rx="16" fill="#142F40" stroke="#275673"/>
+    <rect x="865" y="465" width="80" height="30" rx="8" fill="#00C39A"/><text x="880" y="486" fill="#0E232E" font-size="16" font-weight="700">台電</text>
+    <text x="960" y="487" fill="#FFFFFF" font-size="21" font-weight="700">115年度變電所維護勞務採購案</text>
+    <text x="865" y="525" fill="#8EB5C7" font-size="18">預算金額：NT$ 8,500,000 · 截止：2026-09-15</text>
+    <text x="865" y="555" fill="#64D8B8" font-size="16">已推送至 LINE 投標工作群組</text>
+
+    <rect x="840" y="595" width="600" height="135" rx="16" fill="#142F40" stroke="#275673"/>
+    <rect x="865" y="620" width="105" height="30" rx="8" fill="#3B82F6"/><text x="880" y="641" fill="#FFFFFF" font-size="16" font-weight="700">勞務採購</text>
+    <text x="985" y="642" fill="#FFFFFF" font-size="21" font-weight="700">資訊系統維護與雲端整合服務案</text>
+    <text x="865" y="680" fill="#8EB5C7" font-size="18">預算金額：NT$ 4,200,000 · 截止：2026-09-02</text>
+    <text x="865" y="710" fill="#64D8B8" font-size="16">已推送至 LINE 投標工作群組</text>
+  </g>
+</svg>
