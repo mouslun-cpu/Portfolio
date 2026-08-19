@@ -391,24 +391,30 @@ const PWA_MANIFEST_JSON = {
   name: "Allen 作品集",
   short_name: "Allen 作品集",
   description: "Allen 的個人 AI 應用與精選專案作品集",
-  start_url: "/",
-  id: "/",
+  start_url: "./",
+  id: "./",
   display: "standalone",
   background_color: "#F6F0DA",
   theme_color: "#28738A",
   orientation: "portrait-primary",
   icons: [
     {
-      src: "/assets/icon.svg",
-      sizes: "192x192 512x512 any",
-      type: "image/svg+xml",
-      purpose: "any"
+      src: "assets/app-icon-192.png",
+      sizes: "192x192",
+      type: "image/png",
+      purpose: "maskable"
     },
     {
-      src: "/assets/icon.svg",
-      sizes: "192x192 512x512 any",
-      type: "image/svg+xml",
+      src: "assets/app-icon-512.png",
+      sizes: "512x512",
+      type: "image/png",
       purpose: "maskable"
+    },
+    {
+      src: "assets/icon.svg",
+      sizes: "any",
+      type: "image/svg+xml",
+      purpose: "any"
     }
   ],
   categories: ["portfolio", "productivity", "utilities"]
@@ -419,9 +425,8 @@ app.get(['/manifest.webmanifest', '/manifest.json'], (req, res) => {
   res.json(PWA_MANIFEST_JSON);
 });
 
-app.get(['/assets/icon.svg', '/apple-touch-icon.png', '/favicon.ico'], (req, res) => {
-  res.setHeader('Content-Type', 'image/svg+xml; charset=utf-8');
-  res.send(SVG_APP_ICON);
+app.get(['/assets/icon.svg', '/assets/app-icon-192.png', '/assets/app-icon-512.png', '/sw.js'], (req, res) => {
+  res.sendFile(path.join(__dirname, req.path.slice(1)));
 });
 
 // ==================== 全域身分驗證守衛 ====================
@@ -473,4 +478,3 @@ app.listen(PORT, () => {
   console.log(`🚀 Portfolio 伺服器已安全啟動在 http://localhost:${PORT}`);
   console.log(`🔒 授權存取白名單: ${process.env.ALLOWED_EMAILS || '(未設定 - 任何人皆無法瀏覽)'}`);
 });
-

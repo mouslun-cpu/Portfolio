@@ -2,24 +2,30 @@
   "name": "Allen 作品集",
   "short_name": "Allen 作品集",
   "description": "Allen 的個人 AI 應用與精選專案作品集",
-  "start_url": "/",
-  "id": "/",
+  "start_url": "./",
+  "id": "./",
   "display": "standalone",
   "background_color": "#F6F0DA",
   "theme_color": "#28738A",
   "orientation": "portrait-primary",
   "icons": [
     {
-      "src": "/assets/icon.svg",
-      "sizes": "192x192 512x512 any",
-      "type": "image/svg+xml",
-      "purpose": "any"
+      "src": "assets/app-icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
     },
     {
-      "src": "/assets/icon.svg",
-      "sizes": "192x192 512x512 any",
-      "type": "image/svg+xml",
+      "src": "assets/app-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
       "purpose": "maskable"
+    },
+    {
+      "src": "assets/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
     }
   ],
   "categories": ["portfolio", "productivity", "utilities"]

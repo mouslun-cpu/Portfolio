@@ -73,12 +73,12 @@ ${canonical ? `<meta property="og:url" content="${esc(canonical)}">` : ""}
 <!-- PWA & Mobile Web App Support -->
 <link rel="manifest" href="${prefix}manifest.webmanifest">
 <link rel="icon" type="image/svg+xml" href="${prefix}assets/icon.svg">
-<link rel="apple-touch-icon" href="${prefix}assets/icon.svg">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="apple-mobile-web-app-title" content="${esc(profile.name)}作品集">
 <meta name="theme-color" content="#28738A">
+<script>if ("serviceWorker" in navigator) window.addEventListener("load", () => navigator.serviceWorker.register("${prefix}sw.js"));</script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
