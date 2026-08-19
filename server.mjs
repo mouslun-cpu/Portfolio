@@ -355,17 +355,73 @@ app.get('/auth/logout', (req, res) => {
 });
 
 // ==================== PWA 公開圖示與 Manifest 路由 ====================
-app.get('/manifest.webmanifest', (req, res) => {
-  res.type('application/manifest+json').sendFile(path.join(__dirname, 'manifest.webmanifest'));
+const SVG_APP_ICON = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3A8A9E"/>
+      <stop offset="50%" stop-color="#28738A"/>
+      <stop offset="100%" stop-color="#184E5E"/>
+    </linearGradient>
+    <linearGradient id="accent-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFA463"/>
+      <stop offset="100%" stop-color="#FF7A24"/>
+    </linearGradient>
+    <linearGradient id="cream-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F6F0DA"/>
+    </linearGradient>
+    <filter id="drop-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#0E2E38" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+  <rect width="512" height="512" rx="116" fill="url(#bg-grad)"/>
+  <rect x="12" y="12" width="488" height="488" rx="104" fill="none" stroke="#6F91B5" stroke-width="3" stroke-opacity="0.3"/>
+  <g filter="url(#drop-shadow)">
+    <path d="M168 140 L344 140 C358 140 370 152 370 166 L370 340 C370 354 358 366 344 366 L168 366 C154 366 142 354 142 340 L142 166 C142 152 154 140 168 140 Z" fill="#4A8094" fill-opacity="0.5" transform="rotate(-6 256 253)" />
+    <path d="M256 120 L160 356 C155 368 164 380 177 380 L208 380 C216 380 223 375 226 367 L256 288 L286 367 C289 375 296 380 304 380 L335 380 C348 380 357 368 352 356 L256 120 Z" fill="url(#cream-grad)"/>
+    <polygon points="256,228 296,288 256,316 216,288" fill="url(#accent-grad)"/>
+    <path d="M256 120 L226 367 L256 288 Z" fill="#E8DFBE" fill-opacity="0.6"/>
+  </g>
+  <circle cx="256" cy="424" r="6" fill="#FF8838"/>
+  <circle cx="232" cy="424" r="3.5" fill="#89C0B7" fill-opacity="0.8"/>
+  <circle cx="280" cy="424" r="3.5" fill="#89C0B7" fill-opacity="0.8"/>
+</svg>`;
+
+const PWA_MANIFEST_JSON = {
+  name: "Allen 作品集",
+  short_name: "Allen 作品集",
+  description: "Allen 的個人 AI 應用與精選專案作品集",
+  start_url: "/",
+  id: "/",
+  display: "standalone",
+  background_color: "#F6F0DA",
+  theme_color: "#28738A",
+  orientation: "portrait-primary",
+  icons: [
+    {
+      src: "/assets/icon.svg",
+      sizes: "192x192 512x512 any",
+      type: "image/svg+xml",
+      purpose: "any"
+    },
+    {
+      src: "/assets/icon.svg",
+      sizes: "192x192 512x512 any",
+      type: "image/svg+xml",
+      purpose: "maskable"
+    }
+  ],
+  categories: ["portfolio", "productivity", "utilities"]
+};
+
+app.get(['/manifest.webmanifest', '/manifest.json'], (req, res) => {
+  res.setHeader('Content-Type', 'application/manifest+json; charset=utf-8');
+  res.json(PWA_MANIFEST_JSON);
 });
-app.get('/manifest.json', (req, res) => {
-  res.type('application/manifest+json').sendFile(path.join(__dirname, 'manifest.json'));
-});
-app.get('/assets/icon.svg', (req, res) => {
-  res.type('image/svg+xml').sendFile(path.join(__dirname, 'assets', 'icon.svg'));
-});
-app.get('/apple-touch-icon.png', (req, res) => {
-  res.type('image/svg+xml').sendFile(path.join(__dirname, 'assets', 'icon.svg'));
+
+app.get(['/assets/icon.svg', '/apple-touch-icon.png', '/favicon.ico'], (req, res) => {
+  res.setHeader('Content-Type', 'image/svg+xml; charset=utf-8');
+  res.send(SVG_APP_ICON);
 });
 
 // ==================== 全域身分驗證守衛 ====================
@@ -374,7 +430,6 @@ app.use((req, res, next) => {
   if (req.path.startsWith('/auth/')) {
     return next();
   }
-
 
   // 檢查登入與白名單狀態
   if (req.session?.user?.authenticated && isEmailAllowed(req.session.user.email)) {
@@ -388,7 +443,6 @@ app.use((req, res, next) => {
 
   res.redirect('/auth/login');
 });
-
 
 // ==================== 靜態檔案保護提供 ====================
 // 防止重要檔案被直接下載
@@ -409,10 +463,14 @@ app.use(express.static(__dirname, {
 
 // Fallback 404
 app.use((req, res) => {
-  res.status(404).redirect('/');
+  if (req.accepts('html')) {
+    return res.status(404).redirect('/');
+  }
+  res.status(404).send('Not Found');
 });
 
 app.listen(PORT, () => {
   console.log(`🚀 Portfolio 伺服器已安全啟動在 http://localhost:${PORT}`);
   console.log(`🔒 授權存取白名單: ${process.env.ALLOWED_EMAILS || '(未設定 - 任何人皆無法瀏覽)'}`);
 });
+
