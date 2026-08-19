@@ -28,7 +28,7 @@
       ],
       "summary": "政府標案自動化監控雷達 + 案件資料庫 + LINE 即時推播輔助系統。",
       "cardGradient": "linear-gradient(140deg,#3F6B7E,#264B59)",
-      "cover": "assets/works/buybuybuy/cover.svg",
+      "cover": "assets/works/buybuybuy/cover.png",
       "description": "一套專為政府採購投標設計的「標案雷達 + 案件資料庫 + 投標決策分析」系統。\n每日自動抓取政府電子採購網之新公告（包含台灣電力股份有限公司等採購機關），依自訂關鍵字與標的分類過濾，即時推播至 LINE 群組；所有案件結構化入庫留痕，提供公開看板檢視與管理。",
       "highlights": [
         "每日自動定時抓取政府電子採購網最新公告",
