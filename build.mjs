@@ -61,7 +61,7 @@ const head = (title, desc, canonical, prefix = "") => `<!doctype html>
 <html lang="zh-Hant">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>${esc(title)}</title>
 <meta name="description" content="${esc(desc)}">
 ${canonical ? `<link rel="canonical" href="${esc(canonical)}">` : ""}
@@ -69,6 +69,17 @@ ${canonical ? `<link rel="canonical" href="${esc(canonical)}">` : ""}
 <meta property="og:description" content="${esc(desc)}">
 <meta property="og:type" content="website">
 ${canonical ? `<meta property="og:url" content="${esc(canonical)}">` : ""}
+
+<!-- PWA & Mobile Web App Support -->
+<link rel="manifest" href="${prefix}manifest.webmanifest">
+<link rel="icon" type="image/svg+xml" href="${prefix}assets/icon.svg">
+<link rel="apple-touch-icon" href="${prefix}assets/icon.svg">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="${esc(profile.name)}作品集">
+<meta name="theme-color" content="#28738A">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Noto+Serif+TC:wght@600;700&family=Noto+Sans+TC:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -225,6 +236,47 @@ ${siteHeader()}
   </section>
 
 </main>
+
+<!-- PWA 浮動安裝橫幅 -->
+<div id="pwaBanner" class="pwa-install-banner" style="display: none;">
+  <div class="pwa-icon-thumb">
+    <img src="assets/icon.svg" alt="App Icon">
+  </div>
+  <div class="pwa-btn-text">
+    <span class="pwa-btn-title">下載至手機主畫面</span>
+    <span class="pwa-btn-sub">點擊即可像 APP 般隨時瀏覽</span>
+  </div>
+  <button id="pwaCloseBtn" class="pwa-close-btn" aria-label="關閉提示">✕</button>
+</div>
+
+<!-- iOS PWA 指引彈窗 -->
+<div id="pwaModal" class="pwa-modal-overlay">
+  <div class="pwa-modal-card">
+    <div class="pwa-modal-header">
+      <img src="assets/icon.svg" alt="App Icon" class="pwa-modal-app-icon">
+      <div class="pwa-modal-title">加入主畫面使用</div>
+    </div>
+    <p style="font-size: 13px; color: var(--ink-muted); line-height: 1.5;">
+      將此作品集加入 iPhone 主畫面，享受無網址列的全螢幕 App 體驗：
+    </p>
+    <div class="pwa-steps">
+      <div class="pwa-step-item">
+        <div class="pwa-step-num">1</div>
+        <div>點擊 Safari 底部的「分享」按鈕 <span class="pwa-step-icon">⎋</span></div>
+      </div>
+      <div class="pwa-step-item">
+        <div class="pwa-step-num">2</div>
+        <div>向下滑動選單，點選 <span class="pwa-step-icon">➕ 加入主畫面</span></div>
+      </div>
+      <div class="pwa-step-item">
+        <div class="pwa-step-num">3</div>
+        <div>點擊右上角「新增」，即可在手機桌面點開使用！</div>
+      </div>
+    </div>
+    <button id="pwaModalClose" class="pwa-modal-close-btn">我知道了</button>
+  </div>
+</div>
+
 ${siteFooter()}
 <script>
 const allCards = document.querySelectorAll(".card-small");
@@ -265,9 +317,73 @@ const animateCounter = (counter, delay) => {
   requestAnimationFrame(update);
 };
 counters.forEach((counter, index) => animateCounter(counter, index * 160));
+
+// ================================================================
+// PWA INSTALLATION LOGIC
+// ================================================================
+(function() {
+  const isStandalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true;
+  if (isStandalone) return; // 已安裝在主畫面開啟時不顯示
+
+  const isClosed = sessionStorage.getItem('pwa_banner_closed');
+  if (isClosed) return;
+
+  const banner = document.getElementById('pwaBanner');
+  const closeBtn = document.getElementById('pwaCloseBtn');
+  const modal = document.getElementById('pwaModal');
+  const modalClose = document.getElementById('pwaModalClose');
+
+  let deferredPrompt = null;
+  const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+
+  window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+    deferredPrompt = e;
+    if (banner) banner.style.display = 'flex';
+  });
+
+  // 在 iOS 或行動瀏覽器環境顯示提示
+  if (isIOS || /Android|iPhone|iPad|Mobile/i.test(navigator.userAgent)) {
+    if (banner) banner.style.display = 'flex';
+  }
+
+  if (banner) {
+    banner.addEventListener('click', (e) => {
+      if (e.target === closeBtn) return;
+      if (deferredPrompt) {
+        deferredPrompt.prompt();
+        deferredPrompt.userChoice.then(() => {
+          deferredPrompt = null;
+          banner.style.display = 'none';
+        });
+      } else {
+        // iOS 或其他瀏覽器開啟指引彈窗
+        if (modal) modal.classList.add('active');
+      }
+    });
+  }
+
+  if (closeBtn) {
+    closeBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (banner) banner.style.display = 'none';
+      sessionStorage.setItem('pwa_banner_closed', 'true');
+    });
+  }
+
+  if (modalClose && modal) {
+    modalClose.addEventListener('click', () => {
+      modal.classList.remove('active');
+    });
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) modal.classList.remove('active');
+    });
+  }
+})();
 </script>`;
 
 writeFileSync(join(ROOT, "index.html"), index);
+
 
 /* ================================================================
    WORKS/*.HTML

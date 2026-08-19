@@ -355,9 +355,17 @@ app.get('/auth/logout', (req, res) => {
 });
 
 // ==================== 全域身分驗證守衛 ====================
+const publicPwaPaths = [
+  '/manifest.webmanifest',
+  '/manifest.json',
+  '/assets/icon.svg',
+  '/apple-touch-icon.png',
+  '/favicon.ico',
+];
+
 app.use((req, res, next) => {
-  // 放行認證路由
-  if (req.path.startsWith('/auth/')) {
+  // 放行認證路由與 PWA 圖示/清單
+  if (req.path.startsWith('/auth/') || publicPwaPaths.includes(req.path)) {
     return next();
   }
 
@@ -373,6 +381,7 @@ app.use((req, res, next) => {
 
   res.redirect('/auth/login');
 });
+
 
 // ==================== 靜態檔案保護提供 ====================
 // 防止重要檔案被直接下載
