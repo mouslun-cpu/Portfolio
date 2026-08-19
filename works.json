@@ -1907,6 +1907,43 @@
       "date": "2026-08"
     },
     {
+      "slug": "trip-space",
+      "type": "work",
+      "title": "Trip Space 多旅行行程管理",
+      "categories": [
+        "生活工具",
+        "Web App"
+      ],
+      "summary": "把每趟旅行的行程、收藏與共同／個人花費收在同一個可視化工作台。",
+      "cover": "assets/works/trip-space/cover.svg",
+      "description": "Trip Space 是以旅行為資料邊界的行程管理工具。使用者可建立不同旅行，分別設定天數、同行成員、幣別與換算匯率，再在旅途中安排上午、下午、晚上的行程與費用。每趟旅行的行程、收藏和私帳皆獨立保存於 Firestore。",
+      "highlights": [
+        "建立多趟旅行，獨立管理日期、天數、成員與匯率",
+        "依日與時段編排行程，支援收藏匯入、地圖連結與拖曳排序",
+        "以甜甜圈圖呈現共同費用分類，以橫條圖比較旅伴支出",
+        "使用 Firebase Firestore 保存每趟旅行的行程與私帳資料"
+      ],
+      "tools": [
+        "Vue 3",
+        "Vite",
+        "Tailwind CSS",
+        "Firebase Firestore",
+        "Chart.js",
+        "Zeabur"
+      ],
+      "links": [
+        {
+          "label": "前往作品",
+          "url": "https://weilu-trip-space.zeabur.app"
+        },
+        {
+          "label": "查看原始碼",
+          "url": "https://github.com/mouslun-cpu/jejutrip"
+        }
+      ],
+      "date": "2026-08"
+    },
+    {
       "slug": "yt-nlm-course",
       "type": "skill",
       "title": "課程影片蒸餾",
