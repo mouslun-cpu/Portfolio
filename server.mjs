@@ -354,20 +354,27 @@ app.get('/auth/logout', (req, res) => {
   res.redirect('/auth/login');
 });
 
-// ==================== 全域身分驗證守衛 ====================
-const publicPwaPaths = [
-  '/manifest.webmanifest',
-  '/manifest.json',
-  '/assets/icon.svg',
-  '/apple-touch-icon.png',
-  '/favicon.ico',
-];
+// ==================== PWA 公開圖示與 Manifest 路由 ====================
+app.get('/manifest.webmanifest', (req, res) => {
+  res.type('application/manifest+json').sendFile(path.join(__dirname, 'manifest.webmanifest'));
+});
+app.get('/manifest.json', (req, res) => {
+  res.type('application/manifest+json').sendFile(path.join(__dirname, 'manifest.json'));
+});
+app.get('/assets/icon.svg', (req, res) => {
+  res.type('image/svg+xml').sendFile(path.join(__dirname, 'assets', 'icon.svg'));
+});
+app.get('/apple-touch-icon.png', (req, res) => {
+  res.type('image/svg+xml').sendFile(path.join(__dirname, 'assets', 'icon.svg'));
+});
 
+// ==================== 全域身分驗證守衛 ====================
 app.use((req, res, next) => {
-  // 放行認證路由與 PWA 圖示/清單
-  if (req.path.startsWith('/auth/') || publicPwaPaths.includes(req.path)) {
+  // 放行認證路由
+  if (req.path.startsWith('/auth/')) {
     return next();
   }
+
 
   // 檢查登入與白名單狀態
   if (req.session?.user?.authenticated && isEmailAllowed(req.session.user.email)) {
