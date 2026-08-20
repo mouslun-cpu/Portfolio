@@ -23,8 +23,7 @@
       "slug": "buybuybuy",
       "title": "政府標案投標輔助系統",
       "categories": [
-        "AI應用",
-        "工具軟體"
+        "生產力工具"
       ],
       "summary": "政府標案自動化監控雷達 + 案件資料庫 + LINE 即時推播輔助系統。",
       "cardGradient": "linear-gradient(140deg,#3F6B7E,#264B59)",
@@ -58,8 +57,7 @@
       "slug": "portfolio",
       "title": "個人作品集",
       "categories": [
-        "個人品牌",
-        "前端開發"
+        "生活工具"
       ],
       "summary": "零依賴極速靜態建置、資料驅動與 PWA 支援的個人 AI 專案作品集。",
       "cardGradient": "linear-gradient(140deg,#28738A,#184E5E)",
@@ -653,7 +651,7 @@
       "slug": "ziwei",
       "title": "紫微 ZIP",
       "categories": [
-        "Web應用"
+        "生活工具"
       ],
       "summary": "輸入生辰八字，自動排出紫微斗數命盤，並由 AI 解讀各宮位意涵與人生課題。",
       "cover": "assets/works/ziwei/screenshots/cover.png",
@@ -914,7 +912,7 @@
       "slug": "business-card",
       "title": "個人數位名片",
       "categories": [
-        "Web應用"
+        "生活工具"
       ],
       "summary": "以一頁式行動優先網站，整合醫療、教學身份與直接聯絡入口。",
       "cover": "assets/works/business-card/screenshots/cover.png",
@@ -1691,8 +1689,7 @@
       "type": "skill",
       "title": "紫微深度解讀顧問",
       "categories": [
-        "專屬顧問",
-        "Web應用"
+        "生活工具"
       ],
       "summary": "以可重現排盤資料與分層脈絡，提供不宿命的紫微斗數解讀。",
       "cover": "assets/works/ziwei-deep-reading/cover.svg",
@@ -1911,8 +1908,7 @@
       "type": "work",
       "title": "Trip Space 多旅行行程管理",
       "categories": [
-        "生活工具",
-        "Web App"
+        "生活工具"
       ],
       "summary": "把每趟旅行的行程、收藏與共同／個人花費收在同一個可視化工作台。",
       "cover": "assets/works/trip-space/cover.svg",
