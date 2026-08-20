@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse"><stop stop-color="#F6F0DA"/><stop offset="1" stop-color="#E4F0E7"/></linearGradient>
+    <filter id="shadow" x="0" y="0" width="1200" height="630" filterUnits="userSpaceOnUse"><feDropShadow dx="0" dy="14" stdDeviation="14" flood-color="#28738A" flood-opacity=".16"/></filter>
+  </defs>
+  <rect width="1200" height="630" rx="32" fill="url(#bg)"/>
+  <circle cx="1050" cy="70" r="200" fill="#B7E1E4" fill-opacity=".55"/>
+  <circle cx="100" cy="600" r="210" fill="#C7DB95" fill-opacity=".38"/>
+  <text x="76" y="95" fill="#28738A" font-family="Arial, sans-serif" font-size="20" font-weight="700" letter-spacing="3">SECOND BRAIN</text>
+  <text x="76" y="145" fill="#1C2325" font-family="Arial, sans-serif" font-size="40" font-weight="700">四層知識系統</text>
+  <text x="76" y="181" fill="#49636A" font-family="Arial, sans-serif" font-size="19">不是囤積筆記，而是讓理解持續生長的結構。</text>
+  <g filter="url(#shadow)">
+    <rect x="76" y="230" width="230" height="250" rx="24" fill="#FFFDF5"/>
+    <rect x="76" y="230" width="230" height="14" rx="7" fill="#6F91B5"/>
+    <text x="105" y="292" fill="#28738A" font-family="Arial, sans-serif" font-size="25" font-weight="700">RAW</text>
+    <text x="105" y="325" fill="#1C2325" font-family="Arial, sans-serif" font-size="17">原始素材</text>
+    <line x1="105" y1="355" x2="268" y2="355" stroke="#D7E3DF" stroke-width="2"/>
+    <text x="105" y="389" fill="#587078" font-family="Arial, sans-serif" font-size="15">保留證據</text>
+    <text x="105" y="418" fill="#587078" font-family="Arial, sans-serif" font-size="15">只進不改</text>
+  </g>
+  <path d="M326 356H367" stroke="#28738A" stroke-width="4" stroke-linecap="round"/><path d="M358 346L369 356L358 366" stroke="#28738A" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <g filter="url(#shadow)">
+    <rect x="386" y="230" width="230" height="250" rx="24" fill="#FFFDF5"/>
+    <rect x="386" y="230" width="230" height="14" rx="7" fill="#89C0B7"/>
+    <text x="415" y="292" fill="#28738A" font-family="Arial, sans-serif" font-size="25" font-weight="700">WIKI</text>
+    <text x="415" y="325" fill="#1C2325" font-family="Arial, sans-serif" font-size="17">編譯理解</text>
+    <line x1="415" y1="355" x2="578" y2="355" stroke="#D7E3DF" stroke-width="2"/>
+    <text x="415" y="389" fill="#587078" font-family="Arial, sans-serif" font-size="15">摘要・概念</text>
+    <text x="415" y="418" fill="#587078" font-family="Arial, sans-serif" font-size="15">索引・連結</text>
+  </g>
+  <path d="M636 356H677" stroke="#28738A" stroke-width="4" stroke-linecap="round"/><path d="M668 346L679 356L668 366" stroke="#28738A" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <g filter="url(#shadow)">
+    <rect x="696" y="230" width="190" height="250" rx="24" fill="#FFFDF5"/>
+    <rect x="696" y="230" width="190" height="14" rx="7" fill="#FFB072"/>
+    <text x="725" y="292" fill="#28738A" font-family="Arial, sans-serif" font-size="19" font-weight="700">BRAINSTORM</text>
+    <text x="725" y="325" fill="#1C2325" font-family="Arial, sans-serif" font-size="17">探索推理</text>
+    <line x1="725" y1="355" x2="852" y2="355" stroke="#D7E3DF" stroke-width="2"/>
+    <text x="725" y="389" fill="#587078" font-family="Arial, sans-serif" font-size="15">提問・假設</text>
+    <text x="725" y="418" fill="#587078" font-family="Arial, sans-serif" font-size="15">未解問題</text>
+  </g>
+  <path d="M906 356H947" stroke="#28738A" stroke-width="4" stroke-linecap="round"/><path d="M938 346L949 356L938 366" stroke="#28738A" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <g filter="url(#shadow)">
+    <rect x="966" y="230" width="158" height="250" rx="24" fill="#FFFDF5"/>
+    <rect x="966" y="230" width="158" height="14" rx="7" fill="#C7DB95"/>
+    <text x="992" y="292" fill="#28738A" font-family="Arial, sans-serif" font-size="18" font-weight="700">ARTIFACTS</text>
+    <text x="992" y="325" fill="#1C2325" font-family="Arial, sans-serif" font-size="17">完成作品</text>
+    <line x1="992" y1="355" x2="1095" y2="355" stroke="#D7E3DF" stroke-width="2"/>
+    <text x="992" y="389" fill="#587078" font-family="Arial, sans-serif" font-size="15">實踐回饋</text>
+    <text x="992" y="418" fill="#587078" font-family="Arial, sans-serif" font-size="15">再次編譯</text>
+  </g>
+  <path d="M1045 509C950 576 455 576 306 509" stroke="#6F91B5" stroke-width="3" stroke-dasharray="8 10" stroke-linecap="round"/>
+  <text x="503" y="555" fill="#28738A" font-family="Arial, sans-serif" font-size="17" font-weight="700">保留脈絡，讓知識可回到下一次思考</text>
+</svg>
