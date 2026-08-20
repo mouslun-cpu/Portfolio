@@ -7,7 +7,7 @@
   <circle cx="1050" cy="70" r="200" fill="#B7E1E4" fill-opacity=".55"/>
   <circle cx="100" cy="600" r="210" fill="#C7DB95" fill-opacity=".38"/>
   <text x="76" y="95" fill="#28738A" font-family="Arial, sans-serif" font-size="20" font-weight="700" letter-spacing="3">SECOND BRAIN</text>
-  <text x="76" y="145" fill="#1C2325" font-family="Arial, sans-serif" font-size="40" font-weight="700">四層知識系統</text>
+  <text x="76" y="145" fill="#1C2325" font-family="Arial, sans-serif" font-size="40" font-weight="700">第二大腦知識系統</text>
   <text x="76" y="181" fill="#49636A" font-family="Arial, sans-serif" font-size="19">不是囤積筆記，而是讓理解持續生長的結構。</text>
   <g filter="url(#shadow)">
     <rect x="76" y="230" width="230" height="250" rx="24" fill="#FFFDF5"/>

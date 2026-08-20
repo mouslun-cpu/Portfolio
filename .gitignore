@@ -11,7 +11,10 @@ Thumbs.db
 !.env.example
 
 # Local tools & Scripts
-local-tools/
+local-tools/*
+!local-tools/cover-editor.html
+!local-tools/cover-editor.py
+local-tools/__pycache__/
 *.bat
 
 # Backup files
@@ -21,4 +24,3 @@ local-tools/
 **/*.bak
 **/*.bak.*
 **/*.bak-*
-
