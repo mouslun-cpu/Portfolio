@@ -87,6 +87,46 @@
       "featured": true
     },
     {
+      "slug": "just-qiao",
+      "title": "喬一下 Just Qiao",
+      "categories": [
+        "生活工具"
+      ],
+      "summary": "用即時熱度圖快速喬出多人都方便的時段。",
+      "cardGradient": "linear-gradient(140deg,#177A62,#0F4F43)",
+      "cover": "assets/works/just-qiao/cover.svg",
+      "description": "Just Qiao 是一個 Doodle 式的多人時段調查工具。發起人建立候選日期與時段後，分享連結即可讓參與者填答，並即時從熱度圖與共識分數看見最適合的安排。\n支援記名或匿名填答，以及「每個日期同時段」與「每個日期不同時段」兩種候選時段設定方式。",
+      "highlights": [
+        "即時熱度圖、填答人數與加權共識分數，直接呈現在每個時段格",
+        "可選記名或匿名填答；記名調查可查看各時段的可出席名單",
+        "候選時段支援所有日期共用，或逐日個別設定",
+        "參與者免登入；送出前先確認時段，送出後回覆鎖定為唯讀",
+        "發起人後台彙整回覆數與目前共識最高的時段"
+      ],
+      "tools": [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Firebase Authentication",
+        "Cloud Firestore",
+        "PWA",
+        "Zeabur"
+      ],
+      "links": [
+        {
+          "label": "前往作品",
+          "url": "https://just-qiao.zeabur.app"
+        },
+        {
+          "label": "查看原始碼",
+          "url": "https://github.com/mouslun-cpu/Just-Qiao"
+        }
+      ],
+      "date": "2026-08",
+      "featured": true
+    },
+    {
       "slug": "academic-publication-dashboard",
       "title": "學術發表儀表板",
       "categories": [
